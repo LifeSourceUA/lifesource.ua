@@ -1,8 +1,6 @@
 # Dev image
 FROM hope/nodejs:6
 
-WORKDIR /data/dev
-
 RUN \
     # Prepare build deps
     apk add --no-cache --virtual=build-dependencies git ruby && \
