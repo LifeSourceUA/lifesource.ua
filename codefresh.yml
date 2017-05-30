@@ -13,7 +13,7 @@ steps:
     image: "${{Build}}"
     working_directory: IMAGE_WORK_DIR
     commands:
-      - "lint"
+      - "npm run lint"
     on_success:
       metadata:
         set:
