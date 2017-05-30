@@ -8,23 +8,6 @@ steps:
     working_directory: ./
     dockerfile: Dockerfile
 
-  Test:
-    title: Running Tests
-    image: "${{Build}}"
-    working_directory: IMAGE_WORK_DIR
-    commands:
-      - "npm run lint"
-    on_success:
-      metadata:
-        set:
-          - "${{Build.imageId}}":
-              - CF_QUALITY: true
-    on_fail:
-      metadata:
-        set:
-          - "${{Build.imageId}}":
-              - CF_QUALITY: false
-
   Push:
     title: Pushing to Docker Hub
     type: push
