@@ -14,3 +14,7 @@ steps:
     candidate: "${{Build}}"
     tag: latest
     registry: dockerhub
+    when:
+      branch:
+        only:
+          - "master"
