@@ -6,7 +6,7 @@ steps:
     type: build
     image_name: lifesource/lifesource.ua
     working_directory: ./
-    dockerfile: Dockerfile
+    dockerfile: dev/Dockerfile
 
   Push:
     title: Pushing to Docker Hub
