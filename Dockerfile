@@ -8,6 +8,6 @@ RUN \
     npm run build
 
 ENTRYPOINT ["npm", "run"]
-CMD["start"]
+CMD ["start"]
 
 EXPOSE 3000
