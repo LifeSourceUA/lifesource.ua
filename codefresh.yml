@@ -5,7 +5,7 @@ steps:
     title: Docker Image Build
     type: build
     image_name: lifesource.ua
-    working_directory: ./dev
+    working_directory: ./
     dockerfile: Dockerfile
 
   Push:
