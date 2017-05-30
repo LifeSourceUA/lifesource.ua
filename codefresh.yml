@@ -13,7 +13,7 @@ steps:
     type: push
     candidate: "${{Build}}"
     tag: latest
-    registry: dockerhub
+    registry: azure
     when:
       branch:
         only:
