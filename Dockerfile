@@ -7,7 +7,7 @@ RUN \
 
     git clone --depth 1 https://github.com/LifeSourceUA/lifesource.ua.git -b master . && \
     npm install && \
-    npm run build
+    npm run build && \
 
     apk del build-dependencies
 
