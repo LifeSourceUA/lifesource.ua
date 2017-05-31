@@ -1,0 +1,125 @@
+& {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding-top: px(120);
+  padding-left: px(110);
+  padding-bottom: px(126);
+  border-bottom: 1px dashed #a8b8bf;
+
+  .container {
+    .title {
+      font-family: Kurale;
+      color: #879399;
+      font-size: px(48);
+      letter-spacing: px(4);
+      text-transform: uppercase;
+      font-weight: normal;
+
+      &::after {
+        display: block;
+        margin-top: px(24);
+        background-color: #a8b8bf;
+        width: px(60);
+        height: px(4);
+        border-radius: px(2);
+        content: '';
+      }
+    }
+
+    .content {
+      display: flex;
+      margin-top: px(102);
+
+      .leftBlock {
+        margin-right: px(268);
+
+        .name {
+          font-size: px(60);
+          color: #393d40;
+        }
+
+        .subtitle {
+          display: inline-block;
+          font-family: Kurale;
+          margin-top: px(2);
+          color: #707a80;
+          font-size: px(40);
+        }
+
+        .description {
+          width: px(1198);
+          margin-top: px(50);
+          font-family: Georgia;
+          line-height: px(54);
+          color: #393d40;
+          font-size: px(36);
+        }
+
+        .allBooks {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: px(90);
+          border: 2px solid #65bf80;
+          width: px(384);
+          height: px(112);
+          color: #65bf80;
+          font-size: px(32);
+          font-weight: bold;
+          border-radius: px(56);
+        }
+      }
+
+      .rightBlock {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .image {
+          width: px(304);
+          height: px(304);
+          margin-top: px(6);
+          background-image: url('../../../Assets/photo.png');
+          background-size: cover;
+        }
+
+        .number {
+          position: relative;
+          display: flex;
+          align-items: center;
+          padding: 0 px(32);
+          color:  #f0766d;
+          font-size: px(38);
+          font-weight: bold;
+          border-top: 2px solid #f0766d;
+          border-bottom: 2px solid #f0766d;
+          width: max-content;
+          height: px(64);
+          margin-top: px(48);
+
+          .labelStart {
+            position: absolute;
+            width: px(16);
+            left: px(-10);
+          }
+
+          .labelEnd {
+            position: absolute;
+            width: px(16);
+            right: px(-10);
+            top: px(-4);
+            transform: rotate(180deg);
+          }
+        }
+
+        .booksOnWebsite {
+          margin-top: px(16);
+          color: #707a80;
+          font-size: px(28);
+          font-style: italic;
+        }
+      }
+    }
+  }
+}

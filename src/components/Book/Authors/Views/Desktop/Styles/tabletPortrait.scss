@@ -1,0 +1,76 @@
+@import 'common';
+
+& {
+  padding-top: px(104);
+  padding-left: px(84);
+  padding-bottom: px(108);
+
+  .container {
+    .title {
+      font-size: px(40);
+
+      &::after {
+        width: px(50);
+        margin-top: px(28);
+      }
+    }
+
+    .content {
+      margin-top: px(92);
+
+      .leftBlock {
+        margin-right: px(180);
+
+        .name {
+          font-size: px(56);
+          color: #393d40;
+        }
+
+        .subtitle {
+          font-size: px(38);
+        }
+
+        .description {
+          width: px(830);
+          margin-top: px(68);
+          font-size: px(34);
+          line-height: px(52);
+        }
+
+        .allBooks {
+          margin-top: px(80);
+          border-width: 1px;
+          width: px(376);
+          height: px(120);
+          border-radius: px(60);
+        }
+      }
+
+      .rightBlock {
+        .image {
+          width: px(264);
+          height: px(264);
+          margin-top: px(4);
+        }
+
+        .number {
+          height: px(56);
+          padding: 0 px(24);
+          font-size: px(34);
+
+          .labelStart {
+            width: px(14);
+          }
+
+          .labelEnd {
+            width: px(14);
+          }
+        }
+
+        .booksOnWebsite {
+          font-size: px(26);
+        }
+      }
+    }
+  }
+}

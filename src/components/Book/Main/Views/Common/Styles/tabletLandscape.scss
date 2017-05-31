@@ -1,0 +1,270 @@
+@import 'common';
+
+& {
+  position: relative;
+  justify-content: center;
+
+  .arrowBack {
+    position: absolute;
+    align-items: center;
+    margin-top: px(88);
+    font-size: px(28);
+    font-style: italic;
+    left: px(112);
+    color: #879399;
+
+    .circle {
+      width: px(96);
+      height: px(96);
+      margin-right: px(32);
+    }
+  }
+
+  .content {
+    width: px(1824);
+    align-items: flex-start;
+
+    .image {
+      justify-content: center;
+      width: px(750);
+      height: px(1032);
+      margin-top: px(272);
+      margin-right: px(158);
+
+      .hoverBook {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: px(200);
+        height: px(200);
+        border-radius: 50%;
+        background: #393d40;
+        z-index: 50;
+        transition: opacity .3s;
+        opacity: 0;
+
+        .book {
+          width: px(88);
+        }
+      }
+
+      &:hover {
+        .hoverBook {
+          opacity: 1;
+        }
+      }
+
+      .middleLayer {
+        height: px(984);
+        left: px(-4);
+      }
+
+      .bottomLayer {
+        height: px(936);
+        left: px(-8);
+      }
+
+      .labelNum {
+        height: px(64);
+        font-size: px(36);
+        padding-right: px(54);
+
+        i {
+          width: px(16);
+          margin-right: px(16);
+        }
+      }
+
+      .labelNew {
+        height: px(56);
+        width: px(130);
+        left: px(10);
+
+        i {
+          width: px(14);
+        }
+      }
+    }
+
+    .info {
+      align-items: flex-start;
+      margin-top: px(328);
+
+      .title {
+        width: 100%;
+        margin-top: 0;
+        color:  #393d40;
+        font-size: px(68);
+        text-align: left;
+      }
+
+      .authors {
+        margin-top: px(22);
+
+        .author {
+          font-size: px(40);
+
+          .dot {
+            margin: 0 px(28);
+          }
+        }
+      }
+
+      .tags {
+        justify-content: flex-start;
+        width: 100%;
+        margin-top: px(46);
+
+        .new {
+          padding: 0 px(12);
+        }
+
+        .seriesBooks {
+          height: px(48);
+          padding: 0 px(20);
+          font-size: px(28);
+
+          .labelStart {
+            width: px(12);
+          }
+
+          .labelEnd {
+            width: px(12);
+          }
+        }
+
+        .class {
+          padding: px(8) px(24);
+        }
+
+        div {
+          margin-right: px(44);
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+
+      .buttons {
+        margin-top: px(80);
+
+        .read {
+          width: px(496);
+          height: px(120);
+          padding: 0 px(46) 0 px(36);
+          border-radius: px(24);
+          font-size: px(32);
+        }
+
+        .tableOfContents {
+          position: relative;
+          width: px(336);
+          height: px(120);
+          border-radius: px(24);
+          padding: 0 px(52) 0 px(36);
+          font-size: px(32);
+          margin-right: px(48);
+          margin-left: px(2);
+
+          //&:hover {
+          //  background: #707a80;
+          //  color: #fff;
+          //
+          //  i {
+          //    fill: #fff;
+          //  }
+          //}
+
+          .popup {
+            position: absolute;
+            left: px(-4);
+            top: px(190);
+            width: px(880);
+            height: px(800);
+            padding-top: px(56);
+            padding-left: px(60);
+            background: #fff;
+            border-radius: px(20);
+            opacity: 0;
+
+            &::before {
+              position: absolute;
+              top: px(-44);
+              left: px(76);
+              width: 0;
+              height: 0;
+              border-bottom: px(92) solid #fff;
+              border-left: px(60) solid transparent;
+              border-right: px(60) solid transparent;
+              content: '';
+            }
+
+            .list {
+              height: 100%;
+              overflow: scroll;
+
+              .item {
+                font-size: px(36);
+                color: #393d40;
+                font-family: Kurale;
+                margin-bottom: 16px;
+                font-weight: normal;
+
+                .sublist {
+                  margin-left: px(56);
+                }
+              }
+            }
+          }
+
+          .active {
+            opacity: 1;
+          }
+        }
+      }
+
+      .description {
+        width: px(876);
+        margin-top: px(68);
+        margin-left: px(4);
+        font-family: Georgia;
+        font-size: px(36);
+        line-height: px(54);
+        color: #393d40;
+      }
+    }
+  }
+
+  .language {
+    position: absolute;
+    justify-content: space-between;
+    padding: 0 px(28) 0 px(24);
+    width: px(424);
+    height: px(80);
+    margin-top: px(96);
+    border-radius: px(40);
+    right: px(110);
+
+    .text {
+      width: px(260);
+      font-size: px(32);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-right: px(14);
+    }
+
+    .arrow {
+      width: px(12);
+    }
+
+    .flag {
+      width: px(36);
+    }
+  }
+
+  .content {
+    flex-direction: row;
+  }
+}
