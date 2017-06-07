@@ -58,7 +58,7 @@ function Common(props) {
                         ) : null
                     }
                 </div>
-                <div className={ Styles.content }>
+                <div className={ Styles.text }>
                     <p>
                         Ты прочитаешь в этой книге об одном долларе, который умножился.
                         О молитве, написанной на воздушном змее. О дверях тюрьмы, которые открылись.

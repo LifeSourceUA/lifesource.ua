@@ -28,9 +28,8 @@
 
         .info {
             display: flex;
-            //justify-content: flex-start;
-            justify-content: space-between; // [NEW]
-            width: px(442); // [NEW]
+            justify-content: space-between;
+            width: px(442);
 
             .value {
                 color: $black;
@@ -59,7 +58,7 @@
             }
         }
 
-        .content {
+        .text {
             margin: px(64) 0 0 px(4);
             font-size: px(34);
             line-height: px(48);

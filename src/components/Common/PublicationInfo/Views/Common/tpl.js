@@ -20,8 +20,8 @@ import BP from 'lib/breakpoints';
 function Common(props) {
     const { mediaType } = props;
 
-    const contentMobile = (
-        <div className={ Styles.content }>
+    const textMobile = (
+        <div className={ Styles.text }>
             <p>
                 «Итак, если есть какое утешение во Христе, если есть какая отрада любви,
                 если есть какое общение духа, если есть какое милосердие и сострадательность» (Флп. 2:1).
@@ -37,8 +37,8 @@ function Common(props) {
         </div>
     );
 
-    const contentDesktop = (
-        <div className={ Styles.content }>
+    const textDesktop = (
+        <div className={ Styles.text }>
             <p>
                 Ты прочитаешь в этой книге об одном долларе, который умножился.
                 О молитве, написанной на воздушном змее. О дверях тюрьмы, которые открылись.
@@ -91,7 +91,7 @@ function Common(props) {
                         ) : null
                     }
                 </div>
-                { BP.isMobile(mediaType) ? contentMobile : contentDesktop }
+                { BP.isMobile(mediaType) ? textMobile : textDesktop }
             </div>
         </section>
     );
