@@ -1,16 +1,19 @@
-@import './common';
+@import 'common';
 
 & {
     margin: px(106) px(42) 0;
     padding: 0 px(42) px(98);
+    border-bottom-color: $midGrey2;
 
     .header {
+        color: $grey1;
         font-size: px(38);
         letter-spacing: px(4);
 
         &::after {
             width: px(50);
             margin-top: px(28);
+            background-color: $midGrey2;
         }
     }
 

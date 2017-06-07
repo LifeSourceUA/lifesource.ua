@@ -1,9 +1,7 @@
 & {
     margin: 0;
-    //padding: 61px 147px 65px 56px;
     padding: px(122) px(294) px(130) px(112);
-    //border-bottom: dashed 1px $midGrey; // #b1babf in PSD
-    border-bottom: dashed px(2) $midGrey; // #b1babf in PSD
+    border-bottom: dashed px(2) $midGrey1;
     background-color: $white;
     color: $black;
     font-family: Georgia;
@@ -11,23 +9,17 @@
     .header {
         color: $grey;
         font-family: 'Kurale';
-        //font-size: 23px;
         font-size: px(46);
-        //letter-spacing: 3px;
         letter-spacing: px(6);
         text-transform: uppercase;
 
         &::after {
             display: block;
-            //width: 30px;
             width: px(60);
-            //height: 2px;
             height: px(4);
-            //margin-top: 13px;
             margin-top: px(26);
-            //border-radius: 1px;
             border-radius: px(2);
-            background-color: $grey;
+            background-color: $midGrey1;
             content: '';
         }
     }
@@ -35,102 +27,79 @@
     .mainContainer {
         display: flex;
         justify-content: space-between;
-        //margin-top: 42px;
         margin-top: px(84);
 
         .content {
             order: 1;
-            //width: 601px;
             width: px(1202);
-            //font-size: 18px;
             font-size: px(36);
-            //line-height: 27px;
             line-height: px(54);
 
             &::first-letter {
-                //padding-top: 14px;
                 padding-top: px(28);
-                //padding-right: 9px;
                 padding-right: px(18);
                 float: left;
                 font-family: 'Kurale';
-                //font-size: 56px;
                 font-size: px(112);
             }
         }
 
         .information {
             order: 2;
-            //margin-top: 25px;
             margin-top: px(50);
 
             .value1 {
                 color: $black;
                 font-family: 'PT Sans';
-                //font-size: 20px;
                 font-size: px(40);
             }
 
             .attribute1 {
-                //margin-top: 1px;
                 margin-top: px(2);
-                color: $darkGrey; // #757c80 in .psd
+                color: $darkGrey1;
                 font-family: 'Kurale';
-                //font-size: 16px;
                 font-size: px(32);
             }
 
             .value2 {
-                //margin-top: 36px;
                 margin-top: px(72);
                 color: $black;
                 font-family: 'PT Sans';
-                //font-size: 20px;
                 font-size: px(40);
             }
 
             .attribute2 {
-                //margin-top: 1px;
                 margin-top: px(2);
-                color: $darkGrey; // #757c80 in .psd
+                color: $darkGrey1;
                 font-family: 'Kurale';
-                //font-size: 16px;
                 font-size: px(32);
             }
 
             .value3 {
-                //margin-top: 36px;
                 margin-top: px(72);
                 color: $black;
                 font-family: 'PT Sans';
-                //font-size: 20px;
                 font-size: px(40);
             }
 
             .attribute3 {
-                //margin-top: 1px;
                 margin-top: px(2);
-                color: $darkGrey; // #757c80 in .psd
+                color: $darkGrey1;
                 font-family: 'Kurale';
-                //font-size: 16px;
                 font-size: px(32);
             }
 
             .value4 {
-                //margin-top: 36px;
                 margin-top: px(72);
                 color: $black;
                 font-family: 'PT Sans';
-                //font-size: 20px;
                 font-size: px(40);
             }
 
             .attribute4 {
-                //margin-top: 1px;
                 margin-top: px(2);
-                color: $darkGrey; // #757c80 in .psd
+                color: $darkGrey1;
                 font-family: 'Kurale';
-                //font-size: 16px;
                 font-size: px(32);
             }
         }
