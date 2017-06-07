@@ -1,12 +1,11 @@
 & {
-    margin: 0;
     padding: px(122) px(294) px(130) px(112);
     border-bottom: dashed px(2) $midGrey1;
     background-color: $white;
     color: $black;
     font-family: Georgia;
 
-    .header {
+    .title {
         color: $grey;
         font-family: 'Kurale';
         font-size: px(46);
@@ -17,17 +16,17 @@
             display: block;
             width: px(60);
             height: px(4);
-            margin-top: px(26);
+            margin-top: px(24);
             border-radius: px(2);
             background-color: $midGrey1;
             content: '';
         }
     }
 
-    .mainContainer {
+    .mainContent {
         display: flex;
         justify-content: space-between;
-        margin-top: px(84);
+        margin-top: px(86);
 
         .content {
             order: 1;
@@ -44,59 +43,21 @@
             }
         }
 
-        .information {
+        .info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             order: 2;
             margin-top: px(50);
+            height: px(512);
 
-            .value1 {
+            .value{
                 color: $black;
                 font-family: 'PT Sans';
                 font-size: px(40);
             }
 
-            .attribute1 {
-                margin-top: px(2);
-                color: $darkGrey1;
-                font-family: 'Kurale';
-                font-size: px(32);
-            }
-
-            .value2 {
-                margin-top: px(72);
-                color: $black;
-                font-family: 'PT Sans';
-                font-size: px(40);
-            }
-
-            .attribute2 {
-                margin-top: px(2);
-                color: $darkGrey1;
-                font-family: 'Kurale';
-                font-size: px(32);
-            }
-
-            .value3 {
-                margin-top: px(72);
-                color: $black;
-                font-family: 'PT Sans';
-                font-size: px(40);
-            }
-
-            .attribute3 {
-                margin-top: px(2);
-                color: $darkGrey1;
-                font-family: 'Kurale';
-                font-size: px(32);
-            }
-
-            .value4 {
-                margin-top: px(72);
-                color: $black;
-                font-family: 'PT Sans';
-                font-size: px(40);
-            }
-
-            .attribute4 {
+            .attribute {
                 margin-top: px(2);
                 color: $darkGrey1;
                 font-family: 'Kurale';

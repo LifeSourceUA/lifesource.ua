@@ -1,0 +1,23 @@
+@import 'mobile';
+
+& {
+    .mainContent {
+        margin: px(84) px(22) 0;
+
+        .info {
+            min-width: px(738);
+
+            .value {
+                line-height: px(22);
+            }
+
+            .attribute {
+                color: $grey1;
+            }
+        }
+
+        .content {
+            margin-left: px(2);
+        }
+    }
+}

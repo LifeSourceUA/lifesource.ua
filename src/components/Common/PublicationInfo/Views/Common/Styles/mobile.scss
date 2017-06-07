@@ -1,0 +1,68 @@
+& {
+    padding: px(88) px(40) px(82);
+    border-bottom: dashed px(2) $midGrey;
+    background-color: $white;
+    color: $black;
+    font-family: Georgia;
+
+    .title {
+        color: $grey;
+        font-family: 'Kurale';
+        font-size: px(40);
+        letter-spacing: px(4);
+        text-transform: uppercase;
+
+        &::after {
+            display: block;
+            width: px(50);
+            height: px(4);
+            margin-top: px(28);
+            border-radius: px(2);
+            background-color: $midGrey3;
+            content: '';
+        }
+    }
+
+    .mainContent {
+        margin: px(84) px(20) 0;
+
+        .info {
+            display: flex;
+            //justify-content: flex-start;
+            justify-content: space-between; // [NEW]
+            width: px(442); // [NEW]
+
+            .value {
+                color: $black;
+                font-family: 'PT Sans';
+                font-size: px(38);
+                line-height: px(22);
+            }
+
+            .attribute {
+                color: $grey1;
+                font-family: 'Kurale';
+                font-size: px(30);
+                margin-top: px(4);
+            }
+
+            .pageCount {
+                .attribute {
+                    margin-left: px(2);
+                }
+            }
+
+           .editionCount {
+                .attribute {
+                    margin-left: px(4);
+                }
+            }
+        }
+
+        .content {
+            margin: px(64) 0 0 px(4);
+            font-size: px(34);
+            line-height: px(48);
+        }
+    }
+}

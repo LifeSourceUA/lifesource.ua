@@ -9,14 +9,7 @@ import { connect } from 'react-redux';
  * [IV]
  * View Import
  */
-import Mobile from './Views/Mobile';
-import Desktop from './Views/Desktop';
-
-/**
- * [IBP]
- * Breakpoints
- */
-import BP from 'lib/breakpoints';
+import Common from './Views/Common';
 
 /**
  * [ICONF]
@@ -63,17 +56,7 @@ class PublicationInfo extends Component {
          * [RV]
          * View
          */
-        let view;
-
-        if (BP.isMobile(mediaType)) {
-            view = (
-                <Mobile mediaType={ mediaType }/>
-            );
-        } else {
-            view = (
-                <Desktop mediaType={ mediaType }/>
-            );
-        }
+        const view = <Common mediaType={ mediaType }/>;
 
         /**
          * [RR]

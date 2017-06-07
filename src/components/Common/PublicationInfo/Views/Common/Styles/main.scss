@@ -1,12 +1,24 @@
 @import 'theme/MediaQueries';
-@import 'theme/PaletteLS';
+@import 'theme/Palette';
 @import 'theme/PxFunction';
 
-body {
-    background-color: $white;
-}
-
 .publicationInfoComponent {
+    @function px($px) {
+        @return pxMedia($px, phonePortrait)
+    }
+
+    @media #{$phonePortrait} {
+        @import 'mobile';
+    }
+
+    @function px($px) {
+        @return pxMedia($px, phoneLandscape)
+    }
+
+    @media #{$phoneLandscape} {
+        @import 'phoneLandscape';
+    }
+
     @function px($px) {
         @return pxMedia($px, tabletPortrait)
     }
@@ -55,4 +67,3 @@ body {
         @import 'desktopMega';
     }
 }
-

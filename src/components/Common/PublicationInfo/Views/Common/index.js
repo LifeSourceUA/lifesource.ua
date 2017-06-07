@@ -17,38 +17,46 @@ import Styles from './Styles/main.scss';
  */
 import BP from 'lib/breakpoints';
 
-function Desktop(props) {
+function Common(props) {
     const { mediaType } = props;
 
     return (
         <section className={ Styles.publicationInfoComponent }>
-            <h1 className={ Styles.header }>
+            <h1 className={ Styles.title }>
                 { BP.isTabletPortrait(mediaType) ? 'информация о книге' : 'о книге' }
             </h1>
-            <div className={ Styles.mainContainer }>
-                <div className={ Styles.information }>
+            <div className={ Styles.mainContent }>
+                <div className={ Styles.info }>
                     <div className={ Styles.pageCount }>
-                        <div className={ Styles.value1 }>128</div>
-                        <div className={ Styles.attribute1 }>стр.</div>
+                        <div className={ Styles.value }>128</div>
+                        <div className={ Styles.attribute }>стр.</div>
                     </div>
                     <div className={ Styles.editionYear }>
-                        <div className={ Styles.value2 }>2016</div>
-                        <div className={ Styles.attribute2 }>год издания</div>
+                        <div className={ Styles.value }>2016</div>
+                        <div className={ Styles.attribute }>
+                            { BP.isMobile(mediaType) ? 'год' : 'год издания' }
+                        </div>
                     </div>
                     <div className={ Styles.editionCount }>
-                        <div className={ Styles.value3 }>10 тыс.</div>
-                        <div className={ Styles.attribute3 }>
-                            { BP.isTabletPortrait(mediaType) ? 'тираж (экз.)' : 'тираж' }
+                        <div className={ Styles.value }>
+                            { BP.isMobile(mediaType) ? '10 000' : '10 тыс.' }
+                        </div>
+                        <div className={ Styles.attribute }>
+                            { BP.isMobile(mediaType) || BP.isTabletPortrait(mediaType) ? 'тираж, экз.' : 'тираж' }
                         </div>
                     </div>
-                    <div className={ Styles.paper }>
-                        <div className={ Styles.value4 }>
-                            { BP.isTabletPortrait(mediaType) ? 'мелованная, 80 г/м²' : 'мягкий' }
-                        </div>
-                        <div className={ Styles.attribute4 }>
-                            { BP.isTabletPortrait(mediaType) ? 'бумага, плотность' : 'переплет' }
-                        </div>
-                    </div>
+                    {
+                        !BP.isPhonePortrait(mediaType) ? (
+                            <div className={ Styles.paper }>
+                                <div className={ Styles.value }>
+                                    { BP.isTabletPortrait(mediaType) ? 'мелованная, 80 г/м²' : 'мягкий' }
+                                </div>
+                                <div className={ Styles.attribute }>
+                                    { BP.isTabletPortrait(mediaType) ? 'бумага, плотность' : 'переплет' }
+                                </div>
+                            </div>
+                        ) : null
+                    }
                 </div>
                 <div className={ Styles.content }>
                     <p>
@@ -71,7 +79,7 @@ function Desktop(props) {
  * [CPT]
  * Component prop types
  */
-Desktop.propTypes = {
+Common.propTypes = {
     mediaType: PropTypes.string.isRequired
 };
 
@@ -79,4 +87,4 @@ Desktop.propTypes = {
  * [IE]
  * Export
  */
-export default Desktop;
+export default Common;

@@ -9,15 +9,13 @@ import { connect } from 'react-redux';
  * [IV]
  * View Import
  */
-import Mobile from './Views/Mobile/tpl';
-import Desktop from './Views/Desktop/tpl';
+import Common from './Views/Common/tpl';
 
 /**
  * [IBP]
  * Pixel Perfect and Breakpoints
  */
 import PixelPerfect from 'vendor/PixelPerfect/component';
-import BP from 'lib/breakpoints';
 
 /**
  * [ICONF]
@@ -70,17 +68,7 @@ class PublicationInfo extends Component {
          * [RV]
          * View
          */
-        let view;
-
-        if (BP.isMobile(mediaType)) {
-            view = (
-                <Mobile mediaType={ mediaType }/>
-            );
-        } else {
-            view = (
-                <Desktop mediaType={ mediaType }/>
-            );
-        }
+        const view = <Common mediaType={ mediaType }/>;
 
         /**
          * [RR]

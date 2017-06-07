@@ -1,0 +1,51 @@
+@import 'phoneLandscape';
+
+& {
+    margin: px(104) px(42) 0;
+    padding: 0 px(42) px(98);
+    border-bottom-color: $midGrey2;
+
+    .title {
+        color: $grey1;
+        font-size: px(40);
+        letter-spacing: px(4);
+
+        &::after {
+            width: px(50);
+            margin-top: px(28);
+            background-color: $midGrey2;
+        }
+    }
+
+    .mainContent {
+        margin: px(100) 0 0;
+
+        .info {
+            min-width: px(1180);
+
+            .value {
+                font-size: px(38);
+            }
+
+            .attribute {
+                margin-top: px(10);
+                font-size: px(30);
+            }
+        }
+
+        .content {
+            width: 100%;
+            margin: px(82) 0 0;
+            font-size: px(34);
+            line-height: px(52);
+
+            &::first-letter {
+                padding-top: px(26);
+                padding-right: px(16);
+                float: left;
+                font-family: 'Kurale';
+                font-size: px(104);
+            }
+        }
+    }
+}
