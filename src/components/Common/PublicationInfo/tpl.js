@@ -61,6 +61,12 @@ class PublicationInfo extends Component {
         const { mediaType } = this.props;
 
         /**
+         * [RCD]
+         * Config destructuring
+         */
+        const { id } = config;
+
+        /**
          * [RV]
          * View
          */

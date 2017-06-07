@@ -3,56 +3,56 @@
 @import '../../../../../../theme/PxFunction';
 
 body {
-  background-color: $white;
+    background-color: $white;
 }
 
 .publicationInfoComponent {
-  @function px($px) {
-    @return pxMedia($px, tabletPortrait)
-  }
+    @function px($px) {
+        @return pxMedia($px, tabletPortrait)
+    }
 
-  @media #{$tabletPortrait} {
-    @import 'tabletPortrait';
-  }
+    @media #{$tabletPortrait} {
+        @import 'tabletPortrait';
+    }
 
-  @function px($px) {
-    @return pxMedia($px, tabletLandscape)
-  }
+    @function px($px) {
+        @return pxMedia($px, tabletLandscape)
+    }
 
-  @media #{$tabletLandscape} {
-    @import 'tabletLandscape';
-  }
+    @media #{$tabletLandscape} {
+        @import 'tabletLandscape';
+    }
 
-  @function px($px) {
-      @return pxMedia($px, desktop)
-  }
+    @function px($px) {
+        @return pxMedia($px, desktop)
+    }
 
-  @media #{$desktop} {
-      @import 'desktop';
-  }
+    @media #{$desktop} {
+        @import 'desktop';
+    }
 
-  @function px($px) {
-      @return pxMedia($px, desktopWide)
-  }
+    @function px($px) {
+        @return pxMedia($px, desktopWide)
+    }
 
-  @media #{$desktopWide} {
-      @import 'desktopWide';
-  }
+    @media #{$desktopWide} {
+        @import 'desktopWide';
+    }
 
-  @function px($px) {
-      @return pxMedia($px, desktopHD)
-  }
+    @function px($px) {
+        @return pxMedia($px, desktopHD)
+    }
 
-  @media #{$desktopHD} {
-      @import 'desktopHD';
-  }
+    @media #{$desktopHD} {
+        @import 'desktopHD';
+    }
 
-  @function px($px) {
-      @return pxMedia($px, desktopMega)
-  }
+    @function px($px) {
+        @return pxMedia($px, desktopMega)
+    }
 
-  @media #{$desktopMega} {
-      @import 'desktopMega';
-  }
+    @media #{$desktopMega} {
+        @import 'desktopMega';
+    }
 }
 

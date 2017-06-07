@@ -1,92 +1,92 @@
 @import './common';
 
 & {
-  padding: 0 px(42) px(98);
-  margin: px(106) px(42) 0 px(42);
+    margin: px(106) px(42) 0;
+    padding: 0 px(42) px(98);
 
-  .header {
-    font-size: px(38);
-    letter-spaceing: px(4);
+    .header {
+        font-size: px(38);
+        letter-spacing: px(4);
 
-    &:after {
-      width: px(50);
-      margin-top: px(28);
-    }
-  }
-
-  .mainContainer {
-    flex-direction: column;
-    margin-top: px(92);
-
-    .information {
-      order: 1;
-      display: flex;
-      justify-content: flex-start;
-      margin: 0;
-      font-size: px(38);
-
-      .pageCount {
-        .value1 {
-          margin: 0;
-          font-size: px(38);
+        &::after {
+            width: px(50);
+            margin-top: px(28);
         }
-
-        .attribute1 {
-          font-size: px(30);
-        }
-      }
-
-      .editionYear {
-        margin-left: px(166);
-
-        .value2 {
-          margin: 0;
-          font-size: px(38);
-        }
-
-        .attribute2 {
-          font-size: px(30);
-        }
-      }
-
-      .editionCount {
-        margin-left: px(140);
-
-        .value3 {
-          margin: 0;
-          font-size: px(38);
-        }
-
-        .attribute3 {
-          font-size: px(30);
-        }
-      }
-
-      .paper {
-        margin-left: px(144);
-
-        .value4 {
-          margin: 0;
-          font-size: px(38);
-        }
-
-        .attribute4 {
-          font-size: px(30);
-        }
-      }
     }
 
-    .content {
-      order: 2;
-      margin-top: px(82);
-      line-height: px(52);
-      width: 100%;
-      font-size: px(34);
+    .mainContainer {
+        flex-direction: column;
+        margin-top: px(92);
 
-      &:first-letter {
-        font-size: px(108);
-        padding-right: px(14);
-      }
+        .information {
+            display: flex;
+            justify-content: flex-start;
+            order: 1;
+            margin: 0;
+            font-size: px(38);
+
+            .pageCount {
+                .value1 {
+                    margin: 0;
+                    font-size: px(38);
+                }
+
+                .attribute1 {
+                    font-size: px(30);
+                }
+            }
+
+            .editionYear {
+                margin-left: px(166);
+
+                .value2 {
+                    margin: 0;
+                    font-size: px(38);
+                }
+
+                .attribute2 {
+                    font-size: px(30);
+                }
+            }
+
+            .editionCount {
+                margin-left: px(140);
+
+                .value3 {
+                    margin: 0;
+                    font-size: px(38);
+                }
+
+                .attribute3 {
+                    font-size: px(30);
+                }
+            }
+
+            .paper {
+                margin-left: px(144);
+
+                .value4 {
+                    margin: 0;
+                    font-size: px(38);
+                }
+
+                .attribute4 {
+                    font-size: px(30);
+                }
+            }
+        }
+
+        .content {
+            order: 2;
+            width: 100%;
+            margin-top: px(82);
+            font-size: px(34);
+            line-height: px(52);
+
+            &::first-letter {
+                padding-right: px(14);
+                font-size: px(108);
+            }
+        }
     }
-  }
 }
