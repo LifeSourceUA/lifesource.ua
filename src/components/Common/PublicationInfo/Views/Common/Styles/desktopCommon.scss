@@ -48,15 +48,15 @@
             flex-direction: column;
             justify-content: space-between;
             order: 2;
+            height: px(512);
             margin-top: px(50);
             margin-left: px(262);
-            height: px(512);
 
             .infoItem {
                 margin-bottom: px(72);
             }
 
-            .value{
+            .value {
                 color: $black;
                 font-family: 'PT Sans';
                 font-size: px(40);
