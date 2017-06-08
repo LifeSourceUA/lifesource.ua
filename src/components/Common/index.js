@@ -3,4 +3,4 @@
 // export Footer from './Footer';
 // export Header from './Header';
 // export List from './List';
-export PublicationInfo from './PublicationInfo/tpl';
+export PublicationInfo from './PublicationInfo';
