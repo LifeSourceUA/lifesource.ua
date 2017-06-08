@@ -1,6 +1,6 @@
 & {
     padding: px(122) px(294) px(130) px(112);
-    border-bottom: dashed px(2) $midGrey1;
+    border-bottom: dashed px(2) $midGrey;
     background-color: $white;
     color: $black;
     font-family: Georgia;
@@ -18,14 +18,14 @@
             height: px(4);
             margin-top: px(24);
             border-radius: px(2);
-            background-color: $midGrey1;
+            background-color: $midGrey;
             content: '';
         }
     }
 
     .mainContent {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         margin-top: px(86);
 
         .text {
@@ -43,13 +43,18 @@
             }
         }
 
-        .info {
+        .infoContainer {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             order: 2;
             margin-top: px(50);
+            margin-left: px(262);
             height: px(512);
+
+            .infoItem {
+                margin-bottom: px(72);
+            }
 
             .value{
                 color: $black;
@@ -59,7 +64,7 @@
 
             .attribute {
                 margin-top: px(2);
-                color: $darkGrey1;
+                color: $darkGrey;
                 font-family: 'Kurale';
                 font-size: px(32);
             }

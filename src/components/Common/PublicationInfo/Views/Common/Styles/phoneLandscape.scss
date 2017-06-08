@@ -4,15 +4,13 @@
     .mainContent {
         margin: px(84) px(22) 0;
 
-        .info {
-            min-width: px(738);
+        .infoContainer {
+            .infoItem {
+                margin-right: px(108);
 
-            .value {
-                line-height: px(22);
-            }
-
-            .attribute {
-                color: $grey1;
+                .value {
+                    line-height: px(22);
+                }
             }
         }
 

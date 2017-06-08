@@ -9,7 +9,6 @@ import React, { PropTypes } from 'react';
  * Style Import
  */
 import Styles from './Styles/main.scss';
-// import Grids from 'theme/Grid.scss';
 
 /**
  * [IBP]
@@ -23,7 +22,8 @@ function Common(props) {
     return (
         <section className={ Styles.publicationInfoComponent }>
             <h1 className={ Styles.title }>
-                { BP.isTabletPortrait(mediaType) ? 'информация о книге' : 'о книге' }
+                {/* { BP.isTabletPortrait(mediaType) ? 'информация о книге' : 'о книге' }*/}
+                о книге
             </h1>
             <div className={ Styles.mainContent }>
                 <div className={ Styles.info }>
@@ -34,15 +34,18 @@ function Common(props) {
                     <div className={ Styles.editionYear }>
                         <div className={ Styles.value }>2016</div>
                         <div className={ Styles.attribute }>
-                            { BP.isMobile(mediaType) ? 'год' : 'год издания' }
+                            {/* { BP.isMobile(mediaType) ? 'год' : 'год издания' }*/}
+                            год
                         </div>
                     </div>
                     <div className={ Styles.editionCount }>
                         <div className={ Styles.value }>
-                            { BP.isMobile(mediaType) ? '10 000' : '10 тыс.' }
+                            {/* { BP.isMobile(mediaType) ? '10 000' : '10 тыс.' }*/}
+                            10 000
                         </div>
                         <div className={ Styles.attribute }>
-                            { BP.isMobile(mediaType) || BP.isTabletPortrait(mediaType) ? 'тираж, экз.' : 'тираж' }
+                            {/* { BP.isMobile(mediaType)||BP.isTabletPortrait(mediaType) ? 'тираж, экз.' : 'тираж' }*/}
+                            тираж, экз.
                         </div>
                     </div>
                     {

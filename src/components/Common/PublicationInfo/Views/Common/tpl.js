@@ -9,7 +9,6 @@ import React, { PropTypes } from 'react';
  * Style Import
  */
 import Styles from './Styles/main.scss';
-// import Grids from 'theme/Grid.scss';
 
 /**
  * [IBP]
@@ -42,8 +41,7 @@ function Common(props) {
             <p>
                 Ты прочитаешь в этой книге об одном долларе, который умножился.
                 О молитве, написанной на воздушном змее. О дверях тюрьмы, которые открылись.
-                О { BP.isTabletPortrait(mediaType) ? null : 'радиаторе, который сам ' }
-                заработал и баке, который сам заполнился бензином.
+                О радиаторе, который сам заработал и баке, который сам заполнился бензином.
                 Также ты найдешь истории о дожде, который проливался только на огороды
                 миссионерской школы. О книге, которая не сгорела. О часах, пробивших тринадцать.
                 О манне с небес в Африке. О поездке внутри торнадо и невидимых руках, державших
@@ -56,31 +54,35 @@ function Common(props) {
     return (
         <section className={ Styles.publicationInfoComponent }>
             <h1 className={ Styles.title }>
-                { BP.isTabletPortrait(mediaType) ? 'информация о книге' : 'о книге' }
+                {/* { BP.isTabletPortrait(mediaType) ? 'информация о книге' : 'о книге' }*/}
+                о книге
             </h1>
             <div className={ Styles.mainContent }>
-                <div className={ Styles.info }>
-                    <div className={ Styles.pageCount }>
+                <div className={ Styles.infoRow }>
+                    <div className={ Styles.infoItem }>
                         <div className={ Styles.value }>128</div>
                         <div className={ Styles.attribute }>стр.</div>
                     </div>
-                    <div className={ Styles.editionYear }>
+                    <div className={ Styles.infoItem }>
                         <div className={ Styles.value }>2016</div>
                         <div className={ Styles.attribute }>
-                            { BP.isMobile(mediaType) ? 'год' : 'год издания' }
+                            {/* { BP.isMobile(mediaType) ? 'год' : 'год издания' }*/}
+                            год
                         </div>
                     </div>
-                    <div className={ Styles.editionCount }>
+                    <div className={ Styles.infoItem }>
                         <div className={ Styles.value }>
-                            { BP.isMobile(mediaType) ? '10 000' : '10 тыс.' }
+                            {/* { BP.isMobile(mediaType) ? '10 000' : '10 тыс.' }*/}
+                            10 000
                         </div>
                         <div className={ Styles.attribute }>
-                            { BP.isMobile(mediaType) || BP.isTabletPortrait(mediaType) ? 'тираж, экз.' : 'тираж' }
+                            {/* { BP.isMobile(mediaType)||BP.isTabletPortrait(mediaType) ? 'тираж, экз.' : 'тираж' }*/}
+                            тираж, экз.
                         </div>
                     </div>
                     {
                         !BP.isPhonePortrait(mediaType) ? (
-                            <div className={ Styles.paper }>
+                            <div className={ Styles.infoItem }>
                                 <div className={ Styles.value }>
                                     { BP.isTabletPortrait(mediaType) ? 'мелованная, 80 г/м²' : 'мягкий' }
                                 </div>

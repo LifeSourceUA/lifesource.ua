@@ -18,7 +18,7 @@
             height: px(4);
             margin-top: px(28);
             border-radius: px(2);
-            background-color: $midGrey3;
+            background-color: $midGrey;
             content: '';
         }
     }
@@ -26,34 +26,24 @@
     .mainContent {
         margin: px(84) px(20) 0;
 
-        .info {
+        .infoContainer {
             display: flex;
-            justify-content: space-between;
-            width: px(442);
+            justify-content: flex-start;
 
-            .value {
-                color: $black;
-                font-family: 'PT Sans';
-                font-size: px(38);
-                line-height: px(22);
-            }
+            .infoItem {
+                margin-right: px(72);
 
-            .attribute {
-                color: $grey1;
-                font-family: 'Kurale';
-                font-size: px(30);
-                margin-top: px(4);
-            }
-
-            .pageCount {
-                .attribute {
-                    margin-left: px(2);
+                .value {
+                    font-family: 'PT Sans';
+                    font-size: px(38);
+                    line-height: px(22);
                 }
-            }
 
-           .editionCount {
                 .attribute {
-                    margin-left: px(4);
+                    color: $darkGrey;
+                    font-family: 'Kurale';
+                    font-size: px(30);
+                    margin-top: px(4);
                 }
             }
         }
