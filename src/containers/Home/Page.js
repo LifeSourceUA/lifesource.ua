@@ -3,7 +3,6 @@ import { asyncConnect } from 'redux-connect';
 import Helmet from 'react-helmet';
 
 import Meta from './Meta';
-import * as Common from 'components/Common';
 
 @asyncConnect(
     [],
@@ -21,8 +20,7 @@ class HomePage extends Component {
         return (
             <div>
                 <Helmet { ...Meta() }/>
-                {/* <div>Home Page</div> */}
-                <Common.PublicationInfo/>
+                <div>Home Page</div>
             </div>
         );
     }

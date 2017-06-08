@@ -5,14 +5,14 @@
 
 $baseFont: 'PT Sans';
 $baseFontSize: 16px;
-
 $baseMinWidth: 320px;
+$transparentColor: rgba(0, 0, 0, 0);
 
 html {
     font-family: $baseFont;
     font-size: $baseFontSize;
     // Disable touch highlight on Apple devices
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: $transparentColor;
     // Disable font-size change on Apple devices
     text-size-adjust: 100%;
 }
