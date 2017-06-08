@@ -58,7 +58,7 @@ function Common(props) {
                 о книге
             </h1>
             <div className={ Styles.mainContent }>
-                <div className={ Styles.infoRow }>
+                <div className={ Styles.infoItems }>
                     <div className={ Styles.infoItem }>
                         <div className={ Styles.value }>128</div>
                         <div className={ Styles.attribute }>стр.</div>

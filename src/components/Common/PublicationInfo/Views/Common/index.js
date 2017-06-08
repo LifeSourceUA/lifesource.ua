@@ -26,19 +26,19 @@ function Common(props) {
                 о книге
             </h1>
             <div className={ Styles.mainContent }>
-                <div className={ Styles.info }>
-                    <div className={ Styles.pageCount }>
+                <div className={ Styles.infoItems }>
+                    <div className={ Styles.infoItem }>
                         <div className={ Styles.value }>128</div>
                         <div className={ Styles.attribute }>стр.</div>
                     </div>
-                    <div className={ Styles.editionYear }>
+                    <div className={ Styles.infoItem }>
                         <div className={ Styles.value }>2016</div>
                         <div className={ Styles.attribute }>
                             {/* { BP.isMobile(mediaType) ? 'год' : 'год издания' }*/}
                             год
                         </div>
                     </div>
-                    <div className={ Styles.editionCount }>
+                    <div className={ Styles.infoItem }>
                         <div className={ Styles.value }>
                             {/* { BP.isMobile(mediaType) ? '10 000' : '10 тыс.' }*/}
                             10 000
@@ -50,7 +50,7 @@ function Common(props) {
                     </div>
                     {
                         !BP.isPhonePortrait(mediaType) ? (
-                            <div className={ Styles.paper }>
+                            <div className={ Styles.infoItem }>
                                 <div className={ Styles.value }>
                                     { BP.isTabletPortrait(mediaType) ? 'мелованная, 80 г/м²' : 'мягкий' }
                                 </div>
