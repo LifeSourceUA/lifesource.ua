@@ -20,7 +20,7 @@ export default class HomePage extends Component {
         return (
             <div>
                 <Helmet { ...Meta() }/>
-                <div>Home Page</div>
+                <div>Home Page test4</div>
             </div>
         );
     }
