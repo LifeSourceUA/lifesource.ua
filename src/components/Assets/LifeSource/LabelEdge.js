@@ -5,8 +5,6 @@ import svg from 'lib/svg';
     width: 16,
     height: 64
 })
-
-/* eslint-disable react/prefer-stateless-function */
 export default class LabelEdge extends Component {
     static propTypes = {
         color: PropTypes.string,

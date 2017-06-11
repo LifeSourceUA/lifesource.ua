@@ -5,8 +5,6 @@ import svg from 'lib/svg';
     width: 38,
     height: 32
 })
-
-/* eslint-disable react/prefer-stateless-function */
 export default class Book extends Component {
     static propTypes = {
         color: PropTypes.string

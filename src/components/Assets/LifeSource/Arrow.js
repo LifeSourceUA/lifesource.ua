@@ -5,8 +5,6 @@ import svg from 'lib/svg';
     width: 8,
     height: 14
 })
-
-/* eslint-disable react/prefer-stateless-function */
 export default class Arrow extends Component {
     static propTypes = {
         color: PropTypes.string
