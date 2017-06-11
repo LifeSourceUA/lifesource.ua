@@ -25,8 +25,6 @@ export default function Html(props) {
                 { head.meta.toComponent() }
                 { head.link.toComponent() }
 
-                <script src="/init.js"/>
-
                 { head.script.toComponent() }
 
                 <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico"/>
