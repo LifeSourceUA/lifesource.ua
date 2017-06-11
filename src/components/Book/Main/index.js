@@ -41,7 +41,9 @@ class Main extends Component {
          * [RR]
          * Return Component
          */
-        return (<Common mediaType={ mediaType }/>);
+        return (
+            <Common mediaType={ mediaType }/>
+        );
     }
 }
 
