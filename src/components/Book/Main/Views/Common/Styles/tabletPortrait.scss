@@ -1,109 +1,109 @@
 @import 'common';
 
 & {
-  padding: px(104) px(84) 0;
+    padding: px(104) px(84) 0;
 
-  .wrap {
-    .containerContent {
-      .content {
-        .image {
-          width: px(736);
-          height: px(1007);
-          margin-top: 0;
+    .wrap {
+        .containerContent {
+            .content {
+                .image {
+                    width: px(736);
+                    height: px(1007);
+                    margin-top: 0;
 
-          .middleLayer {
-            height: px(976);
-            transform: translateX(px(-16));
-          }
+                    .middleLayer {
+                        height: px(976);
+                        transform: translateX(px(-16));
+                    }
 
-          .bottomLayer {
-            height: px(944);
-            transform: translateX(px(-32));
-          }
+                    .bottomLayer {
+                        height: px(944);
+                        transform: translateX(px(-32));
+                    }
 
-          div {
-            border-radius: px(4);
-          }
+                    div {
+                        border-radius: px(4);
+                    }
 
-          .labelNum {
-            width: px(96);
-            height: px(56);
-            padding-right: px(50);
-            font-size: px(34);
-            line-height: px(36);
-            margin-top: px(-28);
+                    .labelNum {
+                        width: px(96);
+                        height: px(56);
+                        margin-top: px(-28);
+                        padding-right: px(50);
+                        font-size: px(34);
+                        line-height: px(36);
 
-            i {
-              width: px(14);
-              margin-right: px(14);
+                        i {
+                            width: px(14);
+                            margin-right: px(14);
+                        }
+                    }
+
+                    .labelNew {
+                        left: px(10);
+                        width: px(124);
+                    }
+                }
+
+                .info {
+                    .title {
+                        width: max-content;
+                        margin-top: px(88);
+                        font-size: px(64);
+                    }
+
+                    .authors {
+                        margin-top: px(24);
+
+                        .author {
+                            font-size: px(38);
+
+                            .dot {
+                                margin-top: px(4);
+                            }
+                        }
+                    }
+
+                    .tags {
+                        width: 100%;
+                        margin-top: px(74);
+
+                        .new {
+                            height: px(64);
+                            padding: 0 px(28);
+                            font-size: px(32);
+
+                            .labelStart {
+                                width: px(16);
+                            }
+
+                            .labelEnd {
+                                width: px(16);
+                            }
+                        }
+
+                        .class {
+                            height: px(64);
+                            padding: px(8) px(36);
+                            font-size: px(32);
+                        }
+                    }
+
+                    .buttons {
+                        justify-content: space-between;
+                        width: 100%;
+                        margin-top: px(64);
+
+                        .read {
+                            width: px(472);
+                            height: px(120);
+                            padding: 0 px(36) 0 px(30);
+                            border-radius: px(34);
+                            font-size: px(32);
+                        }
+                    }
+                }
             }
-          }
-
-          .labelNew {
-            width: px(124);
-            left: px(10);
-          }
         }
-
-        .info {
-          .title {
-            width: max-content;
-            margin-top: px(88);
-            font-size: px(64);
-          }
-
-          .authors {
-            margin-top: px(24);
-
-            .author {
-              font-size: px(38);
-
-              .dot {
-                margin-top: px(4);
-              }
-            }
-          }
-
-          .tags {
-            width: 100%;
-            margin-top: px(74);
-
-            .new {
-              height: px(64);
-              padding: 0 px(28);
-              font-size: px(32);
-
-              .labelStart {
-                width: px(16);
-              }
-
-              .labelEnd {
-                width: px(16);
-              }
-            }
-
-            .class {
-              height: px(64);
-              padding: px(8) px(36);
-              font-size: px(32);
-            }
-          }
-
-          .buttons {
-            justify-content: space-between;
-            width: 100%;
-            margin-top: px(64);
-
-            .read {
-              width: px(472);
-              height: px(120);
-              border-radius: px(34);
-              font-size: px(32);
-              padding: 0 px(36) 0 px(30);
-            }
-          }
-        }
-      }
     }
-  }
 }

@@ -14,4 +14,4 @@ export default {
 
     // Custom
     custom1: 'rgba(0, 0, 0, .8)'
-}
+};

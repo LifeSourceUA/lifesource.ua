@@ -1,6 +1,8 @@
 import React from 'react';
 import Styles from './Styles/main.scss';
 
+import Palette from 'theme/Palette';
+
 import Arrow from 'components/Assets/LifeSource/Arrow';
 
 function Mobile() {
@@ -16,7 +18,7 @@ function Mobile() {
                     </div>
                     <a href="#" className={ Styles.allBooks }>
                         все книги автора
-                        <Arrow className={ Styles.arrow } color={ '#65bf80' }/>
+                        <Arrow className={ Styles.arrow } color={ Palette.green }/>
                     </a>
                 </div>
             </div>

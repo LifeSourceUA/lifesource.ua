@@ -8,7 +8,7 @@
     }
 
     @media #{$tabletPortrait} {
-        @import 'components/Book/Authors/Views/Desktop/Styles/tabletPortrait';
+        @import 'tabletPortrait';
     }
 
     @function px($px) {
