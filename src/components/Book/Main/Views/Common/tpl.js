@@ -9,6 +9,7 @@ import cx from 'classnames';
  * Style Import
  */
 import Styles from './Styles/main.scss';
+import Grid from 'theme/Grid.scss';
 
 /**
  * [IBP]
@@ -69,7 +70,7 @@ function Common(props) {
 
     const popupClasses = cx({
         [Styles.popup]: true,
-        [Styles.active]: true
+        [Styles.active]: false
     });
 
     const poapWindow = BP.isDesktop(mediaType) ? (
@@ -107,49 +108,58 @@ function Common(props) {
         </a>
     ) : null;
 
+    const wrap = cx({
+        [Grid.container]: true,
+        [Styles.wrap]: true
+    });
+
     return (
         <section className={ Styles.mainComponent }>
-            { arrowBack }
-            <div className={ Styles.content }>
-                <div className={ Styles.image }>
-                    { hoverBook }
-                    <div className={ Styles.topLayer }/>
-                    <div className={ Styles.middleLayer }/>
-                    <div className={ Styles.bottomLayer }/>
-                    <span className={ Styles.labelNum }>
-                        <Label className={ Styles.label } color1={ '#a8b8bf' }/>
-                        5
-                    </span>
-                    <span className={ Styles.labelNew }>
-                        <Label className={ Styles.label } color={ '#f0766d' } color1={ '#f0766d' }/>
-                    </span>
-                </div>
-                <div className={ Styles.info }>
-                    <h1 className={ Styles.title }>Истории о настоящих героях</h1>
-                    <div className={ Styles.authors }>
-                        { secondAuthor }
-                        <h2 className={ Styles.author }>Алехандро Буйон</h2>
-                    </div>
-                    <div className={ Styles.tags }>
-                        <div className={ Styles.new }>
-                            <Label className={ Styles.labelStart } color={ '#f0766d' } color1={ '#f0766d' }/>
-                            новинка
-                            <Label className={ Styles.labelEnd } color={ '#f0766d' } color1={ '#f0766d' }/>
+            <section className={ wrap }>
+                <div className={ Styles.containerContent }>
+                    { arrowBack }
+                    <div className={ Styles.content }>
+                        <div className={ Styles.image }>
+                            { hoverBook }
+                            <div className={ Styles.topLayer }/>
+                            <div className={ Styles.middleLayer }/>
+                            <div className={ Styles.bottomLayer }/>
+                            <span className={ Styles.labelNum }>
+                                <Label className={ Styles.label } color1={ '#a8b8bf' }/>
+                                5
+                            </span>
+                            <span className={ Styles.labelNew }>
+                                <Label className={ Styles.label } color={ '#f0766d' } color1={ '#f0766d' }/>
+                            </span>
                         </div>
-                        { seriesBooks }
-                        <div className={ Styles.class }>здоровье и семья</div>
+                        <div className={ Styles.info }>
+                            <h1 className={ Styles.title }>Истории о настоящих героях</h1>
+                            <div className={ Styles.authors }>
+                                { secondAuthor }
+                                <h2 className={ Styles.author }>Алехандро Буйон</h2>
+                            </div>
+                            <div className={ Styles.tags }>
+                                <div className={ Styles.new }>
+                                    <Label className={ Styles.labelStart } color={ '#f0766d' } color1={ '#f0766d' }/>
+                                    новинка
+                                    <Label className={ Styles.labelEnd } color={ '#f0766d' } color1={ '#f0766d' }/>
+                                </div>
+                                { seriesBooks }
+                                <div className={ Styles.class }>здоровье и семья</div>
+                            </div>
+                            <div className={ Styles.buttons }>
+                                { content }
+                                <a className={ Styles.read }>
+                                    <Book className={ Styles.book } color={ '#65bf80' }/>
+                                    Читать фрагмент книги
+                                </a>
+                            </div>
+                            { description }
+                        </div>
                     </div>
-                    <div className={ Styles.buttons }>
-                        { content }
-                        <a className={ Styles.read }>
-                            <Book className={ Styles.book } color={ '#65bf80' }/>
-                            Читать фрагмент книги
-                        </a>
-                    </div>
-                    { description }
+                    { language }
                 </div>
-            </div>
-            { language }
+            </section>
         </section>
     );
 }

@@ -1,2 +1,2 @@
-export Main from './Main';
-export Authors from './Authors/tpl';
+export Main from './Main/tpl';
+export Authors from './Authors';

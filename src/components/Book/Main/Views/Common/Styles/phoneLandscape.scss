@@ -1,58 +1,67 @@
 @import 'common';
 
 & {
-  .content {
-    flex-direction: row;
+  .wrap {
+    .containerContent {
+      .content {
+        align-items: flex-start;
+        flex-direction: row;
 
-    .image {
-      width: px(396);
-      height: px(544);
-      margin-top: px(72);
-      margin-left: px(92);
-      margin-right: px(78);
+        .image {
+          width: px(396);
+          height: px(544);
+          margin-top: px(72);
+          margin-left: px(92);
+          margin-right: px(80);
 
-      .middleLayer {
-        width: px(407);
-        height: px(512);
-      }
+          .middleLayer {
+            width: px(407);
+            height: px(512);
+          }
 
-      .bottomLayer {
-        width: px(378);
-        height: px(480);
-      }
+          .bottomLayer {
+            width: px(378);
+            height: px(480);
+          }
 
-      .labelNew {
-        height: px(40);
-        width: px(84);
+          .labelNew {
+            height: px(40);
+            width: px(84);
 
-        i {
-          width: px(10);
+            i {
+              width: px(10);
+            }
+          }
         }
-      }
-    }
 
-    .info {
-      align-items: flex-start;
-      margin-top: px(68);
+        .info {
+          display: block;
+          margin-top: px(144);
 
-      .title {
-        text-align: left;
-        margin-top: 0;
-      }
+          .title {
+            text-align: left;
+            margin-top: 0;
+          }
 
-      .author {
-        margin-top: px(18);
-      }
+          .authors {
+            margin-top: px(18);
 
-      .tags {
-        display: flex;
-        justify-content: space-between;
-        margin-top: px(40);
-        width: px(448);
-      }
+            .author {
+              margin-top: px(0);
+            }
+          }
 
-      .read {
-        padding-right: px(26);
+          .tags {
+            display: flex;
+            justify-content: space-between;
+            margin-top: px(42);
+            width: px(448);
+          }
+
+          .read {
+            padding-right: px(26);
+          }
+        }
       }
     }
   }
