@@ -39,7 +39,7 @@
             font-size: px(34);
             line-height: px(52);
 
-            &::first-letter { // TODO bug in Firefox
+            p::first-letter { // p, but not & -> because of Firefox bug
                 padding-top: px(26);
                 padding-right: px(16);
                 float: left;

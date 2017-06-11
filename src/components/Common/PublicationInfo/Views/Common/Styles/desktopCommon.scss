@@ -34,8 +34,8 @@
             font-size: px(36);
             line-height: px(54);
 
-            &::first-letter { // TODO bug in Firefox
-                padding-top: px(28);
+            p::first-letter { // p, but not & -> because of Firefox bug
+                padding-top: px(24);
                 padding-right: px(18);
                 float: left;
                 font-family: 'Kurale';
