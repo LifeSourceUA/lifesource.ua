@@ -17,62 +17,33 @@ import Styles from './Styles/main.scss';
 import BP from 'lib/breakpoints';
 
 function Common(props) {
-    const { mediaType } = props;
+    const { mediaType, text, info } = props;
+    const infoItems = info.map((item) => {
+        return (
+            <div className={ Styles.infoItem } key={ item.id }>
+                <div className={ Styles.value }>
+                    { item.value }
+                </div>
+                <div className={ Styles.attribute }>
+                    { item.attribute }
+                </div>
+            </div>
+        );
+    });
 
     return (
         <section className={ Styles.publicationInfoComponent }>
             <h1 className={ Styles.title }>
-                {/* { BP.isTabletPortrait(mediaType) ? 'информация о книге' : 'о книге' }*/}
-                о книге
+                { BP.isTabletPortrait(mediaType) ? 'информация о книге' : 'о книге' }
             </h1>
             <div className={ Styles.mainContent }>
                 <div className={ Styles.infoItems }>
-                    <div className={ Styles.infoItem }>
-                        <div className={ Styles.value }>128</div>
-                        <div className={ Styles.attribute }>стр.</div>
-                    </div>
-                    <div className={ Styles.infoItem }>
-                        <div className={ Styles.value }>2016</div>
-                        <div className={ Styles.attribute }>
-                            {/* { BP.isMobile(mediaType) ? 'год' : 'год издания' }*/}
-                            год
-                        </div>
-                    </div>
-                    <div className={ Styles.infoItem }>
-                        <div className={ Styles.value }>
-                            {/* { BP.isMobile(mediaType) ? '10 000' : '10 тыс.' }*/}
-                            10 000
-                        </div>
-                        <div className={ Styles.attribute }>
-                            {/* { BP.isMobile(mediaType)||BP.isTabletPortrait(mediaType) ? 'тираж, экз.' : 'тираж' }*/}
-                            тираж, экз.
-                        </div>
-                    </div>
-                    {
-                        !BP.isPhonePortrait(mediaType) ? (
-                            <div className={ Styles.infoItem }>
-                                <div className={ Styles.value }>
-                                    { BP.isTabletPortrait(mediaType) ? 'мелованная, 80 г/м²' : 'мягкий' }
-                                </div>
-                                <div className={ Styles.attribute }>
-                                    { BP.isTabletPortrait(mediaType) ? 'бумага, плотность' : 'переплет' }
-                                </div>
-                            </div>
-                        ) : null
-                    }
+                    { infoItems[0] }
+                    { infoItems[1] }
+                    { infoItems[2] }
+                    { BP.isPhonePortrait(mediaType) ? null : infoItems[3] }
                 </div>
-                <div className={ Styles.text }>
-                    <p>
-                        Ты прочитаешь в этой книге об одном долларе, который умножился.
-                        О молитве, написанной на воздушном змее. О дверях тюрьмы, которые открылись.
-                        О радиаторе, который сам заработал и баке, который сам заполнился бензином.
-                        Также ты найдешь истории о дожде, который проливался только на огороды миссионерской школы.
-                        О книге, которая не сгорела. О часах, пробивших тринадцать. О манне с небес в Африке.
-                        О поездке внутри торнадо и невидимых руках, державших автомобиль.
-                        О многих таинственных незнакомцах, которых одни люди видели,
-                        а другие нет, и которые всегда защищали, спасали и вызволяли из трудных ситуаций.
-                    </p>
-                </div>
+                <div className={ Styles.text } dangerouslySetInnerHTML={ { __html: text } }/>
             </div>
         </section>
     );
@@ -83,7 +54,9 @@ function Common(props) {
  * Component prop types
  */
 Common.propTypes = {
-    mediaType: PropTypes.string.isRequired
+    mediaType: PropTypes.string.isRequired,
+    info: PropTypes.array.isRequired,
+    text: PropTypes.string.isRequired
 };
 
 /**

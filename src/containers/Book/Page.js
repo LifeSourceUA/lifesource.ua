@@ -3,14 +3,14 @@ import Helmet from 'react-helmet';
 
 import Meta from './Meta';
 import * as Common from 'components/Common';
+import data from './data.json';
 
 class BookPage extends Component {
     render = () => {
         return (
             <div>
                 <Helmet { ...Meta() }/>
-                <div>Book Page</div>
-                <Common.PublicationInfo/>
+                <Common.PublicationInfo { ...data }/>
             </div>
         );
     }

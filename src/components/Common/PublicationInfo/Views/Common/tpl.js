@@ -54,8 +54,8 @@ function Common(props) {
     return (
         <section className={ Styles.publicationInfoComponent }>
             <h1 className={ Styles.title }>
-                {/* { BP.isTabletPortrait(mediaType) ? 'информация о книге' : 'о книге' }*/}
-                о книге
+                { BP.isTabletPortrait(mediaType) ? 'информация о книге' : 'о книге' }
+                {/* о книге*/}
             </h1>
             <div className={ Styles.mainContent }>
                 <div className={ Styles.infoItems }>

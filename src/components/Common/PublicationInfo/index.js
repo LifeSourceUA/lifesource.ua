@@ -2,7 +2,7 @@
  * [IL]
  * Library Import
  */
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 /**
@@ -28,14 +28,6 @@ import config from './config';
 })
 class PublicationInfo extends Component {
     /**
-     * [CPT]
-     * Component prop types
-     */
-    static propTypes = {
-        mediaType: PropTypes.string.isRequired
-    };
-
-    /**
      * [CDN]
      * Component display name
      */
@@ -47,16 +39,14 @@ class PublicationInfo extends Component {
      */
     render = () => {
         /**
-         * [RPD]
-         * Props destructuring
-         */
-        const { mediaType } = this.props;
-
-        /**
          * [RV]
          * View
          */
-        const view = <Common mediaType={ mediaType }/>;
+        const view = (
+            <Common
+                { ...this.props }
+            />
+        );
 
         /**
          * [RR]

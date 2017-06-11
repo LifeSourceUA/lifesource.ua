@@ -39,7 +39,7 @@
             font-size: px(34);
             line-height: px(52);
 
-            &::first-letter {
+            &::first-letter { // TODO bug in Firefox
                 padding-top: px(26);
                 padding-right: px(16);
                 float: left;
