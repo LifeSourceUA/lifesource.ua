@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 
+import * as Book from 'components/Book';
 import Meta from './Meta';
 
 export default class BookPage extends Component {
@@ -8,7 +9,8 @@ export default class BookPage extends Component {
         return (
             <div>
                 <Helmet { ...Meta() }/>
-                <div>Book Page</div>
+                <Book.Main/>
+                <Book.Authors/>
             </div>
         );
     }
