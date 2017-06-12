@@ -1,0 +1,27 @@
+& {
+    padding-bottom: px(76);
+    background-color: $white;
+
+    .rowItems {
+        display: flex;
+        justify-content: flex-end;
+        height: px(72);
+
+        .item {
+            padding: 0 px(24);
+            border-radius: px(20);
+            background-color: $lightGray;
+            font-size: px(26);
+            line-height: px(74);
+
+            a {
+                color: $darkGray;
+            }
+        }
+
+        i {
+            width: px(8);
+            margin: px(28) px(20) 0;
+        }
+    }
+}

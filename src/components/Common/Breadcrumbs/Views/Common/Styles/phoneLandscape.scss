@@ -1,0 +1,17 @@
+@import './common';
+
+& {
+    .rowItems {
+        margin: 0;
+        justify-content: center;
+
+        .item {
+            padding: 0 px(26);
+
+            &:last-of-type {
+                padding: 0;
+                background-color: unset;
+            }
+        }
+    }
+}

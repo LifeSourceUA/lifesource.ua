@@ -1,0 +1,11 @@
+@import './phoneLandscape';
+
+& {
+    padding-bottom: px(92);
+
+    .rowItems {
+        i {
+            margin: px(28) px(22) 0;
+        }
+    }
+}
