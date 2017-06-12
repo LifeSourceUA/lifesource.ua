@@ -1,12 +1,12 @@
 & {
     padding: px(122) px(294) px(130) px(112);
-    border-bottom: dashed px(2) $midGrey;
+    border-bottom: dashed px(2) $midGray;
     background-color: $white;
     color: $black;
     font-family: Georgia;
 
     .title {
-        color: $grey;
+        color: $gray;
         font-family: 'Kurale';
         font-size: px(46);
         letter-spacing: px(6);
@@ -18,7 +18,7 @@
             height: px(4);
             margin-top: px(24);
             border-radius: 1px;
-            background-color: $midGrey;
+            background-color: $midGray;
             content: '';
         }
     }
@@ -64,7 +64,7 @@
 
             .attribute {
                 margin-top: px(2);
-                color: $darkGrey;
+                color: $darkGray;
                 font-family: 'Kurale';
                 font-size: px(32);
             }
