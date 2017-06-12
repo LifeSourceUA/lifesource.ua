@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import config from 'config';
 import Helmet from 'react-helmet';
-import disableHoverOnTouch from 'helpers/disableHoverOnTouch';
+import disableHoverOnTouch from 'lib/disableHoverOnTouch';
 import Styles from './main.scss'; // eslint-disable-line no-unused-vars
 
 @connect(

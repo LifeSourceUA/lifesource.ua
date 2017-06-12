@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/server';
 import config from './config';
 import path from 'path';
 import createStore from './redux/create';
-import Html from './helpers/Html';
+import Html from './containers/Html';
 import PrettyError from 'pretty-error';
 import http from 'http';
 import cookieParser from 'cookie-parser';
