@@ -9,11 +9,7 @@ import svg from 'helpers/svg';
 /* eslint-disable react/prefer-stateless-function */
 export default class Book extends Component {
     static propTypes = {
-        color: PropTypes.string
-    };
-
-    static defaultProps = {
-        color: ''
+        color: PropTypes.string.isRequired
     };
 
     render() {

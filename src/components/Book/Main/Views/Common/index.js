@@ -19,12 +19,12 @@ import Palette from 'theme/Palette';
  */
 import BP from 'lib/breakpoints';
 
-import Label from 'components/Assets/LifeSource/LabelEdge.js';
-import Content from 'components/Assets/LifeSource/Content.js';
-import Book from 'components/Assets/LifeSource/Book.js';
-import Arrow from 'components/Assets/LifeSource/Arrow.js';
-import Ua from 'components/Assets/LifeSource/UA.js';
-// import Ru from 'components/Assets/LifeSource/RU.js';
+import Label from 'components/Assets/LabelEdge.js';
+import Content from 'components/Assets/Content.js';
+import Book from 'components/Assets/Book.js';
+import Arrow from 'components/Assets/Arrow.js';
+import Ua from 'components/Assets/UA.js';
+// import Ru from 'components/Assets/RU.js';
 
 function Common(props) {
     const { mediaType } = props;

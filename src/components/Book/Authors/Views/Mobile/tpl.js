@@ -3,7 +3,7 @@ import Styles from './Styles/main.scss';
 
 import Palette from 'theme/Palette';
 
-import Arrow from 'components/Assets/LifeSource/Arrow';
+import Arrow from 'components/Assets/Arrow';
 
 function Mobile() {
     return (

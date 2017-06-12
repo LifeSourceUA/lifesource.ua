@@ -9,13 +9,8 @@ import svg from 'helpers/svg';
 /* eslint-disable react/prefer-stateless-function */
 export default class LabelEdge extends Component {
     static propTypes = {
-        color: PropTypes.string,
-        color1: PropTypes.string
-    };
-
-    static defaultProps = {
-        color: '',
-        color1: ''
+        color: PropTypes.string.isRequired,
+        color1: PropTypes.string.isRequired
     };
 
     render() {

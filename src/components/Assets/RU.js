@@ -6,20 +6,12 @@ import svg from 'helpers/svg';
     height: 56
 })
 
-/* eslint-disable */
 export default class RU extends Component {
     static propTypes = {
-        color: PropTypes.string
+        color: PropTypes.string.isRequired
     };
 
-    static defaultProps = {
-        color: ''
-    };
-
-    render() {
-        const { color } = this.props;
-
-
+    render = () => {
         return (
             <g>
                 <path fill="#F6F6F6" d="M54.4,18.7H1.6C5.4,7.8,15.8,0,28,0S50.6,7.8,54.4,18.7z"/>

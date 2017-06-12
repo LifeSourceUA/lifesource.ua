@@ -4,7 +4,7 @@ import Grid from 'theme/Grid.scss';
 
 import Palette from 'theme/Palette';
 
-import Label from 'components/Assets/LifeSource/LabelEdge.js';
+import Label from 'components/Assets/LabelEdge.js';
 
 function Desktop() {
     return (

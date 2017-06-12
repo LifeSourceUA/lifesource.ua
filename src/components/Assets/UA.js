@@ -6,19 +6,12 @@ import svg from 'helpers/svg';
     height: 56
 })
 
-/* eslint-disable */
 export default class UA extends Component {
     static propTypes = {
-        color: PropTypes.string
+        color: PropTypes.string.isRequired
     };
 
-    static defaultProps = {
-        color: ''
-    };
-
-    render() {
-        const { color } = this.props;
-
+    render = () => {
         return (
             <g>
                 <path fill="#0AB6CC" d="M28,0C12.5,0,0,12.5,0,28h56C56,12.5,43.5,0,28,0z"/>

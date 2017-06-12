@@ -13,5 +13,6 @@ export default {
     green: '#65bf80',
 
     // Custom
-    custom1: 'rgba(0, 0, 0, .8)'
+    custom1: 'rgba(0, 0, 0, .8)',
+    custom2: 'rgba(0,0,0,.1)'
 };
