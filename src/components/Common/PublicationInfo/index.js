@@ -43,9 +43,7 @@ class PublicationInfo extends Component {
          * View
          */
         const view = (
-            <Common
-                { ...this.props }
-            />
+            <Common { ...this.props }/>
         );
 
         /**
