@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import svg from 'helpers/svg';
+import svg from 'lib/svg';
 
 @svg({
     width: 56,

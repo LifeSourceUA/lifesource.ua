@@ -4,7 +4,6 @@ export const STATE_NORMAL = 'normal';
 export const STATE_HOVER = 'hover';
 export const STATE_ACTIVE = 'active';
 
-/* eslint-disable react/prefer-stateless-function */
 const svg = (Component, { width = 0, height = 0 } = {}) => {
     return class Svg extends Component {
         static propTypes = {

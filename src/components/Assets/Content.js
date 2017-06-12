@@ -1,12 +1,10 @@
 import React, { Component, PropTypes } from 'react';
-import svg from 'helpers/svg';
+import svg from 'lib/svg';
 
 @svg({
     width: 38,
     height: 32
 })
-
-/* eslint-disable react/prefer-stateless-function */
 export default class Book extends Component {
     static propTypes = {
         color: PropTypes.string.isRequired
