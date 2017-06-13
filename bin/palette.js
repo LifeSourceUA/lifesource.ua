@@ -1,4 +1,4 @@
-import Palette from 'components/Assets/Palette';
+import Palette from 'theme/Palette';
 import fs from 'fs';
 
 const colors = Object.keys(Palette).map((e) => {

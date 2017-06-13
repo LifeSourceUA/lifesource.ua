@@ -20,7 +20,6 @@ class HomePage extends Component {
         return (
             <div>
                 <Helmet { ...Meta() }/>
-                <div>Home Page</div>
             </div>
         );
     }

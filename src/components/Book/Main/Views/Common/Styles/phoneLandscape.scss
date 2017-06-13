@@ -1,0 +1,68 @@
+@import 'common';
+
+& {
+    .wrap {
+        .containerContent {
+            .content {
+                flex-direction: row;
+                align-items: flex-start;
+
+                .image {
+                    width: px(396);
+                    height: px(544);
+                    margin-top: px(72);
+                    margin-right: px(80);
+                    margin-left: px(92);
+
+                    .middleLayer {
+                        width: px(407);
+                        height: px(512);
+                    }
+
+                    .bottomLayer {
+                        width: px(378);
+                        height: px(480);
+                    }
+
+                    .labelNew {
+                        width: px(84);
+                        height: px(40);
+
+                        i {
+                            width: px(10);
+                        }
+                    }
+                }
+
+                .info {
+                    display: block;
+                    margin-top: px(144);
+
+                    .title {
+                        margin-top: 0;
+                        text-align: left;
+                    }
+
+                    .authors {
+                        margin-top: px(18);
+
+                        .author {
+                            margin-top: px(0);
+                        }
+                    }
+
+                    .tags {
+                        display: flex;
+                        justify-content: space-between;
+                        width: px(448);
+                        margin-top: px(42);
+                    }
+
+                    .read {
+                        padding-right: px(26);
+                    }
+                }
+            }
+        }
+    }
+}

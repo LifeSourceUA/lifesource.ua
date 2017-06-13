@@ -1,0 +1,280 @@
+& {
+    .wrap {
+        .containerContent {
+            display: flex;
+
+            .arrowBack {
+                display: flex;
+
+                .circle {
+                    display: flex;
+                    flex-shrink: 0;
+                    align-items: center;
+                    justify-content: center;
+                    width: px(104);
+                    height: px(104);
+                    transform: rotate(180deg);
+                    border: 1px solid $red;
+                    border-radius: 50%;
+
+                    i {
+                        width: px(12);
+                    }
+                }
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+
+                .image {
+                    display: flex;
+                    position: relative;
+                    align-items: center;
+                    width: px(448);
+                    height: px(616);
+                    margin-top: px(72);
+
+                    .topLayer {
+                        left: 0;
+                        flex-shrink: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-image: url('../../../assets/cover.jpg');
+                        background-size: cover;
+                        z-index: 20;
+                    }
+
+                    .middleLayer {
+                        top: px(16);
+                        flex-shrink: 0;
+                        width: px(407);
+                        height: px(584);
+                        transform: translateX(px(-12));
+                        z-index: 10;
+                    }
+
+                    .bottomLayer {
+                        top: px(32);
+                        flex-shrink: 0;
+                        width: px(378);
+                        height: px(552);
+                        transform: translateX(px(-24));
+                        z-index: 5;
+                    }
+
+                    div {
+                        position: absolute;
+                        border-radius: px(6);
+                        background-color: $white;
+                        box-shadow: 0 0 16px $custom2;
+                    }
+
+                    .labelNum {
+                        display: flex;
+                        position: absolute;
+                        top: 50%;
+                        right: 100%;
+                        align-items: center;
+                        width: px(68);
+                        height: px(48);
+                        margin-top: px(-24);
+                        padding-right: px(32);
+                        border-top: 2px solid $midGray;
+                        border-bottom: 2px solid $midGray;
+                        color: $midGray;
+                        font-size: px(28);
+                        font-weight: bold;
+                        z-index: 1;
+
+                        i {
+                            width: px(12);
+                            margin-top: px(0);
+                            margin-right: px(10);
+                            margin-left: px(-4);
+                        }
+                    }
+
+                    .labelNew {
+                        position: absolute;
+                        bottom: 0;
+                        left: px(6);
+                        width: px(100);
+                        height: px(48);
+                        transform: rotate(-90deg);
+                        background: $red;
+
+                        i {
+                            width: px(12);
+                            margin-left: px(-10);
+                        }
+                    }
+                }
+
+                .info {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .title {
+                        width: px(460);
+                        margin-top: px(60);
+                        color: $black;
+                        font-size: px(48);
+                        text-align: center;
+                    }
+
+                    .authors {
+                        display: flex;
+                        margin-top: px(14);
+
+                        .author {
+                            display: flex;
+                            align-items: center;
+                            color: $darkGray;
+                            font-family: Kurale;
+                            font-size: px(34);
+                            font-weight: normal;
+
+                            .dot {
+                                width: px(6);
+                                height: px(6);
+                                margin: 0 px(24);
+                                border-radius: 50%;
+                                background: $darkGray;
+                            }
+                        }
+                    }
+
+                    .tags {
+                        display: flex;
+                        justify-content: space-between;
+                        width: px(440);
+                        margin-top: px(44);
+
+                        .new {
+                            display: flex;
+                            position: relative;
+                            align-items: center;
+                            height: px(48);
+                            margin-left: px(12);
+                            padding: 0 px(10);
+                            background: $red;
+                            color: $white;
+                            font-size: px(28);
+
+                            .labelStart {
+                                position: absolute;
+                                left: px(-10);
+                                width: px(12);
+                            }
+
+                            .labelEnd {
+                                position: absolute;
+                                top: 0;
+                                right: px(-10);
+                                width: px(12);
+                                transform: rotate(180deg);
+                            }
+                        }
+
+                        .class {
+                            display: flex;
+                            align-items: center;
+                            padding: px(8) px(30);
+                            border: 1px solid $midGray;
+                            border-radius: px(30);
+                            color: $darkGray;
+                            font-size: px(28);
+                        }
+
+                        .seriesBooks {
+                            display: flex;
+                            position: relative;
+                            align-items: center;
+                            height: px(64);
+                            margin-left: px(6);
+                            padding: 0 px(28);
+                            border-top: 2px solid $midGray;
+                            border-bottom: 2px solid $midGray;
+                            color: $darkGray;
+                            font-size: px(32);
+
+                            .labelStart {
+                                position: absolute;
+                                left: px(-10);
+                                width: px(16);
+                            }
+
+                            .labelEnd {
+                                position: absolute;
+                                top: -2px;
+                                right: px(-10);
+                                width: px(16);
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+
+                    .buttons {
+                        display: flex;
+                        margin-top: px(48);
+
+                        .read {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            width: px(448);
+                            height: px(112);
+                            padding: 0 px(30) 0 px(36);
+                            border: 2px solid $green;
+                            border-radius: px(60);
+                            color: $green;
+                            font-size: px(30);
+                            font-weight: bold;
+
+                            .book {
+                                width: px(46);
+                            }
+                        }
+
+                        .tableOfContents {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            width: px(304);
+                            height: px(120);
+                            padding: 0 px(36);
+                            border: 2px solid $midGray;
+                            border-radius: px(34);
+                            color: $darkGray;
+                            font-size: px(32);
+                            font-weight: bold;
+
+                            i {
+                                width: px(38);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .language {
+                display: flex;
+                flex-shrink: 0;
+                align-items: center;
+                justify-content: center;
+                width: px(104);
+                height: px(104);
+                border: 1px solid $midGray;
+                border-radius: 50%;
+
+                .flag {
+                    width: px(56);
+                }
+            }
+        }
+    }
+}

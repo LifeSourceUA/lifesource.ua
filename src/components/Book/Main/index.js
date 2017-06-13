@@ -2,7 +2,7 @@
  * [IL]
  * Library Import
  */
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
 /**
@@ -10,12 +10,6 @@ import { connect } from 'react-redux';
  * View Import
  */
 import Common from './Views/Common';
-
-/**
- * [ICONF]
- * Config Import
- */
-import config from './config';
 
 /**
  * [IRDX]
@@ -26,31 +20,30 @@ import config from './config';
         mediaType: state.browser.mediaType
     };
 })
-class PublicationInfo extends Component {
+
+class Main extends Component {
     /**
-     * [CDN]
-     * Component display name
+     * [CPT]
+     * Component prop types
      */
-    static displayName = config.id;
+    static propTypes = {
+        mediaType: PropTypes.string.isRequired
+    };
 
     /**
      * [CR]
      * Render function
      */
     render = () => {
-        /**
-         * [RV]
-         * View
-         */
-        const view = (
-            <Common { ...this.props }/>
-        );
+        const { mediaType } = this.props;
 
         /**
          * [RR]
          * Return Component
          */
-        return view;
+        return (
+            <Common mediaType={ mediaType }/>
+        );
     }
 }
 
@@ -58,4 +51,4 @@ class PublicationInfo extends Component {
  * [IE]
  * Export
  */
-export default PublicationInfo;
+export default Main;

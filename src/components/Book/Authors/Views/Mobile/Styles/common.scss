@@ -1,0 +1,83 @@
+& {
+    padding-top: px(88);
+    padding-bottom: px(84);
+    padding-left: px(40);
+    border-bottom: 1px dashed $midGray;
+    background: $white;
+
+    .title {
+        color: $gray;
+        font-family: Kurale;
+        font-size: px(40);
+        font-weight: normal;
+        letter-spacing: px(4);
+        text-transform: uppercase;
+
+        &::after {
+            display: block;
+            width: px(50);
+            height: px(4);
+            margin-top: px(28);
+            border-radius: px(2);
+            background-color: $midGray;
+            content: '';
+        }
+    }
+
+    .container {
+        display: flex;
+        margin-top: px(80);
+        padding-left: px(20);
+
+        .image {
+            width: px(152);
+            height: px(152);
+            margin-right: px(40);
+            background-image: url('../../../Assets/photo.png');
+            background-size: cover;
+        }
+
+        .block {
+            .name {
+                margin-top: px(4);
+                color: $black;
+                font-size: px(34);
+            }
+
+            .subtitle {
+                margin-top: px(2);
+                color: $darkGray;
+                font-family: Kurale;
+                font-size: px(28);
+            }
+        }
+
+        .allBooks {
+            display: flex;
+            align-items: center;
+            width: px(280);
+            height: px(48);
+            margin-top: px(28);
+            padding-left: px(26);
+            border: 1px solid $green;
+            border-radius: px(24);
+            color: $green;
+            font-size: px(28);
+
+            .arrow {
+                width: px(10);
+                margin-left: px(14);
+            }
+        }
+    }
+
+    .description {
+        width: px(514);
+        margin-top: px(84);
+        margin-left: px(20);
+        color: $black;
+        font-family: Georgia;
+        font-size: px(34);
+        line-height: px(48);
+    }
+}

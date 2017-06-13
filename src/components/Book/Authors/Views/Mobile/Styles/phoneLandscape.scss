@@ -1,0 +1,41 @@
+@import 'common';
+
+& {
+    .container {
+        align-items: center;
+        margin-top: px(68);
+        padding-left: px(24);
+
+        .image {
+            margin-right: px(48);
+        }
+
+        .info {
+            display: flex;
+
+            .block {
+                margin-right: px(52);
+
+                .name {
+                    margin-top: px(4);
+                    font-size: px(40);
+                }
+
+                .subtitle {
+                    font-size: px(30);
+                }
+            }
+
+            .allBooks {
+                margin-top: px(8);
+            }
+        }
+    }
+
+    .description {
+        width: px(1010);
+        margin-top: px(64);
+        margin-left: px(24);
+        font-size: px(34);
+    }
+}
