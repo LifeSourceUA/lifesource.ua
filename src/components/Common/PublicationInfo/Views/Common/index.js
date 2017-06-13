@@ -18,7 +18,9 @@ import BP from 'lib/breakpoints';
 
 function Common(props) {
     const { mediaType, text, info } = props;
-    const infoItems = info.map((item) => {
+    let infoItems = info.map((item) => {
+        if((BP.isPhonePortrait(mediaType) && item.id > 3) || item.id > 4)
+            return null;
         return (
             <div className={ Styles.infoItem } key={ item.id }>
                 <div className={ Styles.value }>
@@ -38,9 +40,7 @@ function Common(props) {
             </h1>
             <div className={ Styles.mainContent }>
                 <div className={ Styles.infoItems }>
-                    { infoItems[0] }
-                    { infoItems[1] }
-                    { infoItems[2] }
+                    { infoItems }
                     { BP.isPhonePortrait(mediaType) ? null : infoItems[3] }
                 </div>
                 <div className={ Styles.text } dangerouslySetInnerHTML={ { __html: text } }/>
