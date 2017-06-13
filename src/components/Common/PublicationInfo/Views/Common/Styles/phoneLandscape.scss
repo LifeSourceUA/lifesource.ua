@@ -1,0 +1,21 @@
+@import 'mobile';
+
+& {
+    .mainContent {
+        margin: px(84) px(22) 0;
+
+        .infoItems {
+            .infoItem {
+                margin-right: px(108);
+
+                .value {
+                    line-height: px(22);
+                }
+            }
+        }
+
+        .text {
+            margin-left: px(2);
+        }
+    }
+}

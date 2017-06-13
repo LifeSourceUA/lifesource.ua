@@ -11,7 +11,7 @@ import Meta from './Meta';
     }
 )
 /* eslint-disable react/prefer-stateless-function */
-export default class HomePage extends Component {
+class HomePage extends Component {
     static propTypes = {
         browser: PropTypes.object.isRequired
     };
@@ -24,3 +24,5 @@ export default class HomePage extends Component {
         );
     }
 }
+
+export default HomePage;

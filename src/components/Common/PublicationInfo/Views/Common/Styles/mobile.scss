@@ -1,0 +1,57 @@
+& {
+    padding: px(88) px(40) px(82);
+    border-bottom: dashed px(2) $midGray;
+    background-color: $white;
+    color: $black;
+    font-family: Georgia;
+
+    .title {
+        color: $gray;
+        font-family: 'Kurale';
+        font-size: px(40);
+        letter-spacing: px(4);
+        text-transform: uppercase;
+
+        &::after {
+            display: block;
+            width: px(50);
+            height: px(4);
+            margin-top: px(28);
+            border-radius: 1px;
+            background-color: $midGray;
+            content: '';
+        }
+    }
+
+    .mainContent {
+        margin: px(84) px(20) 0;
+
+        .infoItems {
+            display: flex;
+            justify-content: flex-start;
+
+            .infoItem {
+                margin-right: px(72);
+
+                .value {
+                    font-family: 'PT Sans';
+                    font-size: px(38);
+                    line-height: px(22);
+                }
+
+                .attribute {
+                    margin-top: px(4);
+                    color: $darkGray;
+                    font-family: 'Kurale';
+                    font-size: px(30);
+                }
+            }
+        }
+
+        .text {
+            margin: px(64) 0 0 px(4);
+            font-size: px(34);
+            line-height: px(48);
+        }
+    }
+}

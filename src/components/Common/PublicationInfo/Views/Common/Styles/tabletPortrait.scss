@@ -1,0 +1,51 @@
+@import 'phoneLandscape';
+
+& {
+    margin: px(104) px(42) 0;
+    padding: 0 px(42) px(98);
+
+    .title {
+        color: $gray;
+        font-size: px(40);
+        letter-spacing: px(4);
+
+        &::after {
+            width: px(50);
+            margin-top: px(28);
+        }
+    }
+
+    .mainContent {
+        margin: px(100) 0 0;
+
+        .infoItems {
+            .infoItem {
+                margin-right: px(168);
+
+                .value {
+                    font-size: px(38);
+                }
+
+                .attribute {
+                    margin-top: px(10);
+                    font-size: px(30);
+                }
+            }
+        }
+
+        .text {
+            width: 100%;
+            margin: px(82) 0 0;
+            font-size: px(34);
+            line-height: px(52);
+
+            p::first-letter { // p, but not & -> because of Firefox bug
+                padding-top: px(26);
+                padding-right: px(16);
+                float: left;
+                font-family: 'Kurale';
+                font-size: px(104);
+            }
+        }
+    }
+}
