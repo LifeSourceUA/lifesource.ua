@@ -19,8 +19,6 @@ import BP from 'lib/breakpoints';
 function Common(props) {
     const { mediaType, text, info } = props;
     let infoItems = info.map((item) => {
-        if((BP.isPhonePortrait(mediaType) && item.id > 3) || item.id > 4)
-            return null;
         return (
             <div className={ Styles.infoItem } key={ item.id }>
                 <div className={ Styles.value }>
@@ -32,6 +30,9 @@ function Common(props) {
             </div>
         );
     });
+    infoItems = infoItems.filter((item, index) => {
+        return (((BP.isPhonePortrait(mediaType) && index > 2) || index > 3) ? null : item);
+    });
 
     return (
         <section className={ Styles.publicationInfoComponent }>
@@ -41,7 +42,6 @@ function Common(props) {
             <div className={ Styles.mainContent }>
                 <div className={ Styles.infoItems }>
                     { infoItems }
-                    { BP.isPhonePortrait(mediaType) ? null : infoItems[3] }
                 </div>
                 <div className={ Styles.text } dangerouslySetInnerHTML={ { __html: text } }/>
             </div>
