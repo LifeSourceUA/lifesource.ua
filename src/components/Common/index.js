@@ -3,4 +3,4 @@ export Breadcrumbs from './Breadcrumbs';
 // export Footer from './Footer';
 // export Header from './Header';
 // export List from './List';
-// export PublicationInfo from './PublicationInfo';
+export PublicationInfo from './PublicationInfo';

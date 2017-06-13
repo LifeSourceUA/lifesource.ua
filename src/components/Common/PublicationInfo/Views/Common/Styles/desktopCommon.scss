@@ -1,0 +1,73 @@
+& {
+    padding: px(122) px(294) px(130) px(112);
+    border-bottom: dashed px(2) $midGray;
+    background-color: $white;
+    color: $black;
+    font-family: Georgia;
+
+    .title {
+        color: $gray;
+        font-family: 'Kurale';
+        font-size: px(46);
+        letter-spacing: px(6);
+        text-transform: uppercase;
+
+        &::after {
+            display: block;
+            width: px(60);
+            height: px(4);
+            margin-top: px(24);
+            border-radius: 1px;
+            background-color: $midGray;
+            content: '';
+        }
+    }
+
+    .mainContent {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: px(86);
+
+        .text {
+            order: 1;
+            width: px(1202);
+            font-size: px(36);
+            line-height: px(54);
+
+            p::first-letter { // p, but not & -> because of Firefox bug
+                padding-top: px(24);
+                padding-right: px(18);
+                float: left;
+                font-family: 'Kurale';
+                font-size: px(112);
+            }
+        }
+
+        .infoItems {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            order: 2;
+            height: px(512);
+            margin-top: px(50);
+            margin-left: px(262);
+
+            .infoItem {
+                margin-bottom: px(72);
+            }
+
+            .value {
+                color: $black;
+                font-family: 'PT Sans';
+                font-size: px(40);
+            }
+
+            .attribute {
+                margin-top: px(2);
+                color: $darkGray;
+                font-family: 'Kurale';
+                font-size: px(32);
+            }
+        }
+    }
+}
