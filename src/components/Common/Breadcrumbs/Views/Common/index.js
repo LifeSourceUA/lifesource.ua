@@ -24,30 +24,27 @@ import Arrow from 'components/Assets/Arrow.js';
 import BP from 'lib/breakpoints';
 
 function Common(props) {
-    const { mediaType } = props;
+    const { mediaType, breadcrumbs } = props;
+    const items = breadcrumbs.map((item) => {
+        return (
+            <li className={ Styles.item } key={ item.id }>
+                <a href="#">{ item.title }</a>
+            </li>
+        );
+    });
+
+    const arrow = (<Arrow className={ Styles.arrow } color={ Palette.midGray }/>);
 
     return (
         <section className={ Styles.breadcrumbsComponent }>
             <ul className={ Styles.rowItems }>
-                <li className={ Styles.item }><a href="#">Главная</a></li>
-                <Arrow className={ Styles.arrow } color={ Palette.midGray }/>
-                <li className={ Styles.item }><a href="#">
-                    { BP.isTabletPortrait(mediaType) ? 'Журналы' : 'Книги' }
-                </a></li>
-                <Arrow className={ Styles.arrow } color={ Palette.midGray }/>
-                <li className={ Styles.item }><a href="#">
-                    { BP.isTabletPortrait(mediaType) ? 'Дружболандия' : 'Здоровье и семья' }
-                </a></li>
-                {
-                    BP.isPhonePortrait(mediaType) || BP.isTabletPortrait(mediaType) ? null : (
-                        <Arrow className={ Styles.arrow } color={ Palette.midGray }/>
-                    )
-                }
-                {
-                    BP.isPhonePortrait(mediaType) || BP.isTabletPortrait(mediaType) ? null : (
-                        <li className={ Styles.item }><a href="#">Истории о настоящих героях</a></li>
-                    )
-                }
+                { items[0] }
+                { arrow }
+                { items[1] }
+                { arrow }
+                { items[2] }
+                { BP.isPhonePortrait(mediaType) || BP.isTabletPortrait(mediaType) ? null : arrow }
+                { BP.isPhonePortrait(mediaType) || BP.isTabletPortrait(mediaType) ? null : items[3] }
             </ul>
         </section>
     );
@@ -58,7 +55,8 @@ function Common(props) {
  * Component prop types
  */
 Common.propTypes = {
-    mediaType: PropTypes.string.isRequired
+    mediaType: PropTypes.string.isRequired,
+    breadcrumbs: PropTypes.array.isRequired
 };
 
 /**

@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 import * as Book from 'components/Book';
 import Meta from './Meta';
 import * as Common from 'components/Common';
+import breadcrumbs from './Mock/Breadcrumbs.json';
 
 export default class BookPage extends Component {
     render = () => {
@@ -12,7 +13,7 @@ export default class BookPage extends Component {
                 <Helmet { ...Meta() }/>
                 <Book.Main/>
                 <Book.Authors/>
-                <Common.Breadcrumbs/>
+                <Common.Breadcrumbs breadcrumbs={ breadcrumbs }/>
             </div>
         );
     }

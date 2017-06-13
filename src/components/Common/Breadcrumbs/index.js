@@ -2,7 +2,7 @@
  * [IL]
  * Library Import
  */
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 /**
@@ -28,14 +28,6 @@ import config from './config';
 })
 class Breadcrumbs extends Component {
     /**
-     * [CPT]
-     * Component prop types
-     */
-    static propTypes = {
-        mediaType: PropTypes.string.isRequired
-    };
-
-    /**
      * [CDN]
      * Component display name
      */
@@ -46,13 +38,19 @@ class Breadcrumbs extends Component {
      * Render function
      */
     render = () => {
-        const { mediaType } = this.props;
+        /**
+         * [RV]
+         * View
+         */
+        const view = (
+            <Common { ...this.props }/>
+        );
 
         /**
-         * [RR]
-         * Return Component
-         */
-        return <Common mediaType={ mediaType }/>;
+        * [RR]
+        * Return Component
+        */
+        return view;
     }
 }
 
