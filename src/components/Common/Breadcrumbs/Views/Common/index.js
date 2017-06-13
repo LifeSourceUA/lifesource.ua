@@ -28,7 +28,7 @@ function Common(props) {
     const items = breadcrumbs.map((item) => {
         return (
             <li className={ Styles.item } key={ item.id }>
-                <a href="#">{ item.title }</a>
+                <a href={ item.url }>{ item.title }</a>
             </li>
         );
     });

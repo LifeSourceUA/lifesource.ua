@@ -9,7 +9,7 @@ import { connect } from 'react-redux';
  * [IV]
  * View Import
  */
-import Common from './Views/Common';
+import Common from './Views/Common/tpl';
 
 /**
  * [IBP]

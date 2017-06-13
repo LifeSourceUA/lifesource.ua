@@ -1,5 +1,5 @@
 const config = {
-    id: 'Common.Breadcrums'
+    id: 'Common.Breadcrumbs'
 };
 
 export default config;

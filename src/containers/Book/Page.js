@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 
-import * as Book from 'components/Book';
 import Meta from './Meta';
+import * as Book from 'components/Book';
 import * as Common from 'components/Common';
 import breadcrumbs from './Mock/Breadcrumbs.json';
 

@@ -4,7 +4,6 @@
 
     .rowItems {
         display: flex;
-        justify-content: flex-end;
         height: px(72);
 
         .item {
@@ -16,6 +15,10 @@
 
             a {
                 color: $darkGray;
+            }
+
+            &:last-of-type {
+                background-color: unset;
             }
         }
 

@@ -1,1 +1,15 @@
 @import './common';
+
+& {
+    overflow-x: scroll;
+
+    .rowItems {
+        justify-content: flex-start;
+        padding: 0 px(40);
+        white-space: nowrap;
+
+        .item:last-of-type {
+            padding: 0 px(24) 0 0;
+        }
+    }
+}
