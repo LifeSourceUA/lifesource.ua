@@ -17,34 +17,37 @@ import Palette from 'theme/Palette';
  */
 import Arrow from 'components/Assets/Arrow.js';
 
-/**
- * [IBP]
- * Breakpoints
- */
-import BP from 'lib/breakpoints';
-
 function Common(props) {
-    const { mediaType, breadcrumbs } = props;
+    const { breadcrumbs } = props;
+
+    const arrow = (
+        <div className="wrapArraw">
+            <Arrow color={ Palette.midGray }/>
+        </div>
+    );
+
     const items = breadcrumbs.map((item) => {
         return (
             <li className={ Styles.item } key={ item.id }>
                 <a href={ item.url }>{ item.title }</a>
             </li>
         );
-    });
+    })
+    .reduce((row, item, i, arr) => {
+        row.push(item);
+        if (i < arr.length - 1) {
+            row.push(arrow);
+        }
 
-    const arrow = (<Arrow className={ Styles.arrow } color={ Palette.midGray }/>);
+        return row;
+    }, []);
+
+    console.log(items.props);
 
     return (
         <section className={ Styles.breadcrumbsComponent }>
             <ul className={ Styles.rowItems }>
-                { items[0] }
-                { arrow }
-                { items[1] }
-                { arrow }
-                { items[2] }
-                { BP.isPhonePortrait(mediaType) || BP.isTabletPortrait(mediaType) ? null : arrow }
-                { BP.isPhonePortrait(mediaType) || BP.isTabletPortrait(mediaType) ? null : items[3] }
+                { items }
             </ul>
         </section>
     );
@@ -55,7 +58,6 @@ function Common(props) {
  * Component prop types
  */
 Common.propTypes = {
-    mediaType: PropTypes.string.isRequired,
     breadcrumbs: PropTypes.array.isRequired
 };
 
