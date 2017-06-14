@@ -10,13 +10,7 @@ import { connect } from 'react-redux';
  * [IV]
  * View Import
  */
-import Common from './Views/Common/tpl';
-
-/**
- * [IBP]
- * Pixel Perfect and Breakpoints
- */
-import PixelPerfect from 'vendor/PixelPerfect/component';
+import Common from './Views/Common';
 
 /**
  * [ICONF]
@@ -33,7 +27,7 @@ import config from './config';
         mediaType: state.browser.mediaType
     };
 })
-class PublicationInfo extends Component {
+class Footer extends Component {
     /**
      * [CPT]
      * Component prop types
@@ -60,12 +54,6 @@ class PublicationInfo extends Component {
         const { mediaType } = this.props;
 
         /**
-         * [RCD]
-         * Config destructuring
-         */
-        const { id } = config;
-
-        /**
          * [RV]
          * View
          */
@@ -75,11 +63,7 @@ class PublicationInfo extends Component {
          * [RR]
          * Return Component
          */
-        return (
-            <PixelPerfect component={ id }>
-                { view }
-            </PixelPerfect>
-        );
+        return view;
     }
 }
 
@@ -87,4 +71,4 @@ class PublicationInfo extends Component {
  * [IE]
  * Export
  */
-export default PublicationInfo;
+export default Footer;

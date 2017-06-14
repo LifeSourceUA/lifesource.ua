@@ -33,7 +33,7 @@ import config from './config';
         mediaType: state.browser.mediaType
     };
 })
-class PublicationInfo extends Component {
+class Footer extends Component {
     /**
      * [CPT]
      * Component prop types
@@ -87,4 +87,4 @@ class PublicationInfo extends Component {
  * [IE]
  * Export
  */
-export default PublicationInfo;
+export default Footer;

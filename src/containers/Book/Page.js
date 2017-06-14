@@ -17,6 +17,7 @@ class BookPage extends Component {
                 <Common.PublicationInfo { ...info }/>
                 <Book.Authors/>
                 <Common.Breadcrumbs breadcrumbs={ breadcrumbs }/>
+                <Common.Footer/>
             </div>
         );
     }

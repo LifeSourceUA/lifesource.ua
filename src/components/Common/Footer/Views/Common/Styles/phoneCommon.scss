@@ -1,0 +1,49 @@
+& {
+    padding: px(46) px(122);
+    border-top: dashed px(2) $midGray;
+
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+
+        .btnContacts {
+            height: px(96);
+            line-height: px(96);
+            color: $red;
+            border: px(2) solid $red;
+            font-size: px(30);
+            border-radius: px(48);
+
+            a {
+                padding: px(32) px(62);
+            }
+        }
+
+        .btnWriteToUs {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: px(2) solid $midGray;
+            border-radius: px(48);
+            width: px(96);
+            height: px(96);
+
+            a {
+                padding: px(48);
+
+                .envelope {
+                    width: px(40);
+                }
+            }
+        }
+    }
+
+    .copyright {
+        margin-top: px(44);
+        line-height: px(24);
+        color: $darkGray;
+        font-size: px(20);
+        text-align: center;
+        white-space: pre-wrap;
+    }
+}
