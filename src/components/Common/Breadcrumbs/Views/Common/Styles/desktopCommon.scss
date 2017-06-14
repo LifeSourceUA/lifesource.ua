@@ -1,0 +1,36 @@
+& {
+    padding-bottom: px(120);
+    background-color: $white;
+
+    .rowItems {
+        display: flex;
+        justify-content: center;
+        height: px(80);
+        white-space: nowrap;
+
+        .item {
+            padding: 0 px(46);
+            border-radius: px(20);
+            background-color: $lightGray;
+            color: $darkGray;
+            font-size: px(32);
+            line-height: px(86);
+
+            a {
+                color: $darkGray;
+            }
+
+            &:last-of-type {
+                padding: 0;
+                background-color: unset;
+            }
+        }
+
+        .wrapArrow {
+            i {
+                width: px(12);
+                margin: px(28) px(38) 0;
+            }
+        }
+    }
+}

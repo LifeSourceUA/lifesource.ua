@@ -21,15 +21,23 @@ function Common(props) {
     const { breadcrumbs } = props;
 
     const arrow = (
-        <div className="wrapArraw">
+        <div className={ Styles.wrapArrow }>
             <Arrow color={ Palette.midGray }/>
         </div>
     );
 
     const items = breadcrumbs.map((item) => {
+        if (item.url) {
+            return (
+                <li className={ Styles.item } key={ item.id }>
+                    <a href={ item.url }>{ item.title }</a>
+                </li>
+            );
+        }
+
         return (
             <li className={ Styles.item } key={ item.id }>
-                <a href={ item.url }>{ item.title }</a>
+                { item.title }
             </li>
         );
     })

@@ -1,11 +1,25 @@
-@import './phoneLandscape';
+@import './phoneCommon';
 
 & {
     padding-bottom: px(92);
+    overflow-x: unset;
 
     .rowItems {
-        i {
-            margin: px(28) px(22) 0;
+        justify-content: center;
+        padding: 0;
+
+        .item {
+            padding: 0 px(26);
+
+            &:last-of-type {
+                padding: 0;
+            }
+        }
+
+        .wrapArrow {
+            i {
+                margin: px(28) px(22) 0;
+            }
         }
     }
 }

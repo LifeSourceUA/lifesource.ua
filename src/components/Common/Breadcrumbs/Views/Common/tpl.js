@@ -30,19 +30,19 @@ function Common(props) {
         <section className={ Styles.breadcrumbsComponent }>
             <ul className={ Styles.rowItems }>
                 <li className={ Styles.item }><a href="#">Главная</a></li>
-                <div className={ Styles.arrowWrap }>
+                <div className={ Styles.wrapArrow }>
                     <Arrow color={ Palette.midGray }/>
                 </div>
                 <li className={ Styles.item }>
                     <a href="#">{ BP.isTabletPortrait(mediaType) ? 'Журналы' : 'Книги' }</a>
                 </li>
-                <div className={ Styles.arrowWrap }>
+                <div className={ Styles.wrapArrow }>
                     <Arrow color={ Palette.midGray }/>
                 </div>
                 <li className={ Styles.item }>
                     <a href="#">{ BP.isTabletPortrait(mediaType) ? 'Дружболандия' : 'Здоровье и семья' }</a>
                 </li>
-                <div className={ Styles.arrowWrap }>
+                <div className={ Styles.wrapArrow }>
                     <Arrow color={ Palette.midGray }/>
                 </div>
                 <li className={ Styles.item }><a href="#">Истории о настоящих героях</a></li>

@@ -1,15 +1,20 @@
 & {
     padding-bottom: px(76);
     background-color: $white;
+    overflow-x: scroll;
 
     .rowItems {
         display: flex;
+        justify-content: flex-start;
         height: px(72);
+        padding: 0 px(40);
+        white-space: nowrap;
 
         .item {
             padding: 0 px(24);
             border-radius: px(20);
             background-color: $lightGray;
+            color: $darkGray;
             font-size: px(26);
             line-height: px(74);
 
@@ -18,13 +23,16 @@
             }
 
             &:last-of-type {
+                padding: 0 px(24) 0 0;
                 background-color: unset;
             }
         }
 
-        i {
-            width: px(8);
-            margin: px(28) px(20) 0;
+        .wrapArrow {
+            i {
+                width: px(8);
+                margin: px(28) px(20) 0;
+            }
         }
     }
 }
