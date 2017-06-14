@@ -42,8 +42,6 @@ function Common(props) {
         return row;
     }, []);
 
-    console.log(items.props);
-
     return (
         <section className={ Styles.breadcrumbsComponent }>
             <ul className={ Styles.rowItems }>
