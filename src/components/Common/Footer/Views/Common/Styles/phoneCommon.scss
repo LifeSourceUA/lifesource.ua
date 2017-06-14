@@ -8,11 +8,11 @@
 
         .btnContacts {
             height: px(96);
-            line-height: px(96);
-            color: $red;
             border: px(2) solid $red;
-            font-size: px(30);
             border-radius: px(48);
+            color: $red;
+            font-size: px(30);
+            line-height: px(96);
 
             a {
                 padding: px(32) px(62);
@@ -21,12 +21,12 @@
 
         .btnWriteToUs {
             display: flex;
-            justify-content: center;
             align-items: center;
-            border: px(2) solid $midGray;
-            border-radius: px(48);
+            justify-content: center;
             width: px(96);
             height: px(96);
+            border: px(2) solid $midGray;
+            border-radius: px(48);
 
             a {
                 padding: px(48);
@@ -40,10 +40,9 @@
 
     .copyright {
         margin-top: px(44);
-        line-height: px(24);
         color: $darkGray;
         font-size: px(20);
+        line-height: px(24);
         text-align: center;
-        white-space: pre-wrap;
     }
 }
