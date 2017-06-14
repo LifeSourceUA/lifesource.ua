@@ -1,6 +1,7 @@
 /* eslint-disable flowtype/require-valid-file-annotation */
 
-import React, {Component, PropTypes, Children} from 'react';
+import React, {Component, Children} from 'react';
+import PropTypes from 'prop-types';
 import {Motion, spring} from 'react-motion';
 import warning from 'warning';
 import {UNCERTAINTY_THRESHOLD} from './constant';

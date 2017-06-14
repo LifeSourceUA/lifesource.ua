@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 export const STATE_NORMAL = 'normal';
 export const STATE_HOVER = 'hover';
