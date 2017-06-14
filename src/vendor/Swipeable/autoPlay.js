@@ -1,6 +1,7 @@
 // @flow weak
 
-import React, {Component, PropTypes, Children} from 'react';
+import React, {Component, Children} from 'react';
+import PropTypes from 'prop-types';
 import mod from './utils/mod';
 
 export default function autoPlay(MyComponent) {

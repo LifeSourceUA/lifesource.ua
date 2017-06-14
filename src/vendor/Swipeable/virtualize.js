@@ -1,6 +1,7 @@
 // @flow weak
 
-import React, {Component, PropTypes} from 'react';
+import React, {Component } from 'react';
+import PropTypes from 'prop-types';
 import warning from 'warning';
 
 // Approximate time needed to wait for the end of the transition.
