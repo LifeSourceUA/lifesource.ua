@@ -1,0 +1,45 @@
+& {
+    padding-bottom: px(76);
+    background-color: $white;
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .rowItems {
+        display: flex;
+        justify-content: flex-start;
+        height: px(72);
+        padding: 0 px(40);
+        white-space: nowrap;
+
+        .item {
+            border-radius: px(20);
+            background-color: $lightGray;
+            color: $darkGray;
+            font-size: px(26);
+            line-height: px(74);
+
+            a {
+                padding: 0 px(24);
+                color: $darkGray;
+            }
+
+            &:last-of-type {
+                padding: 0 px(24) 0 0;
+                background-color: unset;
+
+                a {
+                    padding: 0;
+                }
+            }
+        }
+
+        .arrow {
+            flex-shrink: 0;
+            width: px(8);
+            margin: px(28) px(20) 0;
+        }
+    }
+}

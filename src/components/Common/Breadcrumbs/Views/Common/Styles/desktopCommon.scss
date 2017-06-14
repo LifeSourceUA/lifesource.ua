@@ -1,0 +1,39 @@
+& {
+    padding-bottom: px(120);
+    background-color: $white;
+
+    .rowItems {
+        display: flex;
+        justify-content: center;
+        height: px(80);
+        white-space: nowrap;
+
+        .item {
+            border-radius: px(20);
+            background-color: $lightGray;
+            color: $darkGray;
+            font-size: px(32);
+            line-height: px(86);
+
+            a {
+                color: $darkGray;
+                padding: px(22) px(46) px(20);
+
+            }
+
+            &:last-of-type {
+                background-color: unset;
+
+                a {
+                    padding: 0;
+                }
+            }
+        }
+
+        .arrow {
+            flex-shrink: 0;
+            width: px(12);
+            margin: px(28) px(38) 0;
+        }
+    }
+}

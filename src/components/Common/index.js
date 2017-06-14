@@ -1,4 +1,4 @@
-// export Breadcrumbs from './Breadcrumbs';
+export Breadcrumbs from './Breadcrumbs';
 // export Contacts from './Contacts';
 // export Footer from './Footer';
 // export Header from './Header';

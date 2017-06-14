@@ -1,0 +1,24 @@
+@import 'phoneCommon';
+
+& {
+    overflow-x: unset;
+
+    .rowItems {
+        justify-content: center;
+        padding: 0;
+
+        .item {
+            a {
+                padding: 0 px(26);
+            }
+
+            &:last-of-type {
+                padding: 0;
+
+                a {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
