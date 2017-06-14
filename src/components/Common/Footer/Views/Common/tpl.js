@@ -30,10 +30,10 @@ function Common(props) {
     const buttons = (
         <div className={ Styles.buttons }>
             <div className={ Styles.btnContacts }>
-                <a url="#">Контакты</a>
+                <a className={ Styles.link } href="#">Контакты</a>
             </div>
             <div className={ Styles.btnWriteToUs }>
-                <a url="#">
+                <a className={ Styles.link } href="#">
                     {
                         BP.isPhonePortrait(mediaType) ? (
                             <Envelope className={ Styles.envelope } color={ Palette.midGray }/>
@@ -49,7 +49,9 @@ function Common(props) {
         <section className={ Styles.footerComponent }>
             { BP.isPhoneLandscape(mediaType) ? null : buttons }
             <div className={ Styles.copyright }>
-                © 2009 - { currentYear }.  Христианское издательство «Джерело Життя»
+                <span className={ Styles.bold }>© 2009 - { currentYear }. </span>
+                Христианское издательство
+                <span className={ Styles.bold }> «Джерело Життя»</span>
             </div>
         </section>
     );
@@ -61,6 +63,8 @@ function Common(props) {
  */
 Common.propTypes = {
     mediaType: PropTypes.string.isRequired
+    // contacts: PropTypes.string.isRequired,
+    // writeToUs: PropTypes.string.isRequired
 };
 
 /**

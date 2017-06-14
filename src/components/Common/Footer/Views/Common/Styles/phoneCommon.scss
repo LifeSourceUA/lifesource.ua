@@ -6,30 +6,32 @@
         display: flex;
         justify-content: space-between;
 
-        .btnContacts {
+        .link {
             height: px(96);
-            border: px(2) solid $red;
+            border: px(2) solid;
             border-radius: px(48);
-            color: $red;
-            font-size: px(30);
-            line-height: px(96);
+        }
 
-            a {
-                padding: px(32) px(62);
+        .btnContacts {
+            .link {
+                display: block;
+                width: px(250);
+                border-color: $red;
+                color: $red;
+                font-size: px(30);
+                line-height: px(96);
+                text-align: center;
             }
         }
 
         .btnWriteToUs {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: px(96);
-            height: px(96);
-            border: px(2) solid $midGray;
-            border-radius: px(48);
-
-            a {
-                padding: px(48);
+            .link {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: auto;
+                width: px(96);
+                border-color: $midGray;
 
                 .envelope {
                     width: px(40);

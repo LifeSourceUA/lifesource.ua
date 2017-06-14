@@ -1,3 +1,47 @@
 & {
+    padding: px(92) px(616) px(58);
+    border-top: dashed px(2) $midGray;
 
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+
+        .link {
+            display: block;
+            width: px(368);
+            height: px(128);
+            border-radius: px(64);
+            border: px(4) solid;
+            font-size: px(32);
+            text-align: center;
+            font-weight: bolder;
+            line-height: px(124);
+        }
+
+        .btnContacts {
+            .link {
+                color: $red;
+                border-color: $red;
+            }
+        }
+
+        .btnWriteToUs {
+            .link {
+                border-color: $midGray;
+                color: $gray;
+            }
+        }
+    }
+
+    .copyright {
+        margin-top: px(94);
+        color: $darkGray;
+        font-size: px(26);
+        line-height: px(24);
+        text-align: center;
+
+        .bold {
+            font-weight: bolder;
+        }
+    }
 }
