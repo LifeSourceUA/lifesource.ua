@@ -21,22 +21,23 @@
         .btnContacts {
             border-color: $red;
             color: $red;
-        }
 
-        .btnContactsHover:hover {
-            background-color: $red;
-            color: $white;
+            &:hover {
+                background-color: $red;
+                color: $white;
+            }
         }
 
         .btnWriteToUs {
             border-color: $midGray;
             color: $gray;
+
+            &:hover {
+                background-color: $midGray;
+                color: $white;
+            }
         }
 
-        .btnWriteToUsHover:hover {
-            background-color: $midGray;
-            color: $white;
-        }
     }
 
     .copyright {
