@@ -27,29 +27,32 @@ import BP from 'lib/breakpoints';
 function Common(props) {
     const { mediaType } = props;
 
+    // remove hover effect on deices that support touch
+    let btnContacts = Styles.button.concat(' ', Styles.btnContacts);
+    let btnWriteToUs = Styles.button.concat(' ', Styles.btnWriteToUs);
+    if (!(('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0))) {
+        btnContacts = btnContacts.concat(' ', Styles.btnContactsHover);
+        btnWriteToUs = btnWriteToUs.concat(' ', Styles.btnWriteToUsHover);
+    }
+
     const buttons = (
-        <div className={ Styles.buttons }>
-            <div className={ Styles.btnContacts }>
-                <a className={ Styles.link } href="#">Контакты</a>
-            </div>
-            <div className={ Styles.btnWriteToUs }>
-                <a className={ Styles.link } href="#">
-                    {
-                        BP.isPhonePortrait(mediaType) ? (
-                            <Envelope className={ Styles.envelope } color={ Palette.midGray }/>
-                        ) : 'Написать нам'
-                    }
-                </a>
-            </div>
+        <div className={ Styles.btnRow }>
+            <a className={ btnContacts } href="#">Контакты</a>
+            <a className={ btnWriteToUs } href="#">
+                {
+                    BP.isPhonePortrait(mediaType) ? (
+                        <Envelope className={ Styles.envelope } color={ Palette.midGray }/>
+                    ) : 'Написать нам'
+                }
+            </a>
         </div>
     );
-    const currentYear = new Date().getFullYear();
 
     return (
         <section className={ Styles.footerComponent }>
             { BP.isPhoneLandscape(mediaType) ? null : buttons }
             <div className={ Styles.copyright }>
-                <span className={ Styles.bold }>© 2009 - { currentYear }. </span>
+                <span className={ Styles.bold }>© 2009 - 2017. </span>
                 Христианское издательство
                 <span className={ Styles.bold }> «Джерело Життя»</span>
             </div>
@@ -63,8 +66,6 @@ function Common(props) {
  */
 Common.propTypes = {
     mediaType: PropTypes.string.isRequired
-    // contacts: PropTypes.string.isRequired,
-    // writeToUs: PropTypes.string.isRequired
 };
 
 /**

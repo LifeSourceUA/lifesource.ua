@@ -2,34 +2,40 @@
     padding: px(92) px(616) px(58);
     border-top: dashed px(2) $midGray;
 
-    .buttons {
+    .btnRow {
         display: flex;
         justify-content: space-between;
 
-        .link {
+        .button {
             display: block;
             width: px(368);
             height: px(128);
-            border-radius: px(64);
             border: px(4) solid;
+            border-radius: px(64);
             font-size: px(32);
-            text-align: center;
             font-weight: bolder;
             line-height: px(124);
+            text-align: center;
         }
 
         .btnContacts {
-            .link {
-                color: $red;
-                border-color: $red;
-            }
+            border-color: $red;
+            color: $red;
+        }
+
+        .btnContactsHover:hover {
+            background-color: $red;
+            color: $white;
         }
 
         .btnWriteToUs {
-            .link {
-                border-color: $midGray;
-                color: $gray;
-            }
+            border-color: $midGray;
+            color: $gray;
+        }
+
+        .btnWriteToUsHover:hover {
+            background-color: $midGray;
+            color: $white;
         }
     }
 

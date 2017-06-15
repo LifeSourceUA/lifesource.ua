@@ -3,18 +3,18 @@
 & {
     padding: px(78) px(440) px(54);
 
-    .buttons {
-        .link {
+    .btnRow {
+        .button {
+            width: px(298);
             height: px(104);
+            border-width: px(2);
             font-size: px(30);
             line-height: px(102);
-            border-width: px(2);
-            width: px(298);
-        }
+       }
     }
 
     .copyright {
-        font-size: px(22);
         margin-top: px(62);
+        font-size: px(22);
     }
 }

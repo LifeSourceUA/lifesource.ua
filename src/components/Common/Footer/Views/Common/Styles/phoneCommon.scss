@@ -1,41 +1,36 @@
 & {
-    padding: px(46) px(122) px(44);
+    padding: px(46) px(124) px(44);
     border-top: dashed px(2) $midGray;
 
-    .buttons {
+    .btnRow {
         display: flex;
         justify-content: space-between;
 
-        .link {
+        .button {
             height: px(96);
             border: px(2) solid;
             border-radius: px(48);
         }
 
         .btnContacts {
-            .link {
-                display: block;
-                width: px(250);
-                border-color: $red;
-                color: $red;
-                font-size: px(30);
-                line-height: px(96);
-                text-align: center;
-            }
+            display: block;
+            width: px(250);
+            border-color: $red;
+            color: $red;
+            font-size: px(30);
+            line-height: px(96);
+            text-align: center;
         }
 
         .btnWriteToUs {
-            .link {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin: auto;
-                width: px(96);
-                border-color: $midGray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: px(96);
+            border-color: $midGray;
 
-                .envelope {
-                    width: px(40);
-                }
+            .envelope {
+                width: px(40);
             }
         }
     }

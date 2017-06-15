@@ -25,22 +25,18 @@ import Envelope from 'components/Assets/Envelope';
 import BP from 'lib/breakpoints';
 
 function Common(props) {
-    const { mediaType } = props;
+    const { mediaType, urlContacts, urlWriteToUs } = props;
 
     const buttons = (
-        <div className={ Styles.buttons }>
-            <div className={ Styles.btnContacts }>
-                <a url="#">Контакты</a>
-            </div>
-            <div className={ Styles.btnWriteToUs }>
-                <a url="#">
-                    {
-                        BP.isPhonePortrait(mediaType) ? (
-                            <Envelope className={ Styles.envelope } color={ Palette.midGray }/>
-                        ) : 'Написать нам'
-                    }
-                </a>
-            </div>
+        <div className={ Styles.btnRow }>
+            <a className={ Styles.button.concat(' ', Styles.btnContacts) } href={ urlContacts }> Контакты</a>
+            <a className={ Styles.button.concat(' ', Styles.btnWriteToUs) } href={ urlWriteToUs }>
+                {
+                    BP.isPhonePortrait(mediaType) ? (
+                        <Envelope className={ Styles.envelope } color={ Palette.midGray }/>
+                    ) : 'Написать нам'
+                }
+            </a>
         </div>
     );
     const currentYear = new Date().getFullYear();
@@ -60,7 +56,9 @@ function Common(props) {
  * Component prop types
  */
 Common.propTypes = {
-    mediaType: PropTypes.string.isRequired
+    mediaType: PropTypes.string.isRequired,
+    urlContacts: PropTypes.string.isRequired,
+    urlWriteToUs: PropTypes.string.isRequired
 };
 
 /**
