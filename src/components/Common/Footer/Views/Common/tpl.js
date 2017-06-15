@@ -27,7 +27,7 @@ import BP from 'lib/breakpoints';
 function Common(props) {
     const { mediaType } = props;
 
-    // remove hover effect on deices that support touch
+    // remove hover effect on devices that support touch
     let btnContacts = Styles.button.concat(' ', Styles.btnContacts);
     let btnWriteToUs = Styles.button.concat(' ', Styles.btnWriteToUs);
     if (!(('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0))) {
