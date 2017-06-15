@@ -7,6 +7,7 @@ import * as Common from 'components/Common';
 
 import breadcrumbs from './Mock/Breadcrumbs.json';
 import info from './Mock/PublicationInfo.json';
+import urlsFeedback from './Mock/Footer.json';
 
 class BookPage extends Component {
     render = () => {
@@ -17,7 +18,7 @@ class BookPage extends Component {
                 <Common.PublicationInfo { ...info }/>
                 <Book.Authors/>
                 <Common.Breadcrumbs breadcrumbs={ breadcrumbs }/>
-                <Common.Footer/>
+                <Common.Footer { ...urlsFeedback }/>
             </div>
         );
     }
