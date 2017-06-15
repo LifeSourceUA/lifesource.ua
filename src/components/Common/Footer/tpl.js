@@ -3,7 +3,6 @@
  * Library Import
  */
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 /**
@@ -35,14 +34,6 @@ import config from './config';
 })
 class Footer extends Component {
     /**
-     * [CPT]
-     * Component prop types
-     */
-    static propTypes = {
-        mediaType: PropTypes.string.isRequired
-    };
-
-    /**
      * [CDN]
      * Component display name
      */
@@ -54,12 +45,6 @@ class Footer extends Component {
      */
     render = () => {
         /**
-         * [RPD]
-         * Props destructuring
-         */
-        const { mediaType } = this.props;
-
-        /**
          * [RCD]
          * Config destructuring
          */
@@ -69,7 +54,7 @@ class Footer extends Component {
          * [RV]
          * View
          */
-        const view = <Common mediaType={ mediaType }/>;
+        const view = <Common { ...this.props }/>;
 
         /**
          * [RR]
