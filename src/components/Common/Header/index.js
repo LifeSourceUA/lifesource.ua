@@ -41,7 +41,8 @@ class Header extends Component {
      * Component prop types
      */
     static propTypes = {
-        mediaType: PropTypes.string.isRequired
+        mediaType: PropTypes.string.isRequired,
+        items: PropTypes.array.isRequired
     };
 
     /**
@@ -69,7 +70,7 @@ class Header extends Component {
          * [RPD]
          * Props destructuring
          */
-        const { mediaType } = this.props;
+        const { mediaType, items } = this.props;
 
         /**
          * [RV]
@@ -83,6 +84,7 @@ class Header extends Component {
                     mediaType={ mediaType }
                     isMenuVisible={ this.state.isMenuVisible }
                     handleMenu={ this.handleMenu }
+                    items={ items }
                 />
             );
         } else if (BP.isTabletPortrait(mediaType)) {
@@ -90,11 +92,15 @@ class Header extends Component {
                 <Tablet
                     isMenuVisible={ this.state.isMenuVisible }
                     handleMenu={ this.handleMenu }
+                    items={ items }
                 />
             );
         } else {
             view = (
-                <Desktop mediaType={ mediaType }/>
+                <Desktop
+                    mediaType={ mediaType }
+                    items={ items }
+                />
             );
         }
 

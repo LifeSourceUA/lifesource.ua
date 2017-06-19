@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import Styles from './Styles/main.scss';
@@ -7,12 +8,22 @@ import Grid from 'theme/Grid.scss';
 import Palette from 'theme/Palette';
 
 import Logo from 'components/Assets/Logo';
-import SearchTablet from 'components/Assets/SearchTablet';
+import Search from 'components/Assets/Search';
 
-function Desktop() {
-    const itemClasses = cx({
-        [Styles.item]: true,
-        [Styles.active]: true
+function Desktop(props) {
+    const { items } = props;
+
+    const menuItems = items.map((element) => {
+        const itemClasses = cx({
+            [Styles.item]: true,
+            [Styles.active]: element.active
+        });
+
+        return (
+            <a key={ element.id } href={ element.href } className={ itemClasses }>
+                { element.title }
+            </a>
+        );
     });
 
     const contentClasses = cx({
@@ -31,16 +42,16 @@ function Desktop() {
                     </div>
                 </div>
                 <div className={ Styles.menu }>
-                    <a href="#" className={ itemClasses }>Книги</a>
-                    <a href="#" className={ Styles.item }>Журналы</a>
-                    <a href="#" className={ Styles.item }>Газеты</a>
-                    <a href="#" className={ Styles.item }>Авторы</a>
-                    <a href="#" className={ Styles.item }>Контакты</a>
-                    <SearchTablet className={ Styles.search } color={ Palette.darkGray }/>
+                    { menuItems }
+                    <Search className={ Styles.search } color={ Palette.darkGray }/>
                 </div>
             </div>
         </section>
     );
 }
+
+Desktop.propTypes = {
+    items: PropTypes.array.isRequired
+};
 
 export default Desktop;

@@ -1,0 +1,28 @@
+[
+  {
+    "title": "Книги",
+    "url": "#",
+    "active": true,
+    "id": "book"
+  },
+  {
+    "title": "Журналы",
+    "url": "#",
+    "id": "journal"
+  },
+  {
+    "title": "Газеты",
+    "url": "#",
+    "id": "newspaper"
+  },
+  {
+    "title": "Авторы",
+    "url": "#",
+    "id": "authors"
+  },
+  {
+    "title": "Контакты",
+    "url": "#",
+    "id": "contacts"
+  }
+]

@@ -4,7 +4,6 @@ import Styles from './Styles/main.scss';
 import Palette from 'theme/Palette';
 import Arrow from 'components/Assets/Arrow';
 import Logo from 'components/Assets/Logo';
-import SearchTablet from 'components/Assets/SearchTablet';
 import Search from 'components/Assets/Search';
 import Hamburger from 'components/Assets/Hamburger';
 
@@ -19,10 +18,10 @@ function Tablet() {
                     <h2 className={ Styles.subtitle }>христианское издательство</h2>
                 </div>
             </div>
-            <SearchTablet className={ Styles.searchTablet } color={ Palette.darkGray }/>
+            <Search className={ Styles.searchTablet } color={ Palette.darkGray }/>
             <div className={ Styles.dynamicPart }>
                 <div className={ Styles.searchBlock }>
-                    <Search className={ Styles.searchIcon } color={ Palette.darkGray }/>
+                    <Search className={ Styles.searchIcon } color={ Palette.darkGray } type={ 'mobile' }/>
                     <input className={ Styles.searchField } placeholder="Поиск по сайту"/>
                 </div>
                 <div className={ Styles.menu }>

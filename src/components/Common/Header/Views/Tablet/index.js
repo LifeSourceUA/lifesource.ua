@@ -8,11 +8,10 @@ import Palette from 'theme/Palette';
 import Arrow from 'components/Assets/Arrow';
 import Logo from 'components/Assets/Logo';
 import Search from 'components/Assets/Search';
-import SearchTablet from 'components/Assets/SearchTablet';
 import Hamburger from 'components/Assets/Hamburger';
 
 function Tablet(props) {
-    const { isMenuVisible, handleMenu } = props;
+    const { isMenuVisible, handleMenu, items } = props;
 
     if (window) {
         const $content = document.getElementById('content');
@@ -37,6 +36,15 @@ function Tablet(props) {
         boxShadow: isMenuVisible ? '0 0 87px 0 rgba(0, 0, 0, 0.1)' : null
     };
 
+    const menuItems = items.map((element) => {
+        return (
+            <a key={ element.id } href={ element.href } className={ Styles.item }>
+                { element.title }
+                <Arrow className={ Styles.arrow } color={ Palette.midGray }/>
+            </a>
+        );
+    });
+
     return (
         <section className={ Styles.headerComponent } style={ headerStyles }>
             <Hamburger
@@ -52,37 +60,18 @@ function Tablet(props) {
                     <h2 className={ Styles.subtitle }>христианское издательство</h2>
                 </div>
             </div>
-            <SearchTablet
+            <Search
                 className={ Styles.searchTablet }
                 color={ Palette.darkGray }
                 onClick={ handleMenu }
             />
             <div className={ Styles.dynamicPart } style={ dynamicPartStyle }>
                 <div className={ Styles.searchBlock }>
-                    <Search className={ Styles.searchIcon } color={ Palette.darkGray }/>
+                    <Search className={ Styles.searchIcon } color={ Palette.darkGray } type={ 'mobile' }/>
                     <input className={ Styles.searchField } placeholder="Поиск по сайту"/>
                 </div>
                 <div className={ Styles.menu }>
-                    <a href="#" className={ Styles.item }>
-                        Книги
-                        <Arrow className={ Styles.arrow } color={ Palette.midGray }/>
-                    </a>
-                    <a href="#" className={ Styles.item }>
-                        Журналы
-                        <Arrow className={ Styles.arrow } color={ Palette.midGray }/>
-                    </a>
-                    <a href="#" className={ Styles.item }>
-                        Газеты
-                        <Arrow className={ Styles.arrow } color={ Palette.midGray }/>
-                    </a>
-                    <a href="#" className={ Styles.item }>
-                        Авторы
-                        <Arrow className={ Styles.arrow } color={ Palette.midGray }/>
-                    </a>
-                    <a href="#" className={ Styles.item }>
-                        Контакты
-                        <Arrow className={ Styles.arrow } color={ Palette.midGray }/>
-                    </a>
+                    { menuItems }
                 </div>
             </div>
         </section>
@@ -91,7 +80,8 @@ function Tablet(props) {
 
 Tablet.propTypes = {
     isMenuVisible: PropTypes.bool.isRequired,
-    handleMenu: PropTypes.func.isRequired
+    handleMenu: PropTypes.func.isRequired,
+    items: PropTypes.array.isRequired
 };
 
 export default Tablet;

@@ -7,7 +7,7 @@ import Grid from 'theme/Grid.scss';
 import Palette from 'theme/Palette';
 
 import Logo from 'components/Assets/Logo';
-import SearchTablet from 'components/Assets/SearchTablet';
+import Search from 'components/Assets/Search';
 
 function Desktop() {
     const itemClasses = cx({
@@ -36,7 +36,7 @@ function Desktop() {
                     <a href="#" className={ Styles.item }>Газеты</a>
                     <a href="#" className={ Styles.item }>Авторы</a>
                     <a href="#" className={ Styles.item }>Контакты</a>
-                    <SearchTablet className={ Styles.search } color={ Palette.darkGray }/>
+                    <Search className={ Styles.search } color={ Palette.darkGray }/>
                 </div>
             </div>
         </section>

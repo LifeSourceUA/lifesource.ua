@@ -38,7 +38,7 @@ function Mobile() {
             </div>
             <div className={ Styles.dynamicPart }>
                 <div className={ Styles.searchBlock }>
-                    <Search className={ Styles.searchIcon } color={ Palette.darkGray }/>
+                    <Search className={ Styles.searchIcon } color={ Palette.darkGray } type={ 'mobile' }/>
                     <input className={ Styles.searchField } placeholder="Поиск по сайту"/>
                 </div>
                 <div className={ Styles.menu }>

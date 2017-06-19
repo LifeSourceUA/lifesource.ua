@@ -10,7 +10,7 @@ import Hamburger from 'components/Assets/Hamburger';
 import Search from 'components/Assets/Search';
 
 function Mobile(props) {
-    const { isMenuVisible, handleMenu } = props;
+    const { isMenuVisible, handleMenu, items } = props;
     if (window) {
         const $content = document.getElementById('content');
 
@@ -33,6 +33,15 @@ function Mobile(props) {
         display: isMenuVisible ? 'flex' : 'none'
     };
 
+    const menuItems = items.map((element) => {
+        return (
+            <a key={ element.id } href={ element.href } className={ Styles.item }>
+                { element.title }
+                <Arrow className={ Styles.arrow } color={ Palette.midGray }/>
+            </a>
+        );
+    });
+
     return (
         <section className={ Styles.headerComponent } style={ headerComponentStyle }>
             <div className={ Styles.head }>
@@ -52,30 +61,11 @@ function Mobile(props) {
             </div>
             <div className={ Styles.dynamicPart } style={ dynamicPartStyle }>
                 <div className={ Styles.searchBlock }>
-                    <Search className={ Styles.searchIcon } color={ Palette.darkGray }/>
+                    <Search className={ Styles.searchIcon } color={ Palette.darkGray } type={ 'mobile' }/>
                     <input className={ Styles.searchField } placeholder="Поиск по сайту"/>
                 </div>
                 <div className={ Styles.menu }>
-                    <a href="#" className={ Styles.item }>
-                        Книги
-                        <Arrow className={ Styles.arrow } color={ Palette.midGray }/>
-                    </a>
-                    <a href="#" className={ Styles.item }>
-                        Журналы
-                        <Arrow className={ Styles.arrow } color={ Palette.midGray }/>
-                    </a>
-                    <a href="#" className={ Styles.item }>
-                        Газеты
-                        <Arrow className={ Styles.arrow } color={ Palette.midGray }/>
-                    </a>
-                    <a href="#" className={ Styles.item }>
-                        Авторы
-                        <Arrow className={ Styles.arrow } color={ Palette.midGray }/>
-                    </a>
-                    <a href="#" className={ Styles.item }>
-                        Контакты
-                        <Arrow className={ Styles.arrow } color={ Palette.midGray }/>
-                    </a>
+                    { menuItems }
                 </div>
             </div>
         </section>
@@ -84,7 +74,8 @@ function Mobile(props) {
 
 Mobile.propTypes = {
     isMenuVisible: PropTypes.bool.isRequired,
-    handleMenu: PropTypes.func.isRequired
+    handleMenu: PropTypes.func.isRequired,
+    items: PropTypes.array.isRequired
 };
 
 export default Mobile;
