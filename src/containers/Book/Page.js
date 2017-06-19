@@ -11,6 +11,7 @@ class BookPage extends Component {
         return (
             <div>
                 <Helmet { ...Meta() }/>
+                <Common.Header/>
                 <Book.Main/>
                 <Common.PublicationInfo { ...info }/>
                 <Book.Authors/>
