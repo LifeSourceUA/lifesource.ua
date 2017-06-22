@@ -23,6 +23,7 @@
             color: $red;
 
             &:hover {
+                transition: all .3s;
                 background-color: $red;
                 color: $white;
             }
@@ -33,6 +34,7 @@
             color: $gray;
 
             &:hover {
+                transition: all .3s;
                 background-color: $midGray;
                 color: $white;
             }
