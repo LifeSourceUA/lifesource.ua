@@ -7,19 +7,19 @@
 
     .title {
         color: $gray;
-        font-family: 'Kurale';
+        font-family: Kurale;
         font-size: px(46);
         letter-spacing: px(6);
         text-transform: uppercase;
 
         &::after {
+            content: '';
             display: block;
             width: px(60);
             height: px(4);
             margin-top: px(24);
             border-radius: 1px;
             background-color: $midGray;
-            content: '';
         }
     }
 
@@ -38,7 +38,7 @@
                 padding-top: px(24);
                 padding-right: px(18);
                 float: left;
-                font-family: 'Kurale';
+                font-family: Kurale;
                 font-size: px(112);
             }
         }
@@ -65,7 +65,7 @@
             .attribute {
                 margin-top: px(2);
                 color: $darkGray;
-                font-family: 'Kurale';
+                font-family: Kurale;
                 font-size: px(32);
             }
         }

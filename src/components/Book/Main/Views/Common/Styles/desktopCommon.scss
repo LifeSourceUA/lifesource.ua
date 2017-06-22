@@ -54,6 +54,7 @@
 
                 .hoverBook {
                     display: flex;
+                    z-index: 50;
                     top: 50%;
                     left: 50%;
                     align-items: center;
@@ -64,9 +65,8 @@
                     margin-left: px(-100);
                     transition: opacity .3s;
                     border-radius: 50%;
-                    background: $black;
                     opacity: 0;
-                    z-index: 50;
+                    background: $black;
 
                     .book {
                         width: px(88);
@@ -80,6 +80,7 @@
                 }
 
                 .topLayer {
+                    z-index: 20;
                     top: 0;
                     left: 0;
                     flex-shrink: 0;
@@ -88,27 +89,26 @@
                     background-image: url('../../../assets/cover.jpg');
                     background-size: cover;
                     cursor: pointer;
-                    z-index: 20;
                 }
 
                 .middleLayer {
+                    z-index: 10;
                     top: px(24);
                     left: px(-4);
                     flex-shrink: 0;
                     width: px(407);
                     height: px(984);
                     transform: translateX(px(-12));
-                    z-index: 10;
                 }
 
                 .bottomLayer {
+                    z-index: 5;
                     top: px(48);
                     left: px(-8);
                     flex-shrink: 0;
                     width: px(378);
                     height: px(936);
                     transform: translateX(px(-24));
-                    z-index: 5;
                 }
 
                 div {
@@ -121,6 +121,7 @@
                 .labelNum {
                     display: flex;
                     position: absolute;
+                    z-index: 1;
                     top: 50%;
                     left: px(-100);
                     align-items: center;
@@ -132,7 +133,6 @@
                     color: $midGray;
                     font-size: px(36);
                     font-weight: bold;
-                    z-index: 1;
 
                     i {
                         width: px(16);
@@ -326,6 +326,7 @@
                             background: $white;
 
                             &::before {
+                                content: '';
                                 position: absolute;
                                 top: px(-44);
                                 left: px(76);
@@ -334,7 +335,6 @@
                                 border-right: px(60) solid transparent;
                                 border-bottom: px(92) solid $white;
                                 border-left: px(60) solid transparent;
-                                content: '';
                             }
 
                             .list {
@@ -390,10 +390,10 @@
             .text {
                 width: px(260);
                 margin-right: px(14);
+                overflow: hidden;
                 font-size: px(32);
                 text-overflow: ellipsis;
                 white-space: nowrap;
-                overflow: hidden;
             }
 
             .arrow {

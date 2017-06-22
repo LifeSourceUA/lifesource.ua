@@ -7,19 +7,19 @@
 
     .title {
         color: $gray;
-        font-family: 'Kurale';
+        font-family: Kurale;
         font-size: px(40);
         letter-spacing: px(4);
         text-transform: uppercase;
 
         &::after {
+            content: '';
             display: block;
             width: px(50);
             height: px(4);
             margin-top: px(28);
             border-radius: 1px;
             background-color: $midGray;
-            content: '';
         }
     }
 
@@ -42,7 +42,7 @@
                 .attribute {
                     margin-top: px(4);
                     color: $darkGray;
-                    font-family: 'Kurale';
+                    font-family: Kurale;
                     font-size: px(30);
                 }
             }
