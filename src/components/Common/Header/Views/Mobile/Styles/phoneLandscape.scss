@@ -1,0 +1,20 @@
+@import 'common';
+
+& {
+    .dynamicPart {
+        .searchBlock {
+            width: px(1058);
+        }
+
+        .menu {
+            margin-top: px(56);
+
+            .item {
+                width: px(982);
+                margin-bottom: px(32);
+                padding-bottom: px(48);
+                font-size: px(38);
+            }
+        }
+    }
+}

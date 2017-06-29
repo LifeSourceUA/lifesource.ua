@@ -1,0 +1,13 @@
+@import 'theme/MediaQueries';
+@import 'theme/PxFunction';
+@import 'theme/Palette';
+
+.headerComponent {
+    @function px($px) {
+        @return pxMedia($px, tabletPortrait)
+    }
+
+    @media #{$tabletPortrait} {
+        @import 'tabletPortrait';
+    }
+}
