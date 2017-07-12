@@ -5,3 +5,4 @@ export Breadcrumbs from './Breadcrumbs';
 // export List from './List';
 export PublicationInfo from './PublicationInfo';
 export Header from './Header';
+export Contacts from './Contacts';

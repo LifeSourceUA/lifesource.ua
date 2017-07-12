@@ -1,0 +1,55 @@
+@import 'common';
+
+& {
+    height: px(354);
+
+    &::before {
+        height: 2px;
+    }
+
+    .wrap {
+        width: 100%;
+
+        .content {
+            width: 100%;
+            margin: 0;
+            padding: px(82) px(168) 0;
+
+            .arrows {
+                width: px(164);
+                margin-top: px(24);
+            }
+
+            .infoContainer {
+                .phoneNumber {
+                    font-size: px(56);
+
+                    strong {
+                        margin-top: px(-2);
+                        font-size: px(52);
+
+                        &:first-child {
+                            margin-left: px(14);
+                        }
+
+                        &:last-child {
+                            margin-right: px(14);
+                        }
+                    }
+                }
+
+                .title {
+                    margin-top: px(36);
+                    font-size: px(30);
+                }
+
+                .info {
+                    width: px(466);
+                    margin-top: px(12);
+                    font-size: px(26);
+                    line-height: px(34);
+                }
+            }
+        }
+    }
+}

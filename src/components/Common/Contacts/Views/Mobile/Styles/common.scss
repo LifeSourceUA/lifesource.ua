@@ -1,0 +1,68 @@
+& {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    height: px(180);
+    padding: 0 px(22);
+    border-bottom: 1px dashed $midGray;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-image: url('../../../Assets/divider.png');
+        background-size: contain;
+        content: '';
+    }
+
+    .backgroundLeft {
+        width: px(70);
+    }
+
+    .backgroundRight {
+        width: px(70);
+        transform: rotate(180deg);
+    }
+
+    .content {
+        display: flex;
+
+        .leftBlock {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .phoneNumber {
+                display: flex;
+                color: $blue;
+                font-size: px(56);
+                font-weight: bold;
+
+                strong {
+                    display: inline-block;
+                    margin-top: px(-4);
+                    font-size: px(52);
+                    font-weight: normal;
+
+                    &:first-child {
+                        margin-left: px(14);
+                    }
+
+                    &:last-child {
+                        margin-right: px(14);
+                    }
+                }
+            }
+
+            .info {
+                margin-top: px(4);
+                color: $black;
+                font-family: Georgia;
+                font-size: px(24);
+            }
+        }
+    }
+}
