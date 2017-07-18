@@ -1,5 +1,6 @@
 @function pxMedia($px, $media) {
     $k: 0;
+    $m: 1vw;
     @if $media == phonePortrait {
         $k: .1562500;
     } @else if $media == phoneLandscape {
@@ -9,14 +10,18 @@
     } @else if $media == tabletLandscape {
         $k: .04882826;
     } @else if $media == desktop {
-        $k: .04687513;
+        $k: 0.5;
+        $m: 1px;
     } @else if $media == desktopWide {
-        $k: .04394543;
+        $k: 0.5;
+        $m: 1px;
     } @else if $media == desktopHD {
-        $k: .0390626;
+        $k: 0.5;
+        $m: 1px;
     } @else if $media == desktopMega {
-        $k: .0341797;
+        $k: 0.5;
+        $m: 1px;
     }
 
-    @return $px * $k * 1vw;
+    @return $px * $k * $m;
 }
