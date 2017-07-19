@@ -1,0 +1,62 @@
+@import 'common';
+
+& {
+    height: px(228);
+    padding: 0 px(42);
+
+    .backgroundLeft {
+        width: px(70);
+    }
+
+    .backgroundRight {
+        width: px(72);
+    }
+
+    .content {
+        .leftBlock {
+            margin-right: px(48);
+
+            .phoneNumber {
+                padding-top: px(6);
+            }
+
+            .info {
+                margin-top: px(6);
+            }
+        }
+
+        .rightBlock {
+            display: flex;
+
+            .contacts {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: px(250);
+                height: px(96);
+                margin-right: px(48);
+                padding-top: px(6);
+                border: 1px solid $red;
+                border-radius: px(48);
+                color: $red;
+                font-size: px(30);
+            }
+
+            .message {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: px(96);
+                height: px(96);
+                padding-top: px(2);
+                border: 1px solid $midGray;
+                border-radius: 50%;
+
+                .envelope {
+                    width: px(40);
+                    height: px(30);
+                }
+            }
+        }
+    }
+}
