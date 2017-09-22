@@ -1,0 +1,13 @@
+@import 'common';
+
+& {
+    .slider {
+        .arrowLeft {
+            width: px(160);
+        }
+
+        .arrowRight {
+            width: px(160);
+        }
+    }
+}
