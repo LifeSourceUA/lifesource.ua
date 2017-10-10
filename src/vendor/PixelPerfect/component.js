@@ -172,8 +172,8 @@ export default class PixelPerfect extends Component {
             if (typeof breakPoint === 'object') {
                 filename = breakPoint.name;
 
-                if (state.current !== 'Default') {
-                    filename += `__${state.current}`;
+                if (state.current === 'Default') {
+                    filename += `__books`;
                 }
             }
             const src = `/PixelPerfect/${component.replace('.', '//')}/${filename}.jpg`;
