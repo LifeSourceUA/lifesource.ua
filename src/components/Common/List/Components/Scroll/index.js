@@ -10,14 +10,20 @@ import { connect } from 'react-redux';
  * [IV]
  * View Import
  */
-import Mobile from './Views/Mobile/tpl';
-import Desktop from './Views/Desktop/tpl';
+import Mobile from './Views/Mobile';
+import Desktop from './Views/Desktop';
 
 /**
  * [IBP]
- * Pixel Perfect and Breakpoints
+ * Breakpoints
  */
 import BP from 'lib/breakpoints';
+
+/**
+ * [ICONF]
+ * Config Import
+ */
+// import config from './config';
 
 /**
  * [IRDX]
@@ -38,6 +44,12 @@ class Contacts extends Component {
     };
 
     /**
+     * [CDN]
+     * Component display name
+     */
+    // static displayName = config.id;
+
+    /**
      * [CR]
      * Render function
      */
@@ -56,11 +68,15 @@ class Contacts extends Component {
 
         if (BP.isMobile(mediaType)) {
             view = (
-                <Mobile { ...this.props }/>
+                <Mobile
+                    mediaType={ mediaType }
+                />
             );
         } else {
             view = (
-                <Desktop mediaType={ mediaType }/>
+                <Desktop
+                    mediaType={ mediaType }
+                />
             );
         }
 

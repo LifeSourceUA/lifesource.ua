@@ -11,6 +11,9 @@ import { connect } from 'react-redux';
  * View Import
  */
 import Book from './Components/Book/tpl';
+// import Magazines from './Components/Magazines/tpl';
+// import Authors from './Components/Authors/tpl';
+// import Scroll from './Components/Scroll/tpl';
 
 /**
  * [IBP]
@@ -43,6 +46,25 @@ class Contacts extends Component {
         mediaType: PropTypes.string.isRequired
     };
 
+    state = {
+        isSortVisible: false,
+        isFiltersVisible: false
+    };
+
+    showSort = () => {
+        this.setState({
+            isFiltersVisible: false,
+            isSortVisible: !this.state.isSortVisible
+        });
+    };
+
+    showFilters = () => {
+        this.setState({
+            isSortVisible: false,
+            isFiltersVisible: !this.state.isFiltersVisible
+        });
+    };
+
     /**
      * [CDN]
      * Component display name
@@ -58,7 +80,7 @@ class Contacts extends Component {
          * [RPD]
          * Props destructuring
          */
-        // const { mediaType } = this.props;
+        // const { type } = this.props;
 
         /**
          * [RCD]
@@ -70,21 +92,33 @@ class Contacts extends Component {
         const templates = [
             {
                 name: BP.phonePortrait.name,
-                states: ['books', 'row']
+                states: ['authors', 'row']
             },
             {
                 name: BP.phoneLandscape.name,
-                states: ['books', 'row']
+                states: ['authors', 'row']
             },
             {
                 name: BP.tabletPortrait.name,
-                states: ['books', 'row']
+                states: ['authors', 'row']
             },
             {
                 name: BP.tabletLandscape.name,
-                states: ['books', 'row']
+                states: ['authors', 'row']
             }
         ];
+
+        // let view;
+        //
+        // if (type === 'book') {
+        //     view = (<Book/>);
+        // } else if (type === 'magasines') {
+        //     view = (<Magazines/>);
+        // } else if (type === 'authors') {
+        //     view = (<Authors/>)
+        // } else if (type === <Scroll/>) {
+        //     view = (<Scroll/>)
+        // }
 
         /**
          * [RR]
@@ -92,7 +126,12 @@ class Contacts extends Component {
          */
         return (
             <PixelPerfect component={ id } templates={ templates }>
-                <Book/>
+                <Book
+                    showSort={ this.showSort }
+                    showFilters={ this.showFilters }
+                    isSortVisible={ this.state.isSortVisible }
+                    isFiltersVisible={ this.state.isFiltersVisible }
+                />
             </PixelPerfect>
         );
     }

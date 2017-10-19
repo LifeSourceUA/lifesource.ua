@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
 import Styles from './Styles/main.scss';
 
 import Filters from 'components/Assets/Filters';
@@ -10,7 +11,18 @@ import Palette from 'theme/Palette';
 import BP from 'lib/breakpoints';
 
 function Mobile(props) {
-    const { mediaType } = props;
+    const {
+        mediaType,
+        isFiltersVisible,
+        isSortVisible,
+        showSort,
+        showFilters
+    } = props;
+
+    const itemClasses = cx({
+        [Styles.item]: true,
+        [Styles.active]: true
+    });
 
     const description = BP.isPhoneLandscape(mediaType) ? (
         <p className={ Styles.description }>
@@ -19,13 +31,54 @@ function Mobile(props) {
         </p>
     ) : null;
 
+    const sortingStyle = {
+        display: isSortVisible ? 'flex' : 'none'
+    };
+
+    const filtersBlockStyle = {
+        display: isFiltersVisible ? 'flex' : 'none'
+    };
+
+    const sortIconFill = isSortVisible ? Palette.red : Palette.gray;
+    const filtersIconFill = isFiltersVisible ? Palette.green : Palette.gray;
+
     return (
         <section className={ Styles.bookComponent }>
             <div className={ Styles.header }>
                 <h1 className={ Styles.mainTitle }>Книги</h1>
                 <div className={ Styles.settings }>
-                    <Sort className={ Styles.sort } color={ Palette.gray }/>
-                    <Filters className={ Styles.filters } color={ Palette.gray }/>
+                    <Sort className={ Styles.sort } color={ sortIconFill } onClick={ showSort }/>
+                    <Filters className={ Styles.filters } color={ filtersIconFill } onClick={ showFilters }/>
+                </div>
+            </div>
+            <div className={ Styles.dynamicPart }>
+                <div className={ Styles.sorting } style={ sortingStyle }>
+                    <span className={ itemClasses }>
+                        Сначала новые
+                        <span className={ Styles.underLine }/>
+                    </span>
+                    <span className={ Styles.item }>
+                        По алфавиту
+                        <span className={ Styles.underLine }/>
+                    </span>
+                </div>
+                <div className={ Styles.filtersBlock } style={ filtersBlockStyle }>
+                    <span className={ itemClasses }>
+                        Все
+                        <span className={ Styles.underLine }/>
+                    </span>
+                    <span className={ Styles.item }>
+                        Духовные
+                        <span className={ Styles.underLine }/>
+                    </span>
+                    <span className={ Styles.item }>
+                        Здоровье и семья
+                        <span className={ Styles.underLine }/>
+                    </span>
+                    <span className={ Styles.item }>
+                        Музыкальные
+                        <span className={ Styles.underLine }/>
+                    </span>
                 </div>
             </div>
             <div className={ Styles.list }>
@@ -92,7 +145,11 @@ function Mobile(props) {
 }
 
 Mobile.propTypes = {
-    mediaType: PropTypes.string.isRequired
+    mediaType: PropTypes.string.isRequired,
+    isSortVisible: PropTypes.bool.isRequired,
+    isFiltersVisible: PropTypes.bool.isRequired,
+    showSort: PropTypes.func.isRequired,
+    showFilters: PropTypes.func.isRequired
 };
 
 export default Mobile;

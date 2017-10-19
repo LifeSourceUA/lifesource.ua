@@ -1,0 +1,134 @@
+& {
+    padding: px(54) px(40) 0;
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .mainTitle {
+            font-family: 'Kurale';
+            font-size: px(50);
+            font-weight: normal;
+        }
+
+        .sort {
+            width: px(34);
+        }
+    }
+
+    .list {
+        margin-top: px(72);
+
+        .item {
+            display: flex;
+            margin-top: px(40);
+            padding-bottom: px(38);
+            border-bottom: 1px dashed $midGray;
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            .photo {
+                width: px(152);
+                height: px(152);
+                margin-right: px(40);
+                border-radius: 50%;
+                background-image: url('../../../../Assets/photo.png');
+                background-size: cover;
+            }
+
+            .info {
+                margin-right: px(134);
+                padding-top: px(10);
+
+                .name {
+                    font-size: px(34);
+                }
+
+                .activities {
+                    margin-top: px(6);
+                    color: $darkGray;
+                    font-family: 'Kurale';
+                    font-size: px(28);
+                    font-weight: 400;
+                }
+
+                .quantityBooks {
+                    display: flex;
+                    align-items: center;
+                    margin-top: px(26);
+
+                    .number {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: px(32);
+                        margin-right: px(12);
+                        padding: 0 px(12) 0 px(10);
+                        border: px(2) solid $red;
+                        border-radius: px(4);
+                        color: $red;
+                        font-size: px(22);
+                        font-weight: bold;
+                    }
+
+                    .text {
+                        color: $gray;
+                        font-size: px(22);
+                        font-style: italic;
+                    }
+                }
+            }
+
+            .description {
+                width: px(400);
+                height: px(140);
+                margin-top: px(6);
+                color: $black;
+                font-family: 'Georgia';
+                font-size: px(26);
+                line-height: px(36);
+                overflow: hidden;
+            }
+        }
+    }
+
+    .shown {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: px(66);
+
+        .icon {
+            width: px(88);
+            height: px(32);
+            background: $red;
+        }
+
+        .text {
+            margin: 0 px(40);
+            color: $darkGray;
+            font-size: px(24);
+
+            strong {
+                font-weight: bold;
+            }
+        }
+    }
+
+    .showMore {
+        display: flex;
+        align-items: center;
+        width: max-content;
+        height: px(96);
+        margin: px(62) auto 0;
+        padding: 0 px(52);
+        border: px(4) solid $red;
+        border-radius: px(48);
+        color: $red;
+        font-size: px(30);
+        font-weight: bold;
+    }
+}

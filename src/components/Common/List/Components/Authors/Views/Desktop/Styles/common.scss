@@ -1,0 +1,144 @@
+& {
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: px(50);
+        padding: 0 px(110) px(114);
+        border-bottom: 1px dashed $midGray;
+
+        .mainTitle {
+            color: $black;
+            font-family: 'Kurale';
+            font-size: px(74);
+            font-weight: normal;
+        }
+
+        .sort {
+            display: flex;
+            align-items: center;
+
+            .item {
+                display: flex;
+                align-items: center;
+                height: px(48);
+                margin-right: px(38);
+                padding: 0 px(30);
+                border-radius: px(24);
+                color: $gray;
+                font-size: px(28);
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            .active {
+                background-color: $red;
+                color: $white;
+            }
+        }
+    }
+
+    .list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: px(136);
+        padding: 0 px(116);
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: px(488);
+            margin-right: px(176);
+            margin-bottom: px(108);
+
+            &:hover {
+                .photo {
+                    .quantity {
+                        display: flex;
+                    }
+                }
+
+                .author {
+                    .name {
+                        color: $green;
+                    }
+                }
+            }
+
+            &:nth-child(3n+3) {
+                margin-right: 0;
+            }
+
+            .photo {
+                position: relative;
+                width: px(288);
+                height: px(288);
+                background-image: url('../../../../Assets/photo.png');
+                background-size: cover;
+
+                .quantity {
+                    display: none;
+                    position: absolute;
+                    top: px(110);
+                    left: px(296);
+                    align-items: center;
+                    justify-content: center;
+                    height: px(64);
+                    padding: 0 px(32);
+                    border: px(4) solid $red;
+                    border-left-style: none;
+                    border-radius: px(4);
+                    color: $red;
+                    font-size: px(36);
+                    font-weight: bold;
+                    overflow: hidden;
+
+                    &::before {
+                        display: block;
+                        position: absolute;
+                        right: 92%;
+                        width: px(288);
+                        height: px(288);
+                        border: px(4) solid $red;
+                        border-radius: 50%;
+                        content: '';
+                    }
+                }
+            }
+
+            .author {
+                margin-top: px(44);
+                font-size: px(40);
+
+                .name {
+                    color: $black;
+                }
+
+                .surname {
+                    color: $green;
+                }
+            }
+
+            .activities {
+                margin-top: px(8);
+                color: $darkGray;
+                font-family: 'Kurale';
+                font-size: px(32);
+            }
+
+            .description {
+                height: px(124);
+                margin-top: px(28);
+                color: $black;
+                font-family: 'Georgia';
+                font-size: px(32);
+                line-height: px(44);
+                text-align: center;
+                overflow: hidden;
+            }
+        }
+    }
+}

@@ -1,0 +1,157 @@
+& {
+    margin-top: px(120);
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 px(110);
+
+        .mainTitle {
+            position: relative;
+            color: $gray;
+            font-family: 'Kurale';
+            font-size: px(40);
+            font-weight: normal;
+            letter-spacing: px(4);
+            text-transform: uppercase;
+
+            &::after {
+                display: block;
+                position: absolute;
+                bottom: px(-28);
+                width: px(60);
+                height: px(4);
+                border-right: px(2);
+                background-color: $midGray;
+                content: '';
+            }
+        }
+    }
+
+    .slider {
+        display: flex;
+        position: relative;
+        align-items: center;
+        margin-top: px(136);
+
+        .arrowLeft {
+            display: flex;
+            position: absolute;
+            top: px(-12);
+            left: 0;
+            align-items: center;
+            justify-content: center;
+            width: px(80);
+            height: px(80);
+            margin-top: px(308);
+            border: 1px solid $midGray;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 9;
+
+            .arrow {
+                width: px(14);
+                transform: rotate(180deg);
+                fill: $midGray;
+            }
+        }
+
+        .arrowRight {
+            display: flex;
+            position: absolute;
+            top: px(-12);
+            right: 0;
+            align-items: center;
+            justify-content: center;
+            width: px(80);
+            height: px(80);
+            margin-top: px(308);
+            border: 1px solid $midGray;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 9;
+
+            .arrow {
+                width: px(14);
+                fill: $midGray;
+            }
+        }
+
+        .wrap {
+            display: flex;
+            position: relative;
+            width: px(1840);
+            z-index: 0;
+
+            .list {
+                display: flex;
+                width: 100%;
+                transition: all .3s cubic-bezier(.15, .46, .61, 1);
+                background-size: 0;
+
+                .item {
+                    margin-right: px(152);
+
+                    &:nth-child(3n+3) {
+                        margin-right: 0;
+                    }
+
+                    .book {
+                        position: relative;
+                        width: px(512);
+                        height: px(672);
+
+                        &::before {
+                            display: block;
+                            position: absolute;
+                            width: px(516);
+                            height: px(676);
+                            background-image: url('../../../../Assets/bookTemplate.png');
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            content: '';
+                            z-index: 2;
+                        }
+
+                        &::after {
+                            display: block;
+                            position: absolute;
+                            width: px(478);
+                            height: px(676);
+                            background-image: url('../../../../Assets/cover.jpg');
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            content: '';
+                            z-index: 1;
+                        }
+                    }
+
+                    .title {
+                        margin-top: px(44);
+                        color: $black;
+                        font-size: px(40);
+                    }
+
+                    .author {
+                        display: inline-flex;
+                        margin-top: px(14);
+                        color: $darkGray;
+                        font-family: 'Kurale';
+                        font-size: px(32);
+                    }
+
+                    .description {
+                        width: px(500);
+                        height: px(218);
+                        margin-top: px(28);
+                        font-family: 'Georgia';
+                        font-size: px(32);
+                        font-weight: 500;
+                        line-height: px(44);
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+}

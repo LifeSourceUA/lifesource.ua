@@ -1,0 +1,77 @@
+@import 'common';
+
+& {
+    margin-top: px(152);
+
+    .header {
+        padding: 0 px(84);
+
+        .mainTitle {
+            font-size: px(40);
+
+            &::after {
+                bottom: px(-32);
+                width: px(50);
+            }
+        }
+    }
+
+    .slider {
+        margin-top: px(112);
+
+        .arrowLeft {
+            left: 0;
+            margin-top: px(244);
+            border: 0;
+        }
+
+        .arrowRight {
+            right: 0;
+            margin-top: px(244);
+            border: 0;
+        }
+
+        .wrap {
+            width: px(1380);
+
+            .list {
+                .item {
+                    margin-right: px(70);
+
+                    .book {
+                        width: px(414);
+                        height: px(544);
+
+                        &::before {
+                            width: px(414);
+                            height: px(544);
+                        }
+
+                        &::after {
+                            width: px(386);
+                            height: px(544);
+                        }
+                    }
+
+                    .title {
+                        margin-top: px(36);
+                        font-size: px(34);
+                    }
+
+                    .author {
+                        margin-top: px(10);
+                        font-size: px(30);
+                    }
+
+                    .description {
+                        width: px(400);
+                        height: px(194);
+                        margin-top: px(20);
+                        font-size: px(28);
+                        line-height: px(40);
+                    }
+                }
+            }
+        }
+    }
+}

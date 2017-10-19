@@ -27,6 +27,130 @@
         }
     }
 
+    .dynamicPart {
+        width: px(600);
+        overflow: scroll;
+
+        .sorting {
+            display: flex;
+            width: max-content;
+            min-width: 93%;
+            margin-top: px(70);
+            margin-right: px(20);
+            border-bottom: 1px dashed $midGray;
+
+            .item {
+                flex-shrink: 0;
+                margin-right: px(84);
+                padding-bottom: px(34);
+                color: $black;
+                font-size: px(30);
+
+                &:last-child {
+                    margin-right: px(40);
+                }
+            }
+
+            .active {
+                display: flex;
+                position: relative;
+                justify-content: center;
+                color: $red;
+                font-weight: bold;
+
+                .underLine {
+                    display: flex;
+                    position: absolute;
+                    bottom: -1px;
+                    left: 0;
+                    align-items: center;
+                    width: 100%;
+                    height: px(4);
+                    border-radius: px(2);
+                    background-color: $red;
+
+                    &::before {
+                        display: inline-block;
+                        position: absolute;
+                        left: px(-20);
+                        width: px(20);
+                        height: px(4);
+                        background-color: $white;
+                        content: '';
+                    }
+
+                    &::after {
+                        display: inline-block;
+                        position: absolute;
+                        right: px(-20);
+                        width: px(20);
+                        height: px(4);
+                        background-color: $white;
+                        content: '';
+                    }
+                }
+            }
+        }
+
+        .filtersBlock {
+            display: flex;
+            width: max-content;
+            min-width: 93%;
+            margin-top: px(70);
+            border-bottom: 1px dashed $midGray;
+
+            .item {
+                flex-shrink: 0;
+                margin-right: px(84);
+                padding-bottom: px(34);
+                color: $black;
+                font-size: px(30);
+
+                &:last-child {
+                    margin-right: px(40);
+                }
+            }
+
+            .active {
+                position: relative;
+                color: $green;
+                font-weight: bold;
+
+                .underLine {
+                    display: flex;
+                    position: absolute;
+                    bottom: -1px;
+                    left: 0;
+                    align-items: center;
+                    width: 100%;
+                    height: px(4);
+                    border-radius: px(2);
+                    background-color: $green;
+
+                    &::before {
+                        display: inline-block;
+                        position: absolute;
+                        left: px(-20);
+                        width: px(20);
+                        height: px(4);
+                        background-color: $white;
+                        content: '';
+                    }
+
+                    &::after {
+                        display: inline-block;
+                        position: absolute;
+                        right: px(-20);
+                        width: px(20);
+                        height: px(4);
+                        background-color: $white;
+                        content: '';
+                    }
+                }
+            }
+        }
+    }
+
     .list {
         margin-top: px(72);
 

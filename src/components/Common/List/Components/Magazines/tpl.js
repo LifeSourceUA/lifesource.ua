@@ -54,9 +54,9 @@ class Contacts extends Component {
          */
         let view;
 
-        if (BP.isMobile(mediaType)) {
+        if (BP.isMobile(mediaType) || BP.isTabletPortrait(mediaType)) {
             view = (
-                <Mobile { ...this.props }/>
+                <Mobile mediaType={ mediaType }/>
             );
         } else {
             view = (
