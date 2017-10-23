@@ -1,0 +1,15 @@
+@import 'common';
+
+& {
+    .list {
+        .item {
+            .info {
+                .leftBlock {
+                    .title {
+                        width: px(312);
+                    }
+                }
+            }
+        }
+    }
+}

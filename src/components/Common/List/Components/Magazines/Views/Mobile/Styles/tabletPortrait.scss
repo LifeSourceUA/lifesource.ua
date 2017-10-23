@@ -1,0 +1,57 @@
+@import 'common';
+
+& {
+    padding-top: px(38);
+    padding-left: px(84);
+
+    .years {
+        .year {
+            margin-right: px(86);
+            padding-bottom: px(50);
+            font-size: px(32);
+            font-weight: normal;
+        }
+
+        .active {
+            font-weight: bold;
+        }
+    }
+
+    .list {
+        margin-top: px(112);
+
+        .item {
+            margin-right: px(84);
+
+            .magazine {
+                width: px(400);
+                height: px(544);
+
+                &::after {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .number {
+                margin-top: px(42);
+            }
+
+            .magazineTitle {
+                margin-top: px(10);
+                color: $gray;
+                font-family: 'Kurale';
+                font-size: px(30);
+                font-weight: normal;
+            }
+
+            &:nth-child(2n) {
+                margin-right: px(84);
+            }
+
+            &:nth-child(3n+3) {
+                margin-right: 0;
+            }
+        }
+    }
+}

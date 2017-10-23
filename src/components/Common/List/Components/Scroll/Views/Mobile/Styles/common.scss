@@ -1,0 +1,88 @@
+& {
+    padding-top: px(44);
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: px(76);
+        padding: 0 px(38);
+
+        .mainTitle {
+            position: relative;
+            color: $gray;
+            font-family: 'Kurale';
+            font-size: px(40);
+            font-weight: normal;
+            letter-spacing: px(4);
+            text-transform: uppercase;
+
+            &::before {
+                display: block;
+                position: absolute;
+                bottom: px(-32);
+                width: px(50);
+                height: px(4);
+                border-radius: px(2);
+                background-color: $midGray;
+                content: '';
+            }
+        }
+
+        .button {
+            display: flex;
+            align-items: center;
+            height: px(64);
+            padding: 0 px(24);
+            border: 1px solid $green;
+            border-radius: px(32);
+            color: $green;
+            font-size: px(30);
+        }
+    }
+
+    .item {
+        .book {
+            width: px(414);
+            height: px(544);
+
+            &::before {
+                display: block;
+                position: absolute;
+                width: px(414);
+                height: px(544);
+                background-image: url('../../../../Assets/bookTemplate.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                content: '';
+                z-index: 2;
+            }
+
+            &::after {
+                display: block;
+                position: absolute;
+                width: px(386);
+                height: px(544);
+                background-image: url('../../../../Assets/cover.jpg');
+                background-repeat: no-repeat;
+                background-size: contain;
+                content: '';
+                z-index: 1;
+            }
+        }
+
+        .title {
+            margin-top: px(38);
+            color: $black;
+            font-size: px(36);
+        }
+
+        .author {
+            display: inline-block;
+            margin-top: px(6);
+            color: $darkGray;
+            font-family: 'Kurale';
+            font-size: px(30);
+        }
+    }
+}

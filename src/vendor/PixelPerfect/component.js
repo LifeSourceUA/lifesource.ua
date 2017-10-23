@@ -154,10 +154,10 @@ export default class PixelPerfect extends Component {
         });
 
         const statesList = result ? result.states.map((current) => {
-            return (
-                <li key={ current } data-state={ current } onClick={ this.changeState }>{ current }</li>
-            );
-        }) : null;
+                return (
+                    <li key={ current } data-state={ current } onClick={ this.changeState }>{ current }</li>
+                );
+            }) : null;
 
         const image = templates.filter((breakPoint) => {
             const bp = typeof breakPoint === 'object' ? breakPoint.name : breakPoint;
@@ -172,8 +172,8 @@ export default class PixelPerfect extends Component {
             if (typeof breakPoint === 'object') {
                 filename = breakPoint.name;
 
-                if (state.current !== 'Default') {
-                    filename += `__${state.current}`;
+                if (state.current === 'Default') {
+                    filename += `__sorting`;
                 }
             }
             const src = `/PixelPerfect/${component.replace('.', '//')}/${filename}.jpg`;

@@ -6,3 +6,4 @@ export Breadcrumbs from './Breadcrumbs';
 export PublicationInfo from './PublicationInfo';
 export Header from './Header';
 export Contacts from './Contacts';
+export List from './List';

@@ -1,0 +1,83 @@
+@import 'common';
+
+& {
+    height: px(768);
+
+    .slider {
+        .wrap {
+            .list {
+                .item {
+                    width: 100vw;
+                    height: px(768);
+
+                    .content {
+                        padding: px(168) px(180) 0;
+
+                        .title {
+                            align-items: flex-start;
+                            font-size: px(70);
+                        }
+
+                        .label.title {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+
+                            span {
+                                height: px(50);
+                                margin-top: px(32);
+                                margin-left: 0;
+                                padding: 0 px(22);
+                                font-size: px(28);
+                                font-weight: normal;
+                            }
+
+                            &::after {
+                                display: none;
+                            }
+                        }
+
+                        .description {
+                            width: px(700);
+                            height: px(76);
+                            margin-top: px(54);
+                            font-family: 'Georgia';
+                            font-size: px(34);
+                            line-height: px(40);
+                        }
+
+                        .goTo {
+                            width: px(410);
+                            height: px(100);
+                            margin-top: px(100);
+                            font-size: px(34);
+
+                            .book {
+                                width: px(32);
+                                margin-right: px(26);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .dots {
+        bottom: px(32);
+        justify-content: center;
+        width: 100%;
+        margin-top: px(72);
+        padding-left: 0;
+
+        .dot {
+            width: px(14);
+            height: px(14);
+            margin-right: px(28);
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}

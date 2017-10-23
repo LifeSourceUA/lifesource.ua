@@ -1,0 +1,168 @@
+& {
+    .years {
+        width: px(1824);
+        margin: px(124) auto 0;
+
+        .slider {
+            display: flex;
+            position: relative;
+            align-items: center;
+
+            .arrowLeft {
+                display: flex;
+                position: absolute;
+                top: px(-12);
+                left: 0;
+                align-items: center;
+                justify-content: center;
+                width: px(80);
+                height: px(80);
+                border: 1px solid $midGray;
+                border-radius: 50%;
+                cursor: pointer;
+                z-index: 9;
+
+                .arrow {
+                    width: px(14);
+                    transform: rotate(180deg);
+                    fill: $midGray;
+                }
+            }
+
+            .arrowRight {
+                display: flex;
+                position: absolute;
+                top: px(-12);
+                right: 0;
+                align-items: center;
+                justify-content: center;
+                width: px(80);
+                height: px(80);
+                border: 1px solid $midGray;
+                border-radius: 50%;
+                cursor: pointer;
+                z-index: 9;
+
+                .arrow {
+                    width: px(14);
+                    fill: $midGray;
+                }
+            }
+
+            .wrap {
+                display: flex;
+                position: relative;
+                width: px(1526);
+                z-index: 0;
+
+                .list {
+                    display: flex;
+                    width: 100vw;
+                    transition: all .3s cubic-bezier(.15, .46, .61, 1);
+                    background-size: 0;
+
+                    .year {
+                        display: flex;
+                        align-items: center;
+                        margin-right: px(106);
+                        padding: px(12) px(24);
+                        border-radius: px(30);
+                        color: $black;
+                        font-size: px(36);
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+
+                    .active {
+                        background-color: $green;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+
+    .listMagazines {
+        display: flex;
+        flex-wrap: wrap;
+        width: px(1824);
+        margin: px(136) auto 0;
+
+        .item {
+            position: relative;
+            margin-right: px(168);
+            margin-bottom: px(104);
+
+            &:nth-child(3n+3) {
+                margin-right: 0;
+            }
+
+            &:hover {
+                .hoverBlock {
+                    display: block;
+                }
+            }
+
+            .hoverBlock {
+                display: none;
+                position: absolute;
+                top: px(0);
+                left: px(-48);
+                width: px(640);
+                height: px(456);
+                padding: px(56) px(88) px(54) px(64);
+                border-radius: px(12);
+                border-color: $custom4;
+                background-color: $white;
+                box-shadow: 0 0 px(24) 0 $custom5;
+                z-index: 20;
+
+                .description {
+                    height: px(344);
+                    color: $black;
+                    font-family: 'Georgia';
+                    font-size: px(32);
+                    line-height: px(44);
+                    overflow: scroll;
+                }
+            }
+
+            .magazine {
+                position: relative;
+                width: px(496);
+                height: px(456);
+                background-image: url('../../../../Assets/cover.jpg');
+                background-size: cover;
+                overflow: hidden;
+
+                &::after {
+                    display: block;
+                    position: absolute;
+                    top: px(2);
+                    right: px(-4);
+                    width: 100%;
+                    height: 100%;
+                    background-image: url('../../../../Assets/newsPaperTemplate.png');
+                    background-size: cover;
+                    content: '';
+                }
+            }
+
+            .number {
+                margin-top: px(44);
+                color: $black;
+                font-size: px(40);
+            }
+
+            .title {
+                margin-top: px(8);
+                color: $midGray;
+                font-family: 'Kurale';
+                font-size: px(32);
+                font-weight: 600;
+            }
+        }
+    }
+}
