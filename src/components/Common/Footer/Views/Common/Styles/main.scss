@@ -2,13 +2,13 @@
 @import 'theme/Palette';
 @import 'theme/PxFunction';
 
-.publicationInfoComponent {
+.footerComponent {
     @function px($px) {
         @return pxMedia($px, phonePortrait)
     }
 
     @media #{$phonePortrait} {
-        @import 'phonePortrait';
+        @import 'phoneCommon';
     }
 
     @function px($px) {
