@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { asyncConnect } from 'redux-connect';
 import Helmet from 'react-helmet';
+import * as Home from 'components/Home';
 
 import Meta from './Meta';
 
@@ -21,6 +22,7 @@ class HomePage extends Component {
         return (
             <div>
                 <Helmet { ...Meta() }/>
+                <Home.Banner/>
             </div>
         );
     }

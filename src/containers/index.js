@@ -1,6 +1,7 @@
 export App from './App/App';
 export Home from './Home/Page';
 export Book from './Book/Page';
+export List from './List/Page';
 export NotFound from './NotFound/NotFound';
 
 // export WatchUs from '../../old-src/containers/WatchUs/WatchUs';

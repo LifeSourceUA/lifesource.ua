@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Arrow from 'components/Assets/Icons/Arrow';
+import Arrow from 'components/Assets/Arrow';
 
-import Palette from 'components/Assets/Palette';
+import Palette from 'theme/Palette';
 
 export default class Slider extends Component {
     static propTypes = {
@@ -23,10 +23,12 @@ export default class Slider extends Component {
 
     next = () => {
         this.setState({indexCurrent: this.state.indexCurrent + 1});
+        this.props.nextIndex();
     };
 
     prev = () => {
         this.setState({indexCurrent: this.state.indexCurrent - 1});
+        this.props.prevIndex();
     };
 
     refreshLastIndex = () => {
@@ -60,7 +62,7 @@ export default class Slider extends Component {
 
     render(){
         const {
-            children
+            children,
         } = this.props;
 
         const styles = {

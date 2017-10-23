@@ -1,0 +1,308 @@
+& {
+    padding: px(54) px(40) 0;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+
+        .mainTitle {
+            font-family: 'Kurale';
+            font-size: px(50);
+            font-weight: normal;
+        }
+
+        .settings {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: px(136);
+
+            .filters {
+                width: px(32);
+            }
+
+            .sort {
+                width: px(34);
+            }
+        }
+    }
+
+    .dynamicPart {
+        width: px(600);
+        overflow: scroll;
+
+        .sorting {
+            display: flex;
+            width: max-content;
+            min-width: 93%;
+            margin-top: px(70);
+            margin-right: px(20);
+            border-bottom: 1px dashed $midGray;
+
+            .item {
+                flex-shrink: 0;
+                margin-right: px(84);
+                padding-bottom: px(34);
+                color: $black;
+                font-size: px(30);
+
+                &:last-child {
+                    margin-right: px(40);
+                }
+            }
+
+            .active {
+                display: flex;
+                position: relative;
+                justify-content: center;
+                color: $red;
+                font-weight: bold;
+
+                .underLine {
+                    display: flex;
+                    position: absolute;
+                    bottom: -1px;
+                    left: 0;
+                    align-items: center;
+                    width: 100%;
+                    height: px(4);
+                    border-radius: px(2);
+                    background-color: $red;
+
+                    &::before {
+                        display: inline-block;
+                        position: absolute;
+                        left: px(-20);
+                        width: px(20);
+                        height: px(4);
+                        background-color: $white;
+                        content: '';
+                    }
+
+                    &::after {
+                        display: inline-block;
+                        position: absolute;
+                        right: px(-20);
+                        width: px(20);
+                        height: px(4);
+                        background-color: $white;
+                        content: '';
+                    }
+                }
+            }
+        }
+
+        .filtersBlock {
+            display: flex;
+            width: max-content;
+            min-width: 93%;
+            margin-top: px(70);
+            border-bottom: 1px dashed $midGray;
+
+            .item {
+                flex-shrink: 0;
+                margin-right: px(84);
+                padding-bottom: px(34);
+                color: $black;
+                font-size: px(30);
+
+                &:last-child {
+                    margin-right: px(40);
+                }
+            }
+
+            .active {
+                position: relative;
+                color: $green;
+                font-weight: bold;
+
+                .underLine {
+                    display: flex;
+                    position: absolute;
+                    bottom: -1px;
+                    left: 0;
+                    align-items: center;
+                    width: 100%;
+                    height: px(4);
+                    border-radius: px(2);
+                    background-color: $green;
+
+                    &::before {
+                        display: inline-block;
+                        position: absolute;
+                        left: px(-20);
+                        width: px(20);
+                        height: px(4);
+                        background-color: $white;
+                        content: '';
+                    }
+
+                    &::after {
+                        display: inline-block;
+                        position: absolute;
+                        right: px(-20);
+                        width: px(20);
+                        height: px(4);
+                        background-color: $white;
+                        content: '';
+                    }
+                }
+            }
+        }
+    }
+
+    .list {
+        margin-top: px(72);
+
+        .item {
+            display: flex;
+            margin-top: px(46);
+            border-bottom: 1px dashed $midGray;
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            .book {
+                position: relative;
+                width: px(220);
+                height: px(336);
+
+                &::before {
+                    display: block;
+                    position: absolute;
+                    width: px(220);
+                    height: px(288);
+                    background-image: url('../../../../Assets/bookTemplate.png');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    content: '';
+                    z-index: 2;
+                }
+
+                &::after {
+                    display: block;
+                    position: absolute;
+                    width: px(204);
+                    height: px(288);
+                    background-image: url('../../../../Assets/cover.jpg');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    content: '';
+                    z-index: 1;
+                }
+            }
+
+            .info {
+                display: flex;
+                margin-left: px(62);
+                padding-top: px(8);
+
+                .leftBlock {
+                    .title {
+                        font-size: px(34);
+                        line-height: px(36);
+                    }
+
+                    .author {
+                        display: inline-block;
+                        margin-top: px(16);
+                        color: $darkGray;
+                        font-family: 'Kurale';
+                        font-size: px(28);
+                    }
+
+                    .tags {
+                        display: flex;
+                        margin-top: px(26);
+                        margin-left: px(-12);
+
+                        .new {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: px(104);
+                            height: px(32);
+                            border-radius: px(4);
+                            background-color: $red;
+                            color: $white;
+                            font-size: px(22);
+                        }
+
+                        .category {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            height: px(32);
+                            padding: 0 px(10);
+                            border: 1px solid $midGray;
+                            border-radius: px(16);
+                            color: $darkGray;
+                            font-size: px(22);
+                        }
+
+                        span {
+                            margin-right: px(16);
+
+                            &:last-child {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+
+                    .characteristics {
+                        display: flex;
+                        margin-top: px(30);
+
+                        .quantityPages {
+                            display: flex;
+                            flex-direction: column;
+                            color: $black;
+                            font-size: px(26);
+
+                            strong {
+                                color: $darkGray;
+                                font-family: 'Kurale';
+                                font-size: px(22);
+                                font-weight: normal;
+                                line-height: px(14);
+                            }
+                        }
+
+                        .divider {
+                            width: 1px;
+                            height: px(40);
+                            margin: 0 px(30);
+                            background: $midGray;
+                        }
+
+                        .binding {
+                            display: flex;
+                            flex-direction: column;
+                            color: $black;
+                            font-size: px(26);
+
+                            strong {
+                                color: $darkGray;
+                                font-family: 'Kurale';
+                                font-size: px(22);
+                                font-weight: normal;
+                                line-height: px(14);
+                            }
+                        }
+                    }
+                }
+
+                .description {
+                    width: px(370);
+                    margin-top: px(-4);
+                    margin-left: px(86);
+                    color: $black;
+                    font-family: 'Georgia';
+                    font-size: px(26);
+                    line-height: px(36);
+                }
+            }
+        }
+    }
+}

@@ -5,8 +5,7 @@ WORKDIR /data/dev
 
 RUN \
     # Prepare build deps
-    apk add --no-cache --virtual=build-dependencies git ruby ruby-json && \
-    gem install scss_lint -v 0.54.0 --no-ri && \
+    apk add --no-cache --virtual=build-dependencies git && \
 
     git clone --depth 1 https://github.com/LifeSourceUA/lifesource.ua.git -b master . && \
 

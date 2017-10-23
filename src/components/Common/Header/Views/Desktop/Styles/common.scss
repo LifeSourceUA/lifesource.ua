@@ -1,0 +1,87 @@
+& {
+    height: px(184);
+    padding: 0 px(112);
+    border-bottom: 1px dashed $midGray;
+
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .logoContainer {
+        display: flex;
+
+        .logo {
+            width: px(104);
+            margin-right: px(32);
+        }
+
+        .titles {
+            color: $darkGray;
+            font-family: Kurale;
+            font-size: px(32);
+        }
+
+        .subtitle {
+            color: $gray;
+            font-family: Kurale;
+            font-size: px(24);
+        }
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        .item {
+            display: flex;
+            position: relative;
+            align-items: center;
+            height: 100%;
+            margin-right: px(110);
+            color: $darkGray;
+            font-family: Alice;
+            font-size: px(32);
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: px(8);
+                transition: opacity .2s;
+                border-radius: 0 0 px(4) px(4);
+                background: $darkGray;
+                content: '';
+                opacity: 0;
+            }
+
+            &:hover {
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .active {
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: px(8);
+                border-radius: 0 0 px(4) px(4);
+                background: $green;
+                content: '';
+                opacity: 1;
+            }
+        }
+
+        .search {
+            width: px(56);
+        }
+    }
+}

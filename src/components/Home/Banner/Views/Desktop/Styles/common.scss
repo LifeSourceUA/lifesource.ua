@@ -1,0 +1,162 @@
+& {
+    position: relative;
+    height: px(1000);
+
+    .slider {
+        display: flex;
+        position: relative;
+
+        .arrowLeft {
+            display: flex;
+            position: absolute;
+            top: 0;
+            left: 0;
+            align-items: center;
+            justify-content: center;
+            width: px(108);
+            height: 100%;
+            cursor: pointer;
+            z-index: 9;
+
+            .arrow {
+                width: px(26);
+                margin-right: px(38);
+                transform: rotate(180deg);
+            }
+        }
+
+        .arrowRight {
+            display: flex;
+            position: absolute;
+            top: 0;
+            right: 0;
+            align-items: center;
+            justify-content: center;
+            width: px(108);
+            height: 100%;
+            cursor: pointer;
+            z-index: 9;
+
+            .arrow {
+                width: px(26);
+                margin-left: px(30);
+            }
+        }
+
+        .wrap {
+            display: flex;
+            position: relative;
+            z-index: 0;
+
+            .list {
+                display: flex;
+                width: 100vw;
+                transition: all .3s cubic-bezier(.15, .46, .61, 1);
+                background-size: 0;
+
+                .item {
+                    flex-shrink: 0;
+                    width: 100vw;
+                    height: px(1000);
+                    background-color: $custom3;
+                    background-size: cover;
+
+                    .content {
+                        position: relative;
+                        padding: px(202) px(110) 0;
+
+                        .title {
+                            position: relative;
+                            color: $white;
+                            font-family: 'Kurale';
+                            font-size: px(72);
+                            font-weight: normal;
+
+                            span {
+                                display: none;
+                            }
+
+                            &::after {
+                                position: absolute;
+                                bottom: px(-40);
+                                width: px(80);
+                                height: px(4);
+                                background: $white;
+                                content: '';
+                            }
+                        }
+
+                        .label.title {
+                            display: flex;
+                            align-items: center;
+
+                            span {
+                                display: flex;
+                                align-items: center;
+                                height: px(60);
+                                margin-top: px(14);
+                                margin-left: px(36);
+                                padding: 0 px(34);
+                                border-radius: px(30);
+                                background-color: $red;
+                                font-family: 'PT Sans';
+                                font-size: px(32);
+                                font-weight: bold;
+                            }
+                        }
+
+                        .description {
+                            width: px(1176);
+                            height: px(238);
+                            margin-top: px(102);
+                            color: $white;
+                            font-family: 'Kurale';
+                            font-size: px(36);
+                            line-height: px(48);
+                            overflow: hidden;
+                        }
+
+                        .goTo {
+                            display: flex;
+                            align-items: center;
+                            width: px(452);
+                            height: px(120);
+                            margin-top: px(76);
+                            padding-left: px(56);
+                            border-radius: px(60);
+                            background-color: $custom1;
+                            color: $green;
+                            font-size: px(36);
+
+                            .book {
+                                width: px(40);
+                                margin-right: px(32);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .dots {
+        display: flex;
+        position: absolute;
+        bottom: px(70);
+        padding-left: px(110);
+
+        .dot {
+            width: px(16);
+            height: px(16);
+            margin-right: px(30);
+            border-radius: 50%;
+            background: $white;
+            opacity: .5;
+
+        }
+
+        .active.dot {
+            opacity: 1;
+        }
+    }
+}

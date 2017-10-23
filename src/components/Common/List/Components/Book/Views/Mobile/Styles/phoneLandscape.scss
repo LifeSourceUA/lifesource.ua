@@ -1,0 +1,27 @@
+@import 'common';
+
+& {
+    .dynamicPart {
+        width: px(1100);
+
+        .sorting {
+            min-width: 96%;
+        }
+
+        .filtersBlock {
+            min-width: 96%;
+        }
+    }
+
+    .list {
+        .item {
+            .info {
+                .leftBlock {
+                    .title {
+                        width: px(312);
+                    }
+                }
+            }
+        }
+    }
+}

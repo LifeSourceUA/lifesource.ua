@@ -1,0 +1,25 @@
+@import 'common';
+
+& {
+    .years {
+        .year {
+            margin-right: px(76);
+        }
+    }
+
+    .list {
+        padding-left: px(52);
+
+        .item {
+            margin-right: px(92);
+
+            &:nth-child(2n) {
+                margin-right: px(92);
+            }
+
+            &:nth-child(3n+3) {
+                margin-right: 0;
+            }
+        }
+    }
+}

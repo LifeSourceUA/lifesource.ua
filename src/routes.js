@@ -8,6 +8,7 @@ export default () => {
         <Route path="/" component={ Page.App }>
             <IndexRoute component={ Page.Home }/>
             <Route path="books/:id" component={ Page.Book }/>
+            <Route path="list" component={ Page.List }/>
             <Route path="*" component={ Page.NotFound } status={ 404 }/>
         </Route>
     );
