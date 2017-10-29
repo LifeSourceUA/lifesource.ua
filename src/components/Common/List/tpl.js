@@ -11,9 +11,10 @@ import { connect } from 'react-redux';
  * View Import
  */
 import Book from './Components/Book/tpl';
-// import Magazines from './Components/Magazines/tpl';
-// import Authors from './Components/Authors/tpl';
-// import Scroll from './Components/Scroll/tpl';
+import Magazines from './Components/Magazines/tpl';
+import Magazines4 from './Components/Magazines4/tpl';
+import Authors from './Components/Authors/tpl';
+import Scroll from './Components/Scroll/tpl';
 
 /**
  * [IBP]
@@ -37,13 +38,13 @@ import config from './config';
         mediaType: state.browser.mediaType
     };
 })
-class Contacts extends Component {
+class List extends Component {
     /**
      * [CPT]
      * Component prop types
      */
     static propTypes = {
-        mediaType: PropTypes.string.isRequired
+        type: PropTypes.string.isRequired
     };
 
     state = {
@@ -80,7 +81,7 @@ class Contacts extends Component {
          * [RPD]
          * Props destructuring
          */
-        // const { type } = this.props;
+        const { type } = this.props;
 
         /**
          * [RCD]
@@ -108,17 +109,19 @@ class Contacts extends Component {
             }
         ];
 
-        // let view;
-        //
-        // if (type === 'book') {
-        //     view = (<Book/>);
-        // } else if (type === 'magasines') {
-        //     view = (<Magazines/>);
-        // } else if (type === 'authors') {
-        //     view = (<Authors/>)
-        // } else if (type === <Scroll/>) {
-        //     view = (<Scroll/>)
-        // }
+        let view;
+
+        if (type === 'book') {
+            view = (<Book/>);
+        } else if (type === 'magazines') {
+            view = (<Magazines/>);
+        } else if (type === 'authors') {
+            view = (<Authors/>);
+        } else if (type === 'Scroll') {
+            view = (<Scroll/>);
+        } else if (type === 'magazines4') {
+            view = (<Magazines4/>);
+        }
 
         /**
          * [RR]
@@ -126,12 +129,7 @@ class Contacts extends Component {
          */
         return (
             <PixelPerfect component={ id } templates={ templates }>
-                <Book
-                    showSort={ this.showSort }
-                    showFilters={ this.showFilters }
-                    isSortVisible={ this.state.isSortVisible }
-                    isFiltersVisible={ this.state.isFiltersVisible }
-                />
+                { view }
             </PixelPerfect>
         );
     }
@@ -141,4 +139,4 @@ class Contacts extends Component {
  * [IE]
  * Export
  */
-export default Contacts;
+export default List;

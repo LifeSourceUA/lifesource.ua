@@ -69,6 +69,7 @@
                         border-radius: px(30);
                         color: $black;
                         font-size: px(36);
+                        cursor: pointer;
 
                         &:last-child {
                             margin-right: 0;
@@ -94,6 +95,7 @@
             position: relative;
             margin-right: px(168);
             margin-bottom: px(104);
+            cursor: pointer;
 
             &:nth-child(3n+3) {
                 margin-right: 0;

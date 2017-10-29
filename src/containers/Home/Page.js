@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import { asyncConnect } from 'redux-connect';
 import Helmet from 'react-helmet';
 import * as Home from 'components/Home';
+import * as Common from 'components/Common';
+
+import headerMenuItems from './Mock/HeaderMenu.json';
 
 import Meta from './Meta';
 
@@ -22,7 +25,13 @@ class HomePage extends Component {
         return (
             <div>
                 <Helmet { ...Meta() }/>
+                <Common.Header items={ headerMenuItems }/>
                 <Home.Banner/>
+                <Common.List type={ 'book' }/>
+                <Common.List type={ 'magazines' }/>
+                <Common.List type={ 'magazines4' }/>
+                <Common.Contacts/>
+                <Common.Footer/>
             </div>
         );
     }

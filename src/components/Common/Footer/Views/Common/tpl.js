@@ -10,6 +10,7 @@ import PropTypes from 'prop-types';
  * Style Import
  */
 import Styles from './Styles/main.scss';
+import Grid from 'theme/Grid.scss';
 import Palette from 'theme/Palette';
 
 /**
@@ -40,13 +41,15 @@ function Common(props) {
     );
 
     return (
-        <section className={ Styles.footerComponent }>
-            { BP.isPhoneLandscape(mediaType) ? null : buttons }
-            <div className={ Styles.copyright }>
-                <span className={ Styles.bold }>© 2009 - 2017. </span>
-                Христианское издательство
-                <span className={ Styles.bold }> «Джерело Життя»</span>
-            </div>
+        <section className={ Grid.container }>
+            <section className={ Styles.footerComponent }>
+                { BP.isPhoneLandscape(mediaType) ? null : buttons }
+                <div className={ Styles.copyright }>
+                    <span className={ Styles.bold }>© 2009 - 2017. </span>
+                    Христианское издательство
+                    <span className={ Styles.bold }> «Джерело Життя»</span>
+                </div>
+            </section>
         </section>
     );
 }

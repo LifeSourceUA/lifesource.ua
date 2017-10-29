@@ -127,6 +127,7 @@
                             background-color: $custom1;
                             color: $green;
                             font-size: px(36);
+                            cursor: pointer;
 
                             .book {
                                 width: px(40);
@@ -152,7 +153,7 @@
             border-radius: 50%;
             background: $white;
             opacity: .5;
-
+            cursor: pointer;
         }
 
         .active.dot {

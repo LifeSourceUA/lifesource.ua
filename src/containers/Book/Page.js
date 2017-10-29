@@ -18,8 +18,10 @@ class BookPage extends Component {
                 <Book.Main/>
                 <Common.PublicationInfo { ...info }/>
                 <Book.Authors/>
+                <Common.List/>
                 <Common.Breadcrumbs breadcrumbs={ breadcrumbs }/>
                 <Common.Contacts/>
+                <Common.Footer/>
             </div>
         );
     }

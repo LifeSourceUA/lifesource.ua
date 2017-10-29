@@ -1,0 +1,100 @@
+& {
+    width: px(1824);
+    margin: px(182) auto 0;
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .title {
+            height: px(78);
+            color: $gray;
+            font-family: 'Kurale';
+            font-size: px(48);
+            font-weight: 100;
+            text-transform: uppercase;
+            letter-spacing: px(4);
+
+            &::after {
+                display: block;
+                width: px(60);
+                height: px(4);
+                margin-top: px(24);
+                border-radius: px(2);
+                background-color: $midGray;
+                content: '';
+            }
+        }
+
+        .showAll {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: px(64);
+            padding: 0 px(34);
+            border: 1px solid $green;
+            border-radius: px(32);
+            font-size: px(32);
+            color: $green;
+
+            .arrow {
+                width: px(10);
+                margin-top: px(4);
+                margin-left: px(20);
+            }
+        }
+    }
+
+    .listMagazines {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: px(106);
+
+        .item {
+            position: relative;
+            margin-right: px(118);
+            margin-bottom: px(104);
+            cursor: pointer;
+
+            &:nth-child(4n+4) {
+                margin-right: 0;
+            }
+
+            .magazine {
+                position: relative;
+                width: px(366);
+                height: px(496);
+                background-image: url('../../../../Assets/cover.jpg');
+                background-size: cover;
+
+                &::after {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 102%;
+                    height: 101%;
+                    background-image: url('../../../../Assets/newsPaperTemplate.png');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    content: '';
+                }
+            }
+
+            .number {
+                margin-top: px(44);
+                color: $black;
+                font-size: px(40);
+            }
+
+            .title {
+                margin-top: px(8);
+                color: $midGray;
+                font-family: 'Kurale';
+                font-size: px(32);
+                font-weight: 600;
+            }
+        }
+    }
+}

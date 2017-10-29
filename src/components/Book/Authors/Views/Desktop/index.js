@@ -8,8 +8,8 @@ import Label from 'components/Assets/LabelEdge.js';
 
 function Desktop() {
     return (
-        <section className={ Styles.authorsComponent }>
-            <section className={ Grid.container }>
+        <section className={ Grid.container }>
+            <section className={ Styles.authorsComponent }>
                 <div className={ Styles.container }>
                     <h1 className={ Styles.title }>об авторе</h1>
                     <div className={ Styles.content }>

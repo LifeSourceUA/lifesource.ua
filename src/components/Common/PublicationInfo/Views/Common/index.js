@@ -10,6 +10,7 @@ import PropTypes from 'prop-types';
  * Style Import
  */
 import Styles from './Styles/main.scss';
+import Grid from 'theme/Grid.scss';
 
 /**
  * [IBP]
@@ -36,16 +37,18 @@ function Common(props) {
     });
 
     return (
-        <section className={ Styles.publicationInfoComponent }>
-            <h1 className={ Styles.title }>
-                { BP.isTabletPortrait(mediaType) ? 'информация о книге' : 'о книге' }
-            </h1>
-            <div className={ Styles.mainContent }>
-                <div className={ Styles.infoItems }>
-                    { infoItems }
+        <section className={ Grid.container }>
+            <section className={ Styles.publicationInfoComponent }>
+                <h1 className={ Styles.title }>
+                    { BP.isTabletPortrait(mediaType) ? 'информация о книге' : 'о книге' }
+                </h1>
+                <div className={ Styles.mainContent }>
+                    <div className={ Styles.infoItems }>
+                        { infoItems }
+                    </div>
+                    <div className={ Styles.text } dangerouslySetInnerHTML={ { __html: text } }/>
                 </div>
-                <div className={ Styles.text } dangerouslySetInnerHTML={ { __html: text } }/>
-            </div>
+            </section>
         </section>
     );
 }
