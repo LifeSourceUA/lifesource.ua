@@ -1,0 +1,22 @@
+[
+    {
+        "id": "home",
+        "title": "Главная",
+        "url": "/"
+    },
+    {
+        "id": "books",
+        "title": "Книги",
+        "url": "/books"
+    },
+    {
+        "id": "health",
+        "title": "Здоровье и семья",
+        "url": "/books?category=health"
+    },
+    {
+        "id": "heroes",
+        "title": "Истории о настоящих героях",
+        "url": "/books/heroes"
+    }
+]

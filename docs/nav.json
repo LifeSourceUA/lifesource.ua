@@ -1,0 +1,27 @@
+[
+    {
+        "id": "books",
+        "title": "Книги",
+        "url": "/books"
+      },
+      {
+        "id": "magazines",
+        "title": "Журналы",
+        "url": "/magazines"
+      },
+      {
+        "id": "newspapers",
+        "title": "Газеты",
+        "url": "/newspapers"
+      },
+      {
+        "id": "authors",
+        "title": "Авторы",
+        "url": "/authors"
+      },
+      {
+        "id": "contacts",
+        "title": "Контакты",
+        "url": "/contacts"
+      }
+]
