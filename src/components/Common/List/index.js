@@ -11,9 +11,10 @@ import { connect } from 'react-redux';
  * View Import
  */
 import Book from './Components/Book';
-// import Magazines from './Components/Magazines';
-// import Authors from './Components/Authors';
-// import Scroll from './Components/Scroll';
+import Magazines from './Components/Magazines';
+import Authors from './Components/Authors';
+import Scroll from './Components/Scroll';
+import Magazines4 from './Components/Magazines4';
 
 /**
  * [ICONF]
@@ -36,7 +37,7 @@ class Contacts extends Component {
      * Component prop types
      */
     static propTypes = {
-        mediaType: PropTypes.string.isRequired
+        type: PropTypes.string.isRequired
     };
 
     state = {
@@ -73,32 +74,28 @@ class Contacts extends Component {
          * [RPD]
          * Props destructuring
          */
-        // const { type } = this.props;
+        const { type } = this.props;
 
-        // let view;
-        //
-        // if (type === 'book') {
-        //     view = (<Book/>);
-        // } else if (type === 'magasines') {
-        //     view = (<Magazines/>);
-        // } else if (type === 'authors') {
-        //     view = (<Authors/>)
-        // } else if (type === <Scroll/>) {
-        //     view = (<Scroll/>)
-        // }
+        let view;
+
+        if (type === 'book') {
+            view = (<Book/>);
+        } else if (type === 'magazines') {
+            view = (<Magazines/>);
+        } else if (type === 'authors') {
+            view = (<Authors/>);
+        } else if (type === 'Scroll') {
+            view = (<Scroll/>);
+        } else if (type === 'magazines4') {
+            view = (<Magazines4/>);
+        }
 
         /**
          * [RR]
          * Return Component
          */
-        return (
-            <Book
-                showSort={ this.showSort }
-                showFilters={ this.showFilters }
-                isSortVisible={ this.state.isSortVisible }
-                isFiltersVisible={ this.state.isFiltersVisible }
-            />
-        );
+
+        return view;
     }
 }
 
@@ -107,3 +104,10 @@ class Contacts extends Component {
  * Export
  */
 export default Contacts;
+
+//     <Book
+//         showSort={ this.showSort }
+//         showFilters={ this.showFilters }
+//         isSortVisible={ this.state.isSortVisible }
+//         isFiltersVisible={ this.state.isFiltersVisible }
+//     />

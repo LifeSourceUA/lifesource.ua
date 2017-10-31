@@ -173,7 +173,7 @@ export default class PixelPerfect extends Component {
                 filename = breakPoint.name;
 
                 if (state.current === 'Default') {
-                    filename += `__sorting`;
+                    filename += `__4`;
                 }
             }
             const src = `/PixelPerfect/${component.replace('.', '//')}/${filename}.jpg`;

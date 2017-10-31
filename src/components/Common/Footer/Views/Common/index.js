@@ -10,6 +10,7 @@ import PropTypes from 'prop-types';
  * Style Import
  */
 import Styles from './Styles/main.scss';
+import Grid from 'theme/Grid.scss';
 import Palette from 'theme/Palette';
 
 /**
@@ -41,11 +42,13 @@ function Common(props) {
     const currentYear = new Date().getFullYear();
 
     return (
-        <section className={ Styles.footerComponent }>
-            { BP.isPhoneLandscape(mediaType) ? null : buttons }
-            <div className={ Styles.copyright }>
-                © 2009 - { currentYear }.  Христианское издательство «Джерело Життя»
-            </div>
+        <section className={ Grid.container }>
+            <section className={ Styles.footerComponent }>
+                { BP.isPhoneLandscape(mediaType) ? null : buttons }
+                <div className={ Styles.copyright }>
+                    © 2009 - { currentYear }.  Христианское издательство «Джерело Життя»
+                </div>
+            </section>
         </section>
     );
 }

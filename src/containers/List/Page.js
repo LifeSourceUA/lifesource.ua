@@ -22,7 +22,7 @@ class ListPage extends Component {
         return (
             <div>
                 <Helmet { ...Meta() }/>
-                <Common.List type={ 'Book' }/>
+                <Common.List type={ 'magazines4' }/>
             </div>
         );
     }

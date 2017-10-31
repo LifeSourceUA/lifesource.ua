@@ -34,7 +34,7 @@ import BP from 'lib/breakpoints';
         mediaType: state.browser.mediaType
     };
 })
-class Contacts extends Component {
+class Magazines extends Component {
     /**
      * [CPT]
      * Component prop types
@@ -92,4 +92,4 @@ class Contacts extends Component {
  * [IE]
  * Export
  */
-export default Contacts;
+export default Magazines;

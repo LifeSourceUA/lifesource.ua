@@ -12,12 +12,14 @@ function Desktop() {
 
     return (
         <section className={ Styles.authorsComponent }>
-            <div className={ Grid.container }>
-                <div className={ Styles.header }>
-                    <h1 className={ Styles.mainTitle }>Авторы</h1>
-                    <div className={ Styles.sort }>
-                        <span className={ sortItemClass }>По популярности</span>
-                        <span className={ Styles.item }>По алфавиту</span>
+            <div className={ Styles.header }>
+                <div className={ Grid.container }>
+                    <div className={ Styles.wrap }>
+                        <h1 className={ Styles.mainTitle }>Авторы</h1>
+                        <div className={ Styles.sort }>
+                            <span className={ sortItemClass }>По популярности</span>
+                            <span className={ Styles.item }>По алфавиту</span>
+                        </div>
                     </div>
                 </div>
             </div>

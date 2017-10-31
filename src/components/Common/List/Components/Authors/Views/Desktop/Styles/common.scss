@@ -1,41 +1,45 @@
 & {
     .header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         margin-top: px(50);
         padding: 0 px(110) px(114);
         border-bottom: 1px dashed $midGray;
 
-        .mainTitle {
-            color: $black;
-            font-family: 'Kurale';
-            font-size: px(74);
-            font-weight: normal;
-        }
-
-        .sort {
+        .wrap {
             display: flex;
             align-items: center;
+            justify-content: space-between;
 
-            .item {
-                display: flex;
-                align-items: center;
-                height: px(48);
-                margin-right: px(38);
-                padding: 0 px(30);
-                border-radius: px(24);
-                color: $gray;
-                font-size: px(28);
-
-                &:last-child {
-                    margin-right: 0;
-                }
+            .mainTitle {
+                color: $black;
+                font-family: 'Kurale';
+                font-size: px(74);
+                font-weight: normal;
             }
 
-            .active {
-                background-color: $red;
-                color: $white;
+            .sort {
+                display: flex;
+                align-items: center;
+
+                .item {
+                    display: flex;
+                    align-items: center;
+                    height: px(48);
+                    margin-right: px(38);
+                    padding: 0 px(30);
+                    border-radius: px(24);
+                    color: $gray;
+                    font-size: px(28);
+                    cursor: pointer;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+
+                .active {
+                    background-color: $red;
+                    color: $white;
+                }
             }
         }
     }
@@ -53,6 +57,7 @@
             width: px(488);
             margin-right: px(176);
             margin-bottom: px(108);
+            cursor: pointer;
 
             &:hover {
                 .photo {

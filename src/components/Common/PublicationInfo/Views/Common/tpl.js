@@ -10,6 +10,7 @@ import PropTypes from 'prop-types';
  * Style Import
  */
 import Styles from './Styles/main.scss';
+import Grid from 'theme/Grid.scss';
 
 /**
  * [IBP]
@@ -53,49 +54,52 @@ function Common(props) {
     );
 
     return (
-        <section className={ Styles.publicationInfoComponent }>
-            <h1 className={ Styles.title }>
-                { BP.isTabletPortrait(mediaType) ? 'информация о книге' : 'о книге' }
-                {/* о книге*/}
-            </h1>
-            <div className={ Styles.mainContent }>
-                <div className={ Styles.infoItems }>
-                    <div className={ Styles.infoItem }>
-                        <div className={ Styles.value }>128</div>
-                        <div className={ Styles.attribute }>стр.</div>
-                    </div>
-                    <div className={ Styles.infoItem }>
-                        <div className={ Styles.value }>2016</div>
-                        <div className={ Styles.attribute }>
-                            {/* { BP.isMobile(mediaType) ? 'год' : 'год издания' }*/}
-                            год
+        <section className={ Grid.container }>
+            <section className={ Styles.publicationInfoComponent }>
+                <h1 className={ Styles.title }>
+                    { BP.isTabletPortrait(mediaType) ? 'информация о книге' : 'о книге' }
+                    {/* о книге*/}
+                </h1>
+                <div className={ Styles.mainContent }>
+                    <div className={ Styles.infoItems }>
+                        <div className={ Styles.infoItem }>
+                            <div className={ Styles.value }>128</div>
+                            <div className={ Styles.attribute }>стр.</div>
                         </div>
-                    </div>
-                    <div className={ Styles.infoItem }>
-                        <div className={ Styles.value }>
-                            {/* { BP.isMobile(mediaType) ? '10 000' : '10 тыс.' }*/}
-                            10 000
-                        </div>
-                        <div className={ Styles.attribute }>
-                            {/* { BP.isMobile(mediaType)||BP.isTabletPortrait(mediaType) ? 'тираж, экз.' : 'тираж' }*/}
-                            тираж, экз.
-                        </div>
-                    </div>
-                    {
-                        !BP.isPhonePortrait(mediaType) ? (
-                            <div className={ Styles.infoItem }>
-                                <div className={ Styles.value }>
-                                    { BP.isTabletPortrait(mediaType) ? 'мелованная, 80 г/м²' : 'мягкий' }
-                                </div>
-                                <div className={ Styles.attribute }>
-                                    { BP.isTabletPortrait(mediaType) ? 'бумага, плотность' : 'переплет' }
-                                </div>
+                        <div className={ Styles.infoItem }>
+                            <div className={ Styles.value }>2016</div>
+                            <div className={ Styles.attribute }>
+                                {/* { BP.isMobile(mediaType) ? 'год' : 'год издания' }*/}
+                                год
                             </div>
-                        ) : null
-                    }
+                        </div>
+                        <div className={ Styles.infoItem }>
+                            <div className={ Styles.value }>
+                                {/* { BP.isMobile(mediaType) ? '10 000' : '10 тыс.' }*/}
+                                10 000
+                            </div>
+                            <div className={ Styles.attribute }>
+                                {/* { BP.isMobile(mediaType)||BP.isTabletPortrait(mediaType) ? 'тираж, экз.' :
+                                'тираж' }*/}
+                                тираж, экз.
+                            </div>
+                        </div>
+                        {
+                            !BP.isPhonePortrait(mediaType) ? (
+                                <div className={ Styles.infoItem }>
+                                    <div className={ Styles.value }>
+                                        { BP.isTabletPortrait(mediaType) ? 'мелованная, 80 г/м²' : 'мягкий' }
+                                    </div>
+                                    <div className={ Styles.attribute }>
+                                        { BP.isTabletPortrait(mediaType) ? 'бумага, плотность' : 'переплет' }
+                                    </div>
+                                </div>
+                            ) : null
+                        }
+                    </div>
+                    { BP.isMobile(mediaType) ? textMobile : textDesktop }
                 </div>
-                { BP.isMobile(mediaType) ? textMobile : textDesktop }
-            </div>
+            </section>
         </section>
     );
 }
